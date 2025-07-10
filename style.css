@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+nav > img {
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-things > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 3em;
+    background: #D8D7D3;
+    padding: 1em 1.5em;
+    border-radius: 0.6em;
+    margin-top: 1em;
+}
+
+.nav-things > ul > li {
+    display: block;
+}
+
+.nav-things > ul > li:hover {
+    opacity: 0.6;
+}
+
+.nav-things > ul > li > a {
+    text-decoration: none;
+    color: black;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;;
+}
+
+.registration > ul {
+    display: flex;
+    margin-top: 2em;
+    gap: 2em;
+}
+
+.registration > ul > li {
+    display: block;
+}
+
+.hover-arrows {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hover-arrows .arrow {
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateX(-5px);
+}
+
+.hover-arrows:hover .arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.signup {
+    background: black;
+    border-radius: 0.3em;
+    padding: 0.3em 1em;
+    text-align: center;
+}
+
+.signup > a {
+    color: white;
+    text-decoration: none;
+
+}
