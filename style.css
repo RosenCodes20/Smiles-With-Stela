@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Margarine&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Overpass:ital,wght@0,100..900;1,100..900&family=Playwrite+PE:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -13,24 +15,31 @@ html {
     box-sizing: inherit;
 }
 
-nav > img {
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav > a > img {
     width: 100px;
+    height: auto;
+    vertical-align: middle;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 .nav-things > ul {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
     gap: 3em;
-    background: #D8D7D3;
+    background: #FFA726;
     padding: 1em 1.5em;
     border-radius: 0.6em;
-    margin-top: 1em;
 }
 
 .nav-things > ul > li {
@@ -39,17 +48,18 @@ nav {
 
 .nav-things > ul > li:hover {
     opacity: 0.6;
+    border-radius: 0.3em;
+    transition: ease-in-out 0.2s;
 }
 
 .nav-things > ul > li > a {
     text-decoration: none;
-    color: black;
+    color: #4E342E;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;;
 }
 
 .registration > ul {
     display: flex;
-    margin-top: 2em;
     gap: 2em;
 }
 
@@ -79,7 +89,7 @@ nav {
 }
 
 .signup {
-    background: black;
+    background: #FB8C00;
     border-radius: 0.3em;
     padding: 0.3em 1em;
     text-align: center;
@@ -89,4 +99,119 @@ nav {
     color: white;
     text-decoration: none;
 
+}
+
+header + section > img {
+    width: 100%;
+    max-width: 1200px;
+    max-height: 600px;
+    display: block;
+    margin: 2em auto;
+}
+
+header + section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-relative {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 1em 0.5em;
+    opacity: 0.8;
+    font-size: 2em;
+    top: 20%;
+}
+
+header + section > a {
+    position: absolute;
+    top: 60%;
+    background: #FB8C00;
+    padding: 0.6em 1.5em;
+    border-radius: 0.6em;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header + section > a:hover {
+    opacity: 0.7;
+    transition: ease-in-out 0.5s;
+}
+
+header + section + section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header + section + section h2 {
+    font-size: 2.5em;
+}
+
+header + section + section ol {
+    margin-top: 1em;
+    margin-left: 2em;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+}
+
+.categories {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    max-width: 250px;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+}
+
+.category-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.category-item h3 {
+    margin-top: 15px;
+}
+
+.category-item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.category-item a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #f48fb1;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.category-text {
+    font-size: 2.3em;
+    margin-bottom: 1em;
 }
