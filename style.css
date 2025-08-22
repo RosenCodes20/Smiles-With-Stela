@@ -98,7 +98,7 @@ nav {
 .signup > a {
     color: white;
     text-decoration: none;
-
+    
 }
 
 header + section > img {
@@ -247,4 +247,127 @@ header + section + section ol {
 .call-by-phone p {
     text-align: center;
     margin-top: 0.9em;
+}
+
+.contact {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 1.8rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f48fb1;
+    outline: none;
+    box-shadow: 0 0 5px rgba(244, 143, 177, 0.5);
+}
+
+.contact-form button {
+    background: #f48fb1;
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #ec407a;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 0.5px solid rgb(0, 0, 0, 0.6);
+    min-height: 300px;
+}
+
+footer > img {
+    width: 120px;
+    margin-bottom: 0.5em;
+}
+
+footer > p {
+    margin-bottom: 1em;
+}
+
+footer > div:first-child > h4 {
+    margin-bottom: 0.5em;
+}
+
+footer > div:first-child > ul > li {
+    display: block;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+footer > div:first-child > ul > li > a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+footer > div {
+    min-height: 200px;
+}
+
+footer > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer > div:nth-child(2) > form > input {
+    text-align: center;
+    min-width: 400px;
+    padding: 0.5em;
+    border: 0.8px solid gray;
+    margin-bottom: 2em;
+}
+
+footer > div:nth-child(2) > h4 {
+    margin-bottom: 2em;
+}
+
+footer > div:nth-child(2) > a {
+    text-decoration: none;
+    border: 1px solid black;
+    color: black;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    border-radius: 1em;
 }
