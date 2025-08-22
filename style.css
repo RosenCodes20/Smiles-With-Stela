@@ -163,19 +163,19 @@ header + section + section ol {
     justify-content: center;
 }
 
-.categories {
+.categories, .categories + section {
     text-align: center;
     padding: 50px 20px;
 }
 
-.category-list {
+.category-list, .items-list {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
 
-.category-item {
+.category-item, .item {
     max-width: 250px;
     border: 1px solid #eee;
     padding: 20px;
@@ -183,25 +183,27 @@ header + section + section ol {
     transition: transform 0.3s;
 }
 
-.category-item:hover {
+.category-item:hover, .item:hover {
     transform: translateY(-5px);
 }
 
-.category-item img {
+.category-item img, .item img {
     width: 100%;
     border-radius: 10px;
+    height: 150px;
+    object-fit: fill;
 }
 
-.category-item h3 {
+.category-item h3, .item h3 {
     margin-top: 15px;
 }
 
-.category-item p {
+.category-item p, .item p {
     font-size: 0.9rem;
     color: #555;
 }
 
-.category-item a {
+.category-item a, .item a {
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;
@@ -214,4 +216,35 @@ header + section + section ol {
 .category-text {
     font-size: 2.3em;
     margin-bottom: 1em;
+}
+
+.item {
+    max-width: 300px;
+}
+
+.delievery h2 {
+    font-size: 2.3em;
+    text-align: center;
+}
+
+.delievery h3 {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.img-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.call-by-phone h2 {
+    text-align: center;
+    font-size: 2.3em;
+    color: brown;
+}
+
+.call-by-phone p {
+    text-align: center;
+    margin-top: 0.9em;
 }
