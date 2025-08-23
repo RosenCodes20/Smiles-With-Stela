@@ -390,3 +390,7 @@ footer > div:nth-child(3) > div {
     display: flex;
     gap: 0.6em;
 }
+
+.big-img {
+    border-radius: 0.5em;
+}
