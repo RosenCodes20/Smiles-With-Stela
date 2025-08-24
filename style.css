@@ -61,10 +61,16 @@ nav {
 .registration > ul {
     display: flex;
     gap: 2em;
+    align-items: center;
 }
 
 .registration > ul > li {
     display: block;
+}
+
+.registration > ul > a > i {
+    font-size: 1.2em;
+    color: darkorange;
 }
 
 .hover-arrows {
