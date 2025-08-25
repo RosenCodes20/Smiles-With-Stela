@@ -1,5 +1,6 @@
 .sell-items > section > img {
     width: 300px;
+    border-radius: 0.3em;
 }
 
 .sell-items > section {
@@ -62,4 +63,10 @@ p > a {
     border-bottom: 3px solid darkorange;
     cursor: pointer;
     font-size: 1.1em;
+}
+
+.text-items > h2 {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    font-weight: 300;
 }
