@@ -42,3 +42,9 @@ header + section {
     color: white;
     background: darkorange;
 }
+
+p > a {
+    text-decoration: none;
+    color: gray;
+    font-size: 1.2em;
+}
