@@ -1,19 +1,19 @@
-header + section > section > img {
+.sell-items > section > img {
     width: 300px;
 }
 
-header + section > section {
+.sell-items > section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     padding: 1.5em 2em;
     border-radius: 0.3em;
 }
 
-header + section > section:hover {
+.sell-items > section:hover {
     transform: translateY(-5px);
     transition: ease-in-out 0.4s;
 }
 
-header + section {
+.sell-items {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
