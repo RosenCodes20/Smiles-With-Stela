@@ -506,3 +506,9 @@ footer > div:nth-child(3) > div {
 .mySlides {
     display: none;
 }
+
+.law-wrapper {
+    display: flex;
+    margin-top: 2.5em;
+    gap: 2em;
+}
