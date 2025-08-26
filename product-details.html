@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Усмивки със Стела</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="product-details.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="all-products.css">
+    <script src="product-details.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <nav>
             <a href="">
-                <img src="images/logo.png" alt="">
+                <img src="images/logo.png" alt="Лого">
             </a>
             
             <section class="nav-things">
@@ -44,10 +45,82 @@
             </section>
         </nav>
     </header>
-
+    
     <section class="item-details">
+        <div class="img-wrapper">
+            <img id="main-image" src="images/IMG_4230.jpg" alt="Комплект книга със сапуни във формата на плодове">
+
+            <div class="gallery">
+                <img src="images/IMG_4230.jpg" alt="Снимка 1">
+            </div>
+        </div>
         
+        <div class="text-wrapper">
+            <h1>Комплект „Книга с плодови сапуни“</h1>
+
+            <p class="price">Цена: 25.99/13.29€</p>
+
+            <p>
+                Този изискан комплект представлява уникална книга-кутия, в която са подредени ръчно изработени сапуни с формата на свежи плодове. Всеки сапун е моделиран с внимание към детайла – от розовите „ягоди“ с релефна текстура, през нежните лилави „къпини“ и „боровинки“, до зелените декоративни листа, които придават усещане за естественост и свежест.
+            </p>
+            
+            <p>
+                Аранжировката наподобява красив плодов букет, но вместо ядливи плодове, вътре се крият ароматни и артистично оформени сапуни. Те са не само практични, но и изключително ефектни като подарък или декорация в дома. Кутията с формата на книга придава допълнителен чар – тя е елегантна, стилна и удобна за съхранение.
+            </p>
+            
+            <h3>Подходящ за:</h3>
+            <ul>
+                <li>Луксозен и оригинален подарък</li>
+                <li>Хора, които ценят ръчно изработени и артистични изделия</li>
+                <li>Декоративен акцент за банята или дома</li>
+            </ul>
+            
+            <a href="" class="buy-btn">Добави в количката</a>
+        </div>
     </section>
     
+    
+    <footer>
+        <div>
+            <h4>ПОЛЕЗНИ ЛИНКОВЕ</h4>
+            
+            <ul>
+                <li><a href="">Всички продукти</a></li>
+                <li><a href="">Сапуни</a></li>
+                <li><a href="">Големи проекти</a></li>
+                <li><a href="">За нас</a></li>
+                <li><a href="">Контакти</a></li>
+            </ul>
+        </div>
+        
+        <div>
+            <h4>АБОНИРАЙ СЕ ЗА НОВИНИ</h4>
+            
+            <form action="">
+                <input type="email" name="" placeholder="Твоят имейл адрес" id="">
+            </form>
+            
+            <a href="">АБОНИРАЙ СЕ СЕГА</a>
+            
+            <div class="law-wrapper">
+                <p><a href="">Политика за поверителност</a></p><span>|</span>
+                <p><a href="">Общи условия</a></p><span>|</span>
+                <p><a href="">Политика за доставка и връщане</a></p>
+            </div>
+        </div>
+        
+        <div>
+            <h4>КОНТАКТИ</h4>
+            
+            <p>+359 87 860 1157</p>
+            
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+        </div>
+        
+    </footer>
 </body>
 </html>
