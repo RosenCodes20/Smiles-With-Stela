@@ -2,7 +2,7 @@
     width: 900px;
     height: 700px;
     object-fit: cover;
-    border-radius: 0.5em;
+    border-radius: 1em;
 }
 
 .item-details {
