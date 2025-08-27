@@ -518,3 +518,7 @@ p > a {
     color: gray;
     font-size: 1.2em;
 }
+
+.logo-href {
+    cursor: pointer;
+}
