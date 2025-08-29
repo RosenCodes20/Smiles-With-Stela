@@ -1,0 +1,9 @@
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 60dvh;
+    font-size: 1.8em;
+    gap: 2em;
+}
