@@ -1,0 +1,13 @@
+.registration-btn {
+    text-align: center;
+    margin-top: 1.5em;
+    text-decoration: none;
+    padding: 0.6em 0.5em;
+    background: darkorange;
+    color: white;
+    border-radius: 1em;
+}
+
+#password {
+    margin-bottom: 2em;
+}
