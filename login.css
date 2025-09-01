@@ -34,6 +34,17 @@ input {
 }
 
 label {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.6em;
     font-size: 0.7em;
+}
+
+form > a > p {
+    font-size: 0.8em;
+    text-align: right;
+    margin-top: 0.7em;
+}
+
+form > a {
+    text-decoration: none;
+    color: black;
 }
