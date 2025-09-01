@@ -7,15 +7,20 @@
 }
 
 article > form {
-    background: #eee;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.1);
     padding: 2em;
-    min-width: 350px;
+    min-width: 400px;
     border-radius: 0.5em;
 }
 
 article > form > h2 {
     text-align: center;
     margin-bottom: 1em;
+}
+
+article > form:hover {
+    transform: translateY(-5px);
+    transition: ease-in-out 0.4s;
 }
 
 article > form:not(h2) {
@@ -30,11 +35,10 @@ article > form:not(h2) {
 article > form > input {
     border: none;
     border-bottom: 1px solid black;
-    background: #eee;
 }
 
 label {
-    margin-bottom: 0.6em;
+    margin-bottom: 0.3em;
     font-size: 0.7em;
 }
 
@@ -42,6 +46,11 @@ form > a:nth-child(6) > p {
     font-size: 0.8em;
     text-align: right;
     margin-top: 1em;
+}
+
+form > a:nth-child(6):hover {
+    color: #3E5A97;
+    transition: 0.3s ease-in;
 }
 
 form > a:nth-child(6) {
@@ -78,7 +87,6 @@ article > form > h5 {
     background: #3E5A97;
     padding: 0.4em;
     text-align: center;
-    border-radius: 1em;
 }
 
 .icons > a:first-child > i, .icons > a:last-child > i {
@@ -90,7 +98,17 @@ article > form > h5 {
     background: #DA4C3E;
     padding: 0.4em;
     text-align: center;
-    border-radius: 1em;
+}
+
+.icons > a {
+    border-radius: 50%;
+    transition: transform 0.3s, opacity 0.3s;
+}
+  
+
+.icons > a:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
 }
 
 .registration-wrap {
@@ -107,3 +125,15 @@ article > form > h5 {
     color: black;
     font-weight: 400;
 }
+
+article > form > input::placeholder {
+    opacity: 0.6;
+}
+
+article > form > input {
+    padding: 0;
+    height: 2.5em;
+    line-height: 2.5em; 
+}
+
+  
