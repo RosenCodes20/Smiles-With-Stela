@@ -70,6 +70,7 @@ article > form > h5 {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.5em;
 }
 
 .icons > a:first-child {
@@ -80,6 +81,14 @@ article > form > h5 {
     border-radius: 1em;
 }
 
-.icons > a:first-child > i {
+.icons > a:first-child > i, .icons > a:last-child > i {
     color: white;
+}
+
+.icons > a:last-child {
+    text-decoration: none;
+    background: #DA4C3E;
+    padding: 0.4em;
+    text-align: center;
+    border-radius: 1em;
 }
