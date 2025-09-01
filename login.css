@@ -48,7 +48,7 @@ form > a:nth-child(6) > p {
     margin-top: 1em;
 }
 
-form > a:nth-child(6):hover {
+form > a:nth-child(6):hover, .registraion-link:hover {
     color: #3E5A97;
     transition: 0.3s ease-in;
 }
@@ -140,5 +140,4 @@ article > form > input {
     height: 2.5em;
     line-height: 2.5em; 
 }
-
   
