@@ -9,7 +9,7 @@
 article > form {
     background: #eee;
     padding: 2em;
-    min-width: 300px;
+    min-width: 350px;
     border-radius: 0.5em;
 }
 
@@ -38,13 +38,23 @@ label {
     font-size: 0.7em;
 }
 
-form > a > p {
+form > a:nth-child(6) > p {
     font-size: 0.8em;
     text-align: right;
     margin-top: 0.7em;
 }
 
-form > a {
+form > a:nth-child(6) {
     text-decoration: none;
     color: black;
+}
+
+form > a:nth-child(7) {
+    text-align: center;
+    margin-top: 1.5em;
+    text-decoration: none;
+    padding: 0.4em 0.5em;
+    background: darkorange;
+    color: white;
+    border-radius: 1em;
 }
