@@ -68,6 +68,11 @@ form > a:nth-child(7) {
     border-radius: 1em;
 }
 
+form > a:nth-child(7):hover {
+    opacity: 0.6;
+    transition: 0.4s ease-out;
+}
+
 article > form > h5 {
     text-align: center;
     margin-top: 2em;
