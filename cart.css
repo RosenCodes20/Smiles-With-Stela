@@ -52,10 +52,17 @@ td img {
     vertical-align: middle;
 }
 
+td > a {
+    background: #eee;
+    padding: 0.2em;
+    border-radius: 50%;
+}
+
 td .fa-xmark {
-    color: #e74c3c;
+    color: black;
     font-size: 18px;
     transition: color 0.3s;
+    font-size: 1em;
 }
 
 td .fa-xmark:hover {
