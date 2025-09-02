@@ -76,3 +76,17 @@ td .fa-xmark:hover {
     border-radius: 6px;
     background: #f9f9f9;
 }
+
+.summary {
+    max-width: 400px;
+    background: #EFEFEF;
+}
+
+.delivery {
+    padding: 1em;
+}
+
+.delivery h2 {
+    font-weight: 500;
+}
+
