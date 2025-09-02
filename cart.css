@@ -80,12 +80,12 @@ td .fa-xmark:hover {
 .summary {
     min-width: 500px;
     background: #EFEFEF;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
 }
 
 .delivery {
     padding: 1em;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
 }
 
 .delivery h2 {
@@ -138,4 +138,9 @@ td .fa-xmark:hover {
     color: white;
     margin-top: 1em;
     border-radius: 0.5em;
+}
+
+.buy-btn:hover {
+    opacity: 0.6;
+    transition: ease-in-out 0.4s;
 }
