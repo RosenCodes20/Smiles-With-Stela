@@ -41,7 +41,7 @@ div > p {
 
 .mom-img-wrap > a {
     background: #146BFF;
-    padding: 0.15em;
+    padding: 0.2em;
     color: white;
     border-radius: 50%;
 }
@@ -50,4 +50,11 @@ div > p {
     font-size: 0.8em;
     color: #83A6C7;
     margin-bottom: 0.8em;
+}
+
+.my-img-wrap > a {
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    color: white;
+    padding: 0.15em;
+    border-radius: 50%;
 }
