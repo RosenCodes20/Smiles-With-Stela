@@ -1,0 +1,19 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main > h2 {
+    margin-bottom: 1em;
+    font-size: 1.9em;
+}
+
+main > p, main > h2 {
+    font-weight: 450;
+}
+
+main > p:not(:last-child) {
+    margin-bottom: 0.5em;
+}
