@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Усмивки със Стела</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
-    <link rel="stylesheet" href="contact.css">
-    <script src="contact-copy.js"></script>
+    <link rel="stylesheet" href="styles/product-details.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/all-products.css">
+    <script src="product-details.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <nav>
             <a href="" class="logo-href">
-                <img src="images/logo.png" alt="">
+                <img src="images/logo.png" alt="Лого">
             </a>
             
             <section class="nav-things">
@@ -28,7 +28,6 @@
                     <li><a href="">Контакти</a></li>
                 </ul>
             </section>
-            
             
             <section class="registration">
                 <ul>
@@ -47,47 +46,40 @@
         </nav>
     </header>
     
-    <article class="contact-container">
-        <h2>Контакти</h2>
-        <p>☎️ Телефон за връзка - +359 87 860 1157</p>
-        
-        <p>✉️ Имейл - rrirrirri08@gmail.com</p>
-        
-        <p>🕑 Работно време - Доставката е онлайн до 17 часа</p>
-    </article>
-    
-    <article class="social-media">
-        <h2>Имате въпрос? Свържете се с нас сега!</h2>
-        <div class="a-links">
-            <a href="https://www.instagram.com/rosko.r.i.6/">
-                <div class="instagram icon">
-                    <i class="fa-brands fa-instagram"></i>
-                    <p>Instagram</p>
-                </div>
-            </a>
-            
-            <a href="https://www.facebook.com/profile.php?id=100019817384349&name=xhp_nt__fb__action__open_user">
-                <div class="facebook icon">
-                    <i class="fa-brands fa-facebook"></i>
-                    <p>Facebook</p>
-                </div>
-            </a>
-            
-            <a href="" onclick="copyGmail()">
-                <div class="gmail icon">
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>Gmail</p>
-                </div>
-            </a>
-            
-            <a href="" onclick="copyDiscordUsername()">
-                <div class="discord icon">
-                    <i class="fa-brands fa-discord"></i>
-                    <p>Discord</p>
-                </div>
-            </a>
+    <section class="item-details">
+        <div class="img-wrapper">
+            <img id="main-image" src="images/IMG_4230.jpg" alt="Комплект книга със сапуни във формата на плодове">
+
+            <div class="gallery">
+                <img src="images/IMG_4230.jpg" alt="Снимка 1">
+                <img src="images/IMG_4248.jpg" alt="Снимка 2">
+            </div>
         </div>
-    </article>
+        
+        <div class="text-wrapper">
+            <h1>Комплект „Книга с плодови сапуни“</h1>
+
+            <p class="price">Цена: 25.99лв/13.29€</p>
+
+            <p>
+                Този изискан комплект представлява уникална книга-кутия, в която са подредени ръчно изработени сапуни с формата на свежи плодове. Всеки сапун е моделиран с внимание към детайла – от розовите „ягоди“ с релефна текстура, през нежните лилави „къпини“ и „боровинки“, до зелените декоративни листа, които придават усещане за естественост и свежест.
+            </p>
+            
+            <p>
+                Аранжировката наподобява красив плодов букет, но вместо ядливи плодове, вътре се крият ароматни и артистично оформени сапуни. Те са не само практични, но и изключително ефектни като подарък или декорация в дома. Кутията с формата на книга придава допълнителен чар – тя е елегантна, стилна и удобна за съхранение.
+            </p>
+            
+            <h3>Подходящ за:</h3>
+            <ul>
+                <li>Луксозен и оригинален подарък</li>
+                <li>Хора, които ценят ръчно изработени и артистични изделия</li>
+                <li>Декоративен акцент за банята или дома</li>
+            </ul>
+            
+            <a href="" class="buy-btn"><i class="fa-solid fa-cart-shopping"></i>Добави в количката</a>
+        </div>
+    </section>
+    
     
     <footer>
         <div>
@@ -131,6 +123,5 @@
         </div>
         
     </footer>
-    
 </body>
 </html>

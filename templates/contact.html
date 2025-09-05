@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Усмивки със Стела</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="registration.css">
-    <script src="contact-copy.js"></script>
+    <link rel="stylesheet" href="../styles/contact.css">
+    <script src="../scripts/contact-copy.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <a href="" class="logo-href">
-                <img src="images/logo.png" alt="">
+                <img src="../images/logo.png" alt="">
             </a>
             
             <section class="nav-things">
@@ -48,32 +47,46 @@
         </nav>
     </header>
     
-    <article class="login">
+    <article class="contact-container">
+        <h2>Контакти</h2>
+        <p>☎️ Телефон за връзка - +359 87 860 1157</p>
         
-        <form action="">
-            <h2>Регистрация</h2>
-            <label for="username">Имейл</label>
-            <input type="email" name="email" id="username" required placeholder="Въведи твоят имейл">
-            
-            <label for="password">Парола</label>
-            <input type="password" name="password" id="password" required placeholder="Въведи твоята парола">
-            
-            <label for="password-conf">Потвърждение на паролата</label>
-            <input type="password-conf" name="password-conf" id="password-conf" required placeholder="Въведи твоята парола отново">
-            
-            
-            <a href="" class="registration-btn">РЕГИСТРАЦИЯ</a>
-            
-            <div class="icons">
-                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                <a href=""><i class="fa-brands fa-google"></i></a>
-            </div>
-
-            <div class="have-an-account-wrapper">
-                <h5>Имаш акаунт? <a href="">Вход</a></h5>
-            </div>
+        <p>✉️ Имейл - rrirrirri08@gmail.com</p>
         
-        </form>
+        <p>🕑 Работно време - Доставката е онлайн до 17 часа</p>
+    </article>
+    
+    <article class="social-media">
+        <h2>Имате въпрос? Свържете се с нас сега!</h2>
+        <div class="a-links">
+            <a href="https://www.instagram.com/rosko.r.i.6/">
+                <div class="instagram icon">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>Instagram</p>
+                </div>
+            </a>
+            
+            <a href="https://www.facebook.com/profile.php?id=100019817384349&name=xhp_nt__fb__action__open_user">
+                <div class="facebook icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>Facebook</p>
+                </div>
+            </a>
+            
+            <a href="" onclick="copyGmail()">
+                <div class="gmail icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Gmail</p>
+                </div>
+            </a>
+            
+            <a href="" onclick="copyDiscordUsername()">
+                <div class="discord icon">
+                    <i class="fa-brands fa-discord"></i>
+                    <p>Discord</p>
+                </div>
+            </a>
+        </div>
     </article>
     
     <footer>
