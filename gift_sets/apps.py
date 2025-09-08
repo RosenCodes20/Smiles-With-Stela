@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class DecorationsConfig(AppConfig):
+class GiftSetsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'mother_gift.decorations'
+    name = 'gift_sets'
