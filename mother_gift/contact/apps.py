@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class AboutUsConfig(AppConfig):
+class ContactConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'mother_gift.about_us'
+    name = 'mother_gift.contact'
