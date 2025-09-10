@@ -23,3 +23,7 @@ class AllProducts(models.Model):
         max_digits=10,
         decimal_places=2
     )
+
+    is_available = models.BooleanField(
+        default=True
+    )
