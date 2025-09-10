@@ -18,3 +18,8 @@ class AllProducts(models.Model):
     product_type = models.CharField(
         choices=ProductTypeChoices.choices
     )
+
+    product_price = models.DecimalField(
+        max_digits=10,
+        decimal_places=2
+    )
