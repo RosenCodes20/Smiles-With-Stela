@@ -36,6 +36,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mother_gift.about_us',
+    'mother_gift.accounts',
+    'mother_gift.all_products',
+    'mother_gift.cart',
+    'mother_gift.common',
+    'mother_gift.contact',
+    'mother_gift.decorations',
+    'mother_gift.gift_sets',
+    'mother_gift.soaps',
 ]
 
 MIDDLEWARE = [
