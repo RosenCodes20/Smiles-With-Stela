@@ -7,7 +7,9 @@ from mother_gift.all_products.choices import ProductTypeChoices
 
 class AllProducts(models.Model):
 
-    image = models.ImageField()
+    image = models.ImageField(
+        upload_to="media/"
+    )
 
     product_description = models.CharField(
         max_length=200,
