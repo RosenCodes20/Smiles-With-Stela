@@ -1,50 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Усмивки със Стела</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/x-icon" href="/images/logo.png">
-    <link rel="stylesheet" href="../static/css/all-products.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="" class="logo-href">
-                <img src="../static/images/logo.png" alt="">
-            </a>
-            
-            <section class="nav-things">
-                <ul>
-                    <li><a href="">Всички продукти</a></li>
-                    <li><a href="">Сапуни</a></li>
-                    <li><a href="">Украси</a></li>
-                    <li><a href="">Подаръчни комплекти</a></li>
-                    <li><a href="">За нас</a></li>
-                    <li><a href="">Контакти</a></li>
-                </ul>
-            </section>
-            
+{% extends 'base.html' %}
 
-            <section class="registration">
-                <ul>
-                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> 
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                    <li>
-                        <a href="" class="hover-arrows">
-                            <span class="arrow left">←</span>
-                            ВХОД
-                            <span class="arrow right">→</span>
-                        </a>
-                    </li>
-                    <li class="signup"><a href="">РЕГИСТРАЦИЯ</a></li>
-                </ul>
-            </section>
-        </nav>
-    </header>
+{% block content %}
     
     <section class="filters">
         <select name="filters" id="filters">
@@ -154,48 +110,4 @@
         </section>
     </section>
     
-    <footer>
-        <div>
-            <h4>ПОЛЕЗНИ ЛИНКОВЕ</h4>
-            
-            <ul>
-                <li><a href="">Всички продукти</a></li>
-                <li><a href="">Сапуни</a></li>
-                <li><a href="">Големи проекти</a></li>
-                <li><a href="">За нас</a></li>
-                <li><a href="">Контакти</a></li>
-            </ul>
-        </div>
-        
-        <div>
-            <h4>АБОНИРАЙ СЕ ЗА НОВИНИ</h4>
-            
-            <form action="">
-                <input type="email" name="" placeholder="Твоят имейл адрес" id="">
-            </form>
-            
-            <a href="">АБОНИРАЙ СЕ СЕГА</a>
-            
-            <div class="law-wrapper">
-                <p><a href="">Политика за поверителност</a></p><span>|</span>
-                <p><a href="">Общи условия</a></p><span>|</span>
-                <p><a href="">Политика за доставка и връщане</a></p>
-            </div>
-        </div>
-        
-        <div>
-            <h4>КОНТАКТИ</h4>
-            
-            <p>+359 87 860 1157</p>
-            
-            <div>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-github"></i>
-            </div>
-        </div>
-        
-    </footer>
-    
-</body>
-</html>
+{% endblock %}
