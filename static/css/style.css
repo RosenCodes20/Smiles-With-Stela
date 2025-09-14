@@ -243,6 +243,8 @@ header + section + section ol {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 400px;
+    height: 400px;
 }
 
 .call-by-phone h2 {
@@ -522,3 +524,4 @@ p > a {
 .logo-href {
     cursor: pointer;
 }
+
