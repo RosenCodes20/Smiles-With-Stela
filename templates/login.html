@@ -8,10 +8,10 @@
             <h2>Вход</h2>
             <label for="username">Имейл</label>
             <input type="email" name="email" id="username" required placeholder="Въведи твоят имейл">
-            
+
             <label for="password">Парола</label>
             <input type="password" name="password" id="password" required placeholder="Въведи твоята парола">
-            
+
             <a href=""><p>Забравена парола?</p></a>
             
             <a href="">ВХОД</a>
@@ -24,7 +24,7 @@
             
             <div class="registration-wrap">
                 <h5>Или се регистрирайте с:</h5>
-                <a href="" class="registraion-link"><p>РЕГИСТРАЦИЯ</p></a>
+                <a href="{% url 'register' %}" class="registraion-link"><p>РЕГИСТРАЦИЯ</p></a>
             </div>
         </form>
     </article>
