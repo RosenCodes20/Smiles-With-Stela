@@ -5,7 +5,7 @@
         <img src="../static/images/image.png" class="big-img" alt="">
         
         <p class="p-relative">ИЗЦЯЛО ДОМАШНО НАПРАВЕНИ САПУНИ И УКРАСИ</p>
-        <a href="">Виж Тук</a>
+        <a href="{% url 'all-products' %}">Виж Тук</a>
     </section>
     
     <section>
@@ -26,19 +26,19 @@
                 <img src="../static/images/IMG_4225.jpg" alt="Сапуни">
                 <h3>Сапуни</h3>
                 <p>Ръчно изработени сапуни с натурални съставки.</p>
-                <a href="">Виж повече</a>
+                <a href="{% url 'soaps' %}">Виж повече</a>
             </div>
             <div class="category-item">
                 <img src="../static/images/IMG_4228.jpg" alt="Украси">
                 <h3>Украси</h3>
                 <p>Красиви декорации за дома и подаръци.</p>
-                <a href="">Виж повече</a>
+                <a href="{% url 'decorations' %}">Виж повече</a>
             </div>
             <div class="category-item">
                 <img src="../static/images/IMG_4229.jpg" alt="Подаръчни комплекти">
                 <h3>Подаръчни комплекти</h3>
                 <p>Специални комплекти за подарък, готови за радост.</p>
-                <a href="">Виж повече</a>
+                <a href="{% url 'gift-sets' %}">Виж повече</a>
             </div>
         </div>
     </section>
