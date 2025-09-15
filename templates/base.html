@@ -12,6 +12,7 @@
     <script src="{% static 'scripts/contact-copy.js' %}"></script>
     <script src="{% static 'scripts/product-details.js' %}"></script>
     <script src="{% static 'scripts/script.js' %}"></script>
+    
 
 </head>
 
@@ -32,33 +33,37 @@
 <body>
     <header>
         <nav>
-            <a href="" class="logo-href">
+            <a href="{% url 'index' %}" class="logo-href">
                 <img src="{%  static  'images/logo.png' %}" alt="">
             </a>
             
             <section class="nav-things">
                 <ul>
-                    <li><a href="">Всички продукти</a></li>
-                    <li><a href="">Сапуни</a></li>
-                    <li><a href="">Украси</a></li>
-                    <li><a href="">Подаръчни комплекти</a></li>
-                    <li><a href="">За нас</a></li>
-                    <li><a href="">Контакти</a></li>
+                    <li><a href="{% url 'all-products' %}">Всички продукти</a></li>
+                    <li><a href="{% url 'soaps' %}">Сапуни</a></li>
+                    <li><a href="{% url 'decorations' %}">Украси</a></li>
+                    <li><a href="{% url 'gift-sets' %}">Подаръчни комплекти</a></li>
+                    <li><a href="{% url 'about-us' %}">За нас</a></li>
+                    <li><a href="{% url 'contact' %}">Контакти</a></li>
                 </ul>
             </section>
             
             <section class="registration">
                 <ul>
-                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a> 
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                    <section class="search-bar" id="search-bar">
+                        <input type="text" placeholder="Search..." />
+                        <button type="button">Search</button>
+                    </section>
+                    <a href="javascript:void(0);" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
                     <li>
-                        <a href="" class="hover-arrows">
+                        <a href="{% url 'login' %}" class="hover-arrows">
                             <span class="arrow left">←</span>
                             ВХОД
                             <span class="arrow right">→</span>
                         </a>
                     </li>
-                    <li class="signup"><a href="">РЕГИСТРАЦИЯ</a></li>
+                    <li class="signup"><a href="{% url 'register' %}">РЕГИСТРАЦИЯ</a></li>
                 </ul>
             </section>
         </nav>
