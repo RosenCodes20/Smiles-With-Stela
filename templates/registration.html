@@ -4,19 +4,12 @@
     
     <article class="login">
         
-        <form action="">
+        <form action="{% url 'register' %}" method="post">
             <h2>Регистрация</h2>
-            <label for="username">Имейл</label>
-            <input type="email" name="email" id="username" required placeholder="Въведи твоят имейл">
+            {{ form }}
+            {% csrf_token %}
             
-            <label for="password">Парола</label>
-            <input type="password" name="password" id="password" required placeholder="Въведи твоята парола">
-            
-            <label for="password-conf">Потвърждение на паролата</label>
-            <input type="password-conf" name="password-conf" id="password-conf" required placeholder="Въведи твоята парола отново">
-            
-            
-            <a href="" class="registration-btn">РЕГИСТРАЦИЯ</a>
+            <button class="registration-btn">РЕГИСТРАЦИЯ</button>
             
             <div class="icons">
                 <a href=""><i class="fa-brands fa-facebook-f"></i></a>
@@ -24,7 +17,7 @@
             </div>
 
             <div class="have-an-account-wrapper">
-                <h5>Имаш акаунт? <a href="">Вход</a></h5>
+                <h5>Имаш акаунт? <a href="{% url 'login' %}">Вход</a></h5>
             </div>
         
         </form>

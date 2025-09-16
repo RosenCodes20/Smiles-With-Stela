@@ -14,12 +14,14 @@ class UserRegisterForm(UserCreationForm):
 
         labels = {
             'email': 'Имейл',
-            'password': 'Парола'
+            'password1': 'Парола',
+            'password2': 'Потвърди паролата'
         }
 
         widgets = {
             'email': forms.TextInput(attrs={'placeholder': 'Въведи твоят имейл'}),
-            'password': forms.TextInput(attrs={'placeholder': 'Въведи твоята парола'})
+            'id_password1': forms.TextInput(attrs={'placeholder': 'Въведи твоята парола'}),
+            'password2': forms.TextInput(attrs={'placeholder': 'Въведи твоята парола отново'})
         }
 
 
