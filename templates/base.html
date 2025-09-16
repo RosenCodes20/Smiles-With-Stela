@@ -84,6 +84,8 @@
                     </section>
                     <a href="javascript:void(0);" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                    
+                    {% if not request.user.is_authenticated %}
                     <li>
                         <a href="{% url 'login' %}" class="hover-arrows">
                             <span class="arrow left">←</span>
@@ -92,6 +94,17 @@
                         </a>
                     </li>
                     <li class="signup"><a href="{% url 'register' %}">РЕГИСТРАЦИЯ</a></li>
+                    
+                    {% else %}
+                        <li>
+                            <a href="{% url 'login' %}" class="hover-arrows">
+                                <span class="arrow left">←</span>
+                                ИЗХОД
+                                <span class="arrow right">→</span>
+                            </a>
+                        </li>
+                        <li class="signup"><a href="{% url 'register' %}">ПРОФИЛ</a></li>
+                    {% endif %}
                 </ul>
             </section>
         </nav>
