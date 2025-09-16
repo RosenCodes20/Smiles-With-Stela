@@ -32,6 +32,7 @@ article > form:not(h2), article > form > div {
     margin-bottom: 2em;
     border: none;
     border-bottom: 1px solid black;
+    padding: 0.5em 0;
 }
 
 div > label {
