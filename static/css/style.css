@@ -513,6 +513,8 @@ footer > div:nth-child(3) > div {
     display: flex;
     margin-top: 2.5em;
     gap: 2em;
+    align-items: center;
+    justify-content: center;
 }
 
 p > a {
