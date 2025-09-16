@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
-from django.contrib.auth.mixins import UserPassesTestMixin
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
+from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
@@ -34,3 +34,7 @@ class Register(UserPassesTestMixin, CreateView):
     model = UserModel
     form_class = UserRegisterForm
     success_url = reverse_lazy('login')
+
+class Logout(LogoutView, LoginRequiredMixin):
+    template_name = 'logout.html'
+    http_method_names = ['post', 'get']

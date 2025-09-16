@@ -1,0 +1,35 @@
+.logout-art {
+    min-height: 50dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-btn {
+    padding: 0.5em;
+    background: #34B614;
+    color: white;
+    border: none;
+    margin-right: 1em;
+    font-size: 1.5em;
+    border-radius: 1em;
+}
+
+.logout-btn i, .no-btn > i {
+    margin-right: 0.2em;
+}
+
+.no-btn {
+    padding: 0.5em;
+    background: #EA3D4B;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    border-radius: 1em;
+}
+
+.logout-btn:hover, .no-btn:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s ease-in-out;
+}
