@@ -28,16 +28,14 @@ article > form:not(h2) {
     flex-direction: column;
 }
 
-#username {
+#username, #pass {
     margin-bottom: 2em;
-}
-
-article > form > div  input {
     border: none;
     border-bottom: 1px solid black;
 }
 
-label {
+
+div > label {
     margin-bottom: 0.3em;
     font-size: 0.7em;
 }
@@ -46,6 +44,7 @@ label {
     font-size: 0.8em;
     text-align: right;
     margin-top: 1em;
+    background: red;
 }
 
 form > a:nth-child(6):hover, .registraion-link:hover {

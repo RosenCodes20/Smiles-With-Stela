@@ -2,6 +2,8 @@
 
 {% block content %}
     
+    
+    
     <article class="login">
         
         <form action="{% url 'login' %}" method="post">
@@ -10,7 +12,7 @@
             {% csrf_token %}
             <a href="" class="forgot-pass"><p>Забравена парола?</p></a>
             
-            <a href="" class="login-btn">ВХОД</a>
+            <button class="login-btn">ВХОД</button>
             
             <h5>Или се регистрирайте с:</h5>
             <div class="icons">

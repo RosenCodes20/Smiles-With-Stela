@@ -23,22 +23,19 @@ article > form:hover {
     transition: ease-in-out 0.4s;
 }
 
-article > form:not(h2) {
+article > form:not(h2), article > form > div {
     display: flex;
     flex-direction: column;
 }
 
-#username {
+#username, #pass {
     margin-bottom: 2em;
-}
-
-article > form > div  input {
     border: none;
     border-bottom: 1px solid black;
 }
 
-label {
-    margin-bottom: 0.3em;
+div > label {
+    margin-bottom: 0.6em;
     font-size: 0.7em;
 }
 
@@ -48,12 +45,12 @@ label {
     margin-top: 1em;
 }
 
-form > a:nth-child(6):hover, .registraion-link:hover {
+.forgot-pass:hover, .registraion-link:hover {
     color: #3E5A97;
     transition: 0.3s ease-in;
 }
 
-form > a:nth-child(6) {
+.forgot-pass {
     text-decoration: none;
     color: black;
 }
@@ -66,11 +63,13 @@ form > a:nth-child(6) {
     background: darkorange;
     color: white;
     border-radius: 1em;
+    border: none;
 }
 
-form > a:nth-child(7):hover {
+.login-btn:hover {
     opacity: 0.6;
     transition: 0.4s ease-out;
+    cursor: pointer;
 }
 
 article > form > h5 {
@@ -84,6 +83,7 @@ article > form > h5 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     gap: 0.5em;
 }
 
