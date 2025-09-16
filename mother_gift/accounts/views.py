@@ -7,14 +7,7 @@ from django.shortcuts import render
 
 UserModel = get_user_model()
 
-class Login(UserPassesTestMixin, LoginView):
-
-    def test_func(self):
-        if self.request.user.is_authenticated:
-            return False
-
-        elif not self.request.user.is_authenticated:
-            return True
+class Login(LoginView):
 
     template_name = "login.html"
 

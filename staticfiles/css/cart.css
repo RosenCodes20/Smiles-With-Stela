@@ -1,0 +1,146 @@
+.cart-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12),
+    0 3px 6px rgba(0,0,0,0.08);
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+td > img {
+    width: 100px;
+}
+
+.cart-table {
+    max-width: 1000px;
+
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.cart-table h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #444;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #f9f9f9;
+    font-weight: 600;
+}
+
+td img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 6px;
+    vertical-align: middle;
+}
+
+td > a {
+    background: #eee;
+    padding: 0.2em;
+    border-radius: 50%;
+    font-size: 1.2em;
+}
+
+td .fa-xmark {
+    color: black;
+    transition: color 0.3s;
+}
+
+td .fa-xmark:hover {
+    color: #c0392b;
+}
+
+.quantity p {
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    display: inline-block;
+    border-radius: 6px;
+    background: #f9f9f9;
+}
+
+.summary {
+    min-width: 500px;
+    background: #EFEFEF;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.delivery {
+    padding: 1em;
+}
+
+.delivery h2 {
+    font-weight: 500;
+    text-align: center;
+}
+
+.subtotal-wrap, .shipping-wrap, .total-wrap {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5em;
+}
+
+.total-wrap {
+    padding: 1em;
+    background: #E8E8E8;
+    font-size: 1.1em;
+}
+
+.shipping-subtotal-wrap {
+    padding: 1em;
+}
+
+.p-total {
+    font-weight: bold;
+}
+
+.articles-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 2em;
+    margin: 3em 0;
+}
+
+.cart-table {
+    margin: 0;
+}
+
+.buy-btn > p {
+    background: #509450;
+    padding: 0.8em;
+    text-align: center;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.buy-btn {
+    text-decoration: none;
+    color: white;
+    margin-top: 1em;
+    border-radius: 0.5em;
+}
+
+.buy-btn:hover {
+    opacity: 0.6;
+    transition: ease-in-out 0.4s;
+}

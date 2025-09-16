@@ -1,0 +1,66 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 50dvh;
+}
+
+main > h2 {
+    margin: 1em 0;
+    font-size: 1.9em;
+}
+
+main > p, main > h2 {
+    font-weight: 450;
+}
+
+main > p:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+
+div > img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.images-wrap {
+    margin-top: 1em;
+    display: flex;
+    min-height: 50dvh;
+    align-items: center;
+    min-width: 50%;
+    justify-content: space-around;
+    text-align: center;
+}
+
+div > p {
+    margin-top: 0.5em;
+}
+
+.mom-img-wrap > a {
+    background: #146BFF;
+    padding: 0.2em;
+    color: white;
+    border-radius: 50%;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.bottom-text {
+    font-size: 0.8em;
+    color: #83A6C7;
+    margin-bottom: 0.8em;
+}
+
+.my-img-wrap > a {
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    color: white;
+    padding: 0.15em;
+    border-radius: 50%;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.6;
+}

@@ -1,0 +1,35 @@
+.registration-btn {
+    text-align: center;
+    margin-top: 1.5em;
+    text-decoration: none;
+    padding: 0.6em 0.5em;
+    background: darkorange;
+    color: white;
+    border-radius: 1em;
+}
+
+#password {
+    margin-bottom: 2em;
+}
+
+.registration-btn:hover {
+    opacity: 0.6;
+    transition: ease-in-out 0.4s;
+}
+
+.have-an-account-wrapper > h5 {
+    text-align: center;
+    margin-top: 1.5em;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.have-an-account-wrapper > h5 > a {
+    text-decoration: none;
+    color: #3E5A97;
+}
+
+.have-an-account-wrapper > h5 > a:hover {
+    border-bottom: 0.7px solid #3E5A97;
+    transition: ease-in-out 0.6s;
+}

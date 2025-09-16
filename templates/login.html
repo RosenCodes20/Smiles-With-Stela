@@ -4,17 +4,13 @@
     
     <article class="login">
         
-        <form action="">
+        <form action="{% url 'login' %}" method="post">
             <h2>Вход</h2>
-            <label for="username">Имейл</label>
-            <input type="email" name="email" id="username" required placeholder="Въведи твоят имейл">
-
-            <label for="password">Парола</label>
-            <input type="password" name="password" id="password" required placeholder="Въведи твоята парола">
-
-            <a href=""><p>Забравена парола?</p></a>
+            {{ form }}
+            {% csrf_token %}
+            <a href="" class="forgot-pass"><p>Забравена парола?</p></a>
             
-            <a href="">ВХОД</a>
+            <a href="" class="login-btn">ВХОД</a>
             
             <h5>Или се регистрирайте с:</h5>
             <div class="icons">
