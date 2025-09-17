@@ -3,7 +3,7 @@
     
     <article class="login">
         
-        <form action="{% url 'login' %}" method="post">
+        <form action="{% url 'edit-profile' profile.pk %}" method="post">
             <h2>Промяна на профила</h2>
             {{ form }}
             {% csrf_token %}
