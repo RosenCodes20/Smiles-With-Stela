@@ -42,3 +42,9 @@ class EditProfileForm(forms.ModelForm):
             'last_name': 'Фамилия',
             'profile_picture': 'Профилна снимка'
         }
+
+        widgets = {
+            'first_name': forms.TextInput(attrs={'placeholder': 'Моля въведете първо име', 'id': 'username'}),
+            'last_name': forms.TextInput(attrs={'placeholder': 'Моля въведете фамилия', 'id': 'username'}),
+            'profile_picture': forms.TextInput(attrs={'placeholder': 'Моля въведете URL за профилна снимка', 'id': 'username'})
+        }
