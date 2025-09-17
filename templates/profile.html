@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+    <header class="profile-header-gift">
+    <h1>Моят профил</h1>
+  </header>
+
+  <section class="profile-header">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvpUGO1rrA9pDJw9s-2dEpcr2qCv_yGZR5EA&s" alt="Profile picture" class="profile-pic">
+    <div class="things-div">
+        <h2>Здравейте, Стела!</h2>
+        <p>Добре дошли обратно 💜</p>
+    </div>
+  </section>
+
+  <section class="profile-info">
+    <h3>Моята информация</h3>
+    <ul>
+      <li><strong>Имейл:</strong> {{ request.user.email }}</li>
+    </ul>
+    <button>Редактирай</button>
+  </section>
+
+  <section class="profile-orders">
+    <h3>Моите поръчки</h3>
+    <table>
+      <tr>
+        <th>Номер</th>
+        <th>Продукт</th>
+        <th>Дата</th>
+        <th>Статус</th>
+      </tr>
+      <tr>
+        <td>#1001</td>
+        <td>Сапун Лавандула</td>
+        <td>12.09.2025</td>
+        <td>Доставено</td>
+      </tr>
+      <tr>
+        <td>#1002</td>
+        <td>Декоративна свещ</td>
+        <td>15.09.2025</td>
+        <td>В процес</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="profile-settings">
+    <h3>Настройки</h3>
+    <ul>
+      <li><a href="#">Изход</a></li>
+    </ul>
+  </section>
+{% endblock %}

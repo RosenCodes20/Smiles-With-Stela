@@ -38,3 +38,8 @@ class Register(UserPassesTestMixin, CreateView):
 class Logout(LogoutView, LoginRequiredMixin):
     template_name = 'logout.html'
     http_method_names = ['post', 'get']
+
+
+def profile_details(request, pk):
+
+    return render(request, 'profile.html')

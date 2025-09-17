@@ -103,7 +103,7 @@
                                 <span class="arrow right">→</span>
                             </a>
                         </li>
-                        <li class="signup"><a href="{% url 'register' %}">ПРОФИЛ</a></li>
+                        <li class="signup"><a href="{% url 'profile-details' request.user.pk %}">ПРОФИЛ</a></li>
                     {% endif %}
                 </ul>
             </section>

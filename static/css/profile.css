@@ -1,0 +1,82 @@
+.profile-header-gift {
+  background: #f48fb1;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-header {
+  text-align: center;
+  padding: 30px;
+  background: #fce4ec;
+  border-radius: 12px;
+  margin: 20px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #f48fb1;
+  margin-bottom: 15px;
+}
+
+.profile-info, .profile-orders, .profile-settings {
+  background: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.profile-info button {
+  background: #f48fb1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.profile-info button:hover {
+  background: #ec407a;
+}
+
+.profile-orders table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-orders th, .profile-orders td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.profile-settings ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-settings li {
+  margin: 10px 0;
+}
+
+.profile-settings a {
+  text-decoration: none;
+  color: #f48fb1;
+  font-weight: bold;
+}
+
+.profile-settings a:hover {
+  text-decoration: underline;
+}
+
+.things-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
