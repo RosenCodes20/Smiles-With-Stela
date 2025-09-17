@@ -23,11 +23,6 @@ class Profile(models.Model):
         blank=True
     )
 
-    date_of_birth = models.DateField(
-        null=True,
-        blank=True
-    )
-
     profile_picture = models.URLField(
         null=True,
         blank=True
@@ -38,6 +33,6 @@ class Profile(models.Model):
             return f"{self.first_name} {self.last_name}"
 
         elif not self.first_name and not self.last_name:
-            return "Anonymous User"
+            return "Aнонимен потребител"
 
         return self.first_name if self.first_name else self.last_name

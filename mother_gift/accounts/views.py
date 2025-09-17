@@ -1,9 +1,9 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DetailView
 
 from mother_gift.accounts.forms import UserRegisterForm
 
@@ -40,6 +40,11 @@ class Logout(LogoutView, LoginRequiredMixin):
     http_method_names = ['post', 'get']
 
 
-def profile_details(request, pk):
+class ProfileDetails(LoginRequiredMixin, UserPassesTestMixin, DetailView):
+    model = UserModel
+    template_name = "profile.html"
+    context_object_name = "profile"
 
-    return render(request, 'profile.html')
+    def test_func(self):
+        user = get_object_or_404(UserModel, pk=self.kwargs['pk'])
+        return self.request.user.profile == user.profile
