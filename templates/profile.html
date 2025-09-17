@@ -17,7 +17,7 @@
     <ul>
       <li><strong>Имейл:</strong> {{ request.user.email }}</li>
     </ul>
-    <button><a href="{% url 'edit-profile' request.user.pk %}">Редактирай</a></button>
+    <button><a href="{% url 'edit-profile' request.user.pk %}" class="edit-profile-btn">Редактирай</a></button>
   </section>
 
   <section class="profile-orders">

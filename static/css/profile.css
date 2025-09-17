@@ -80,3 +80,8 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.edit-profile-btn {
+  text-decoration: none;
+  color: white;
+}
