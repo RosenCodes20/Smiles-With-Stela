@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+    <article class="login">
+        
+        <form action="{% url 'login' %}" method="post">
+            <h2>Промяна на профила</h2>
+            {{ form }}
+            {% csrf_token %}
+            
+            <button class="login-btn">Променете профила</button>
+            
+        </form>
+    </article>
+    
+{% endblock %}

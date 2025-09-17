@@ -48,3 +48,8 @@ class ProfileDetails(LoginRequiredMixin, UserPassesTestMixin, DetailView):
     def test_func(self):
         user = get_object_or_404(UserModel, pk=self.kwargs['pk'])
         return self.request.user.profile == user.profile
+
+
+def edit_profile(request, pk):
+
+    return render(request, 'edit-profile.html')
