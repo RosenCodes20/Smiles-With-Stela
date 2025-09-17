@@ -3,9 +3,10 @@ from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, DetailView
+from django.views.generic import CreateView, DetailView, UpdateView
 
-from mother_gift.accounts.forms import UserRegisterForm
+from mother_gift.accounts.forms import UserRegisterForm, EditProfileForm
+from mother_gift.accounts.models import Profile
 
 # Create your views here.
 
@@ -50,6 +51,21 @@ class ProfileDetails(LoginRequiredMixin, UserPassesTestMixin, DetailView):
         return self.request.user.profile == user.profile
 
 
-def edit_profile(request, pk):
+class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Profile
+    template_name = "edit-profile.html"
+    form_class = EditProfileForm
+    context_object_name = "profile"
 
-    return render(request, 'edit-profile.html')
+    def test_func(self):
+        user = get_object_or_404(UserModel, pk=self.kwargs['pk'])
+        return self.request.user.profile == user.profile
+
+    def get_success_url(self):
+
+        return reverse_lazy(
+            "profile-details",
+            kwargs={
+                "pk": self.object.user.pk
+            }
+        )

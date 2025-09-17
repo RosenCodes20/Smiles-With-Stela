@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
-from mother_gift.accounts.models import User
+from mother_gift.accounts.models import User, Profile
 
 UserModel = get_user_model()
 
@@ -30,3 +30,9 @@ class AppUserChangeForm(UserChangeForm):
     class Meta(UserChangeForm.Meta):
         model = UserModel
 
+
+class EditProfileForm(forms.ModelForm):
+
+    class Meta:
+        model = Profile
+        fields = ('first_name', 'last_name', 'profile_picture')
