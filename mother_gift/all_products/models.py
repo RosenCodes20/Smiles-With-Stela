@@ -1,10 +1,11 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 
 from mother_gift.all_products.choices import ProductTypeChoices
 
 
 # Create your models here.
-
+UserModel = get_user_model()
 class AllProducts(models.Model):
 
     image = models.ImageField(
@@ -26,4 +27,9 @@ class AllProducts(models.Model):
 
     is_available = models.BooleanField(
         default=True
+    )
+
+    user = models.ForeignKey(
+        to=UserModel,
+        on_delete=models.CASCADE
     )
