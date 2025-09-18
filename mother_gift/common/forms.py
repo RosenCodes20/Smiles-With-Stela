@@ -7,5 +7,6 @@ class SearchForm(forms.Form):
         required=False,
         widget=forms.TextInput(
             attrs={'placeholder': 'Моля въведете продукт за търсене..'}
-        )
+        ),
+        label=''
     )

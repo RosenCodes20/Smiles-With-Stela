@@ -12,6 +12,20 @@ def index(request):
     queryset = AllProducts.objects.all()
 
     if request.user.is_authenticated:
-        queryset = AllProducts.objects.filter()
+        queryset = AllProducts.objects.filter(user=request.user)
 
-    return render(request, "index.html",)
+    else:
+        queryset = []
+
+    if request.user.is_authenticated:
+        if "all_products" in request.GET:
+            product = request.GET.get('product')
+            queryset = queryset.filter(product_type__icontains=product)
+
+
+    context = {
+        'player_search_form': player_search_form,
+        'queryset': queryset
+    }
+
+    return render(request, "index.html", context)

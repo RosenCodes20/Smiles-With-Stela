@@ -1,5 +1,6 @@
+{% load search_tags %}
 {% load static %}
-    
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,6 +57,11 @@
         border-radius: 3px;
         cursor: pointer;
     }
+    
+    .search-bar form {
+        display: flex;
+        gap: 1em;
+    }
 </style>
 
 <body>
@@ -75,12 +81,16 @@
                     <li><a href="{% url 'contact' %}">Контакти</a></li>
                 </ul>
             </section>
+        
+            {% get_search_form as form %}
             
             <section class="registration">
                 <ul>
                     <section class="search-bar" id="search-bar">
-                        <input type="text" placeholder="Search..." />
-                        <button type="button">Search</button>
+                        <form method="get">
+                            {{ form }}
+                            <button type="submit">Search</button>
+                            </form>
                     </section>
                     <a href="javascript:void(0);" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
