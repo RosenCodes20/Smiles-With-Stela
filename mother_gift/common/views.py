@@ -1,7 +1,8 @@
+from django.core.mail import send_mail
 from django.shortcuts import render
 
 from mother_gift.all_products.models import AllProducts
-from mother_gift.common.forms import SearchForm
+from mother_gift.common.forms import SearchForm, SendInfoForm
 
 
 # Create your views here.
@@ -22,10 +23,25 @@ def index(request):
             product = request.GET.get('product')
             queryset = queryset.filter(product_type__icontains=product)
 
+    if request.method == "GET":
+        message_form = SendInfoForm()
+
+    else:
+        message_form = SendInfoForm(request.POST)
+
+        if message_form.is_valid():
+            send_mail(
+                'Въпрос до нас',
+                message_form.message,
+                "rrirrirri08@gmail.com",
+                [message_form.email],
+                fail_silently=False
+            )
 
     context = {
         'player_search_form': player_search_form,
-        'queryset': queryset
+        'queryset': queryset,
+        'message_form': message_form
     }
 
     return render(request, "index.html", context)
