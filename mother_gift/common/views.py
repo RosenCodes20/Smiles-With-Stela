@@ -34,8 +34,8 @@ def index(request):
             send_mail(
                 f'Съобщение до мен от: {message_form.cleaned_data["name"]}',
                 message_form.cleaned_data['message'],
-                "rrirrirri08@gmail.com",
-                [message_form.cleaned_data['email']],
+                message_form.cleaned_data['email'],
+                ["rrirrirri08@gmail.com"],
                 fail_silently=False
             )
 
