@@ -30,11 +30,12 @@ def index(request):
         message_form = SendInfoForm(request.POST)
 
         if message_form.is_valid():
+
             send_mail(
-                'Въпрос до нас',
-                message_form.message,
+                f'Съобщение до мен от: {message_form.cleaned_data["name"]}',
+                message_form.cleaned_data['message'],
                 "rrirrirri08@gmail.com",
-                [message_form.email],
+                [message_form.cleaned_data['email']],
                 fail_silently=False
             )
 

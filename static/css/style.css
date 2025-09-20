@@ -280,22 +280,24 @@ header + section + section ol {
     gap: 15px;
 }
 
-.contact-form label {
+.contact-form div > label {
     font-weight: bold;
     color: #555;
+    font-size: 0.9em;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form div > input,
+.contact-form div > textarea {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
     transition: border 0.3s;
+    width: 100%;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form div > input:focus,
+.contact-form div > textarea:focus {
     border-color: #f48fb1;
     outline: none;
     box-shadow: 0 0 5px rgba(244, 143, 177, 0.5);

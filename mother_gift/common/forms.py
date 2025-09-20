@@ -16,16 +16,18 @@ class SendInfoForm(forms.Form):
     name = forms.CharField(
         max_length=300,
         required=True,
-        label='Име:'
+        label='Име:',
+        widget=forms.TextInput(attrs={'id': 'name'})
     )
 
     email = forms.EmailField(
         max_length=500,
         required=True,
-        label='Имейл:'
+        label='Имейл:',
+        widget=forms.EmailInput(attrs={'id': 'email'})
     )
 
     message = forms.CharField(
-        widget=forms.Textarea(attrs={}),
+        widget=forms.Textarea(attrs={'id': 'message'}),
         label='Съобщение'
     )
