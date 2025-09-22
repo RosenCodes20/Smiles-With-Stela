@@ -47,7 +47,7 @@ def index(request):
                 "Абониране за новини",
                 'Ти успешно се абонира за нашите новини! Очаквай имейл при появата на нов продукт!',
                 'rrirrirri08@gmail.com',
-                [request.user.get_username()],
+                ['rrirrirri08@gmail.com'],
                 fail_silently=False
             )
 
@@ -57,7 +57,8 @@ def index(request):
     context = {
         'player_search_form': player_search_form,
         'queryset': queryset,
-        'message_form': message_form
+        'message_form': message_form,
+        'sign_for_news_form': sign_for_news_form
     }
 
     return render(request, "index.html", context)

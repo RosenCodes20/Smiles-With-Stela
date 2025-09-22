@@ -38,6 +38,7 @@ class SubscribeForNewsForm(forms.Form):
         max_length=500,
         required=True,
         widget=forms.EmailInput(
-            attrs={'placeholder': 'Твоят имейл адрес'}
-        )
+            attrs={'placeholder': 'Твоят имейл адрес', 'id': 'noidhere'}
+        ),
+        label=''
     )

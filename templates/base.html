@@ -147,15 +147,15 @@
             </ul>
         </div>
         
-        {% get_subscribe_form as subscribe_form %}
+        {% get_subscribe_form as sign_for_news_form %}
     
         <div>
             <h4>АБОНИРАЙ СЕ ЗА НОВИНИ</h4>
             
             <form action="" method="post" class="footer-form">
-                {{ subscribe_form }}
+                {{ sign_for_news_form }}
+                {% csrf_token %}
                 <button type="submit">АБОНИРАЙ СЕ СЕГА</button>
-                
             </form>
             
             <div class="law-wrapper">

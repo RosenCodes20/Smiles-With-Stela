@@ -362,7 +362,7 @@ footer > div:nth-child(2) {
     flex-direction: column;
 }
 
-footer > div:nth-child(2) > form > input {
+footer > div:nth-child(2) > form > div > input {
     text-align: center;
     min-width: 400px;
     padding: 0.5em;
