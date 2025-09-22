@@ -383,11 +383,17 @@ footer > div:nth-child(2) > form > button {
     text-decoration: none;
     border: 1px solid black;
     color: black;
-    padding: 1em 1.5em;
+    padding: 1em 0.1em;
     border-radius: 1em;
     background: none;
     width: 70%;
     margin: 0 auto;
+}
+
+footer > div:nth-child(2) > form > button:hover {
+    opacity: 0.6;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 footer > div:nth-child(3) {
