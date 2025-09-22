@@ -31,3 +31,13 @@ class SendInfoForm(forms.Form):
         widget=forms.Textarea(attrs={'id': 'message'}),
         label='Съобщение'
     )
+
+class SubscribeForNewsForm(forms.Form):
+
+    email = forms.EmailField(
+        max_length=500,
+        required=True,
+        widget=forms.EmailInput(
+            attrs={'placeholder': 'Твоят имейл адрес'}
+        )
+    )

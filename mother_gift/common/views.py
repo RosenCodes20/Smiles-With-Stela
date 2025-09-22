@@ -1,8 +1,8 @@
 from django.core.mail import send_mail
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from mother_gift.all_products.models import AllProducts
-from mother_gift.common.forms import SearchForm, SendInfoForm
+from mother_gift.common.forms import SearchForm, SendInfoForm, SubscribeForNewsForm
 
 
 # Create your views here.
@@ -38,6 +38,21 @@ def index(request):
                 ["rrirrirri08@gmail.com"],
                 fail_silently=False
             )
+
+    sign_for_news_form = SubscribeForNewsForm(request.POST or None)
+
+    if sign_for_news_form.is_valid():
+        if request.user.is_authenticated:
+            send_mail(
+                "Абониране за новини",
+                'Ти успешно се абонира за нашите новини! Очаквай имейл при появата на нов продукт!',
+                'rrirrirri08@gmail.com',
+                [request.user.get_username()],
+                fail_silently=False
+            )
+
+        else:
+            return redirect('register')
 
     context = {
         'player_search_form': player_search_form,

@@ -1,4 +1,5 @@
 {% load search_tags %}
+{% load get_subscribe_form %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -146,12 +147,14 @@
             </ul>
         </div>
         
+        {% get_subscribe_form as subscribe_form %}
+    
         <div>
             <h4>АБОНИРАЙ СЕ ЗА НОВИНИ</h4>
             
-            <form action="" class="footer-form">
-                <input type="email" name="" placeholder="Твоят имейл адрес" id="">
-                <button>АБОНИРАЙ СЕ СЕГА</button>
+            <form action="" method="post" class="footer-form">
+                {{ subscribe_form }}
+                <button type="submit">АБОНИРАЙ СЕ СЕГА</button>
                 
             </form>
             
