@@ -39,6 +39,16 @@ def index(request):
                 fail_silently=False
             )
 
+    context = {
+        'player_search_form': player_search_form,
+        'queryset': queryset,
+        'message_form': message_form,
+    }
+
+    return render(request, "index.html", context)
+
+
+def subscribe_for_news(request):
     sign_for_news_form = SubscribeForNewsForm(request.POST or None)
 
     if sign_for_news_form.is_valid():
@@ -55,10 +65,7 @@ def index(request):
             return redirect('register')
 
     context = {
-        'player_search_form': player_search_form,
-        'queryset': queryset,
-        'message_form': message_form,
-        'sign_for_news_form': sign_for_news_form
+        'sign_for_news_form': sign_for_news_form,
     }
 
-    return render(request, "index.html", context)
+    return redirect(request.META['HTTP_REFERER'])

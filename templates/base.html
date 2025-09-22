@@ -152,7 +152,7 @@
         <div>
             <h4>АБОНИРАЙ СЕ ЗА НОВИНИ</h4>
             
-            <form action="" method="post" class="footer-form">
+            <form action="{% url 'subscribe-for-news' %}" method="post" class="footer-form">
                 {{ sign_for_news_form }}
                 {% csrf_token %}
                 <button type="submit">АБОНИРАЙ СЕ СЕГА</button>
