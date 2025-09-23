@@ -54,10 +54,10 @@ def subscribe_for_news(request):
     if sign_for_news_form.is_valid():
         if request.user.is_authenticated:
             send_mail(
-                "Абониране за новини",
+                f"Абониране за новини от: {sign_for_news_form.cleaned_data['email']}",
                 'Ти успешно се абонира за нашите новини! Очаквай имейл при появата на нов продукт!',
                 'rrirrirri08@gmail.com',
-                ['rrirrirri08@gmail.com'],
+                [sign_for_news_form.cleaned_data['email']],
                 fail_silently=False
             )
 
