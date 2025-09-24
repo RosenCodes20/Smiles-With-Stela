@@ -8,7 +8,7 @@ from mother_gift.all_products.choices import ProductTypeChoices
 UserModel = get_user_model()
 class AllProducts(models.Model):
 
-    image = models.ImageField(
+    product_image = models.ImageField(
         upload_to="media/"
     )
 

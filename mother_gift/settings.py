@@ -154,3 +154,7 @@ EMAIL_USE_SSL = True
 EMAIL_HOST_USER = "rrirrirri08@gmail.com"
 EMAIL_HOST_PASSWORD = os.getenv('GOOGLE_PASSOWRD', config('GOOGLE_PASSOWRD'))
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")

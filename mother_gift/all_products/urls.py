@@ -4,5 +4,6 @@ from mother_gift.all_products import views
 
 urlpatterns = [
     path('', views.all_products, name='all-products'),
-    path('product-details/<int:pk>/', views.product_details, name='product-details')
+    path('product-details/<int:pk>/', views.product_details, name='product-details'),
+    path('add-product/', views.create_products, name='add-product')
 ]

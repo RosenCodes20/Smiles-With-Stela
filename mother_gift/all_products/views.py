@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from mother_gift.all_products.forms import AddProductForm
+
 
 # Create your views here.
 
@@ -12,4 +15,19 @@ def product_details(request, pk):
 
 
 def create_products(request): # THIS PAGE WILL BE ONLY VISIBLE BY ME!!!
-    pass
+    form = AddProductForm(request.POST or None, request.FILES or None)
+
+    if form.is_valid():
+        product = form.save(commit=False)
+
+        product.user = request.user
+
+        product.save()
+
+        return redirect('all-products')
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'add_product.html', context)
