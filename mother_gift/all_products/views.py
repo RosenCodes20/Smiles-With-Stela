@@ -9,3 +9,7 @@ def all_products(request):
 def product_details(request, pk):
 
     return render(request, 'product-details.html')
+
+
+def create_products(request): # THIS PAGE WILL BE ONLY VISIBLE BY ME!!!
+    pass
