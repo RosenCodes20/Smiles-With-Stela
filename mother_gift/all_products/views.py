@@ -2,13 +2,20 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from mother_gift.all_products.forms import AddProductForm
+from mother_gift.all_products.models import AllProducts
 
 
 # Create your views here.
 
 def all_products(request):
 
-    return render(request, 'all-products.html')
+    all_products_queryset = AllProducts.objects.all()
+
+    context = {
+        'all_products_queryset': all_products_queryset,
+    }
+
+    return render(request, 'all-products.html', context)
 
 def product_details(request, pk):
 
