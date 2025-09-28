@@ -2,6 +2,8 @@
 
 {% block content %}
     
+    {% for product in all_products_queryset %}
+    
     <section class="filters">
         <select name="filters" id="filters">
             <option value="По подразбиране">Подреждане по подразбиране</option>
@@ -13,101 +15,18 @@
     </section>
     
     <section class="sell-items">
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
         
         <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
+            <img src="{{ product.product_image.url }}" alt="">
             <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
-        
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
-        
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
-        
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
-        
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
-        
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
-        
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
+                <h2>{{ product.product_description }}</h2>
+                <p><a href="">{{ product.product_type }}</a></p>
+                <p>{{ product.product_price }}лв/{% widthratio product.product_price 1.95583 1 %}€</p>
                 <p>Курс: 1 EUR = 1.95583 BGN</p>
                 <p>В наличност ✅</p>
                 <a href="">Виж повече</a>
             </div>
         </section>
     </section>
-    
+    {% endfor %}
 {% endblock %}
