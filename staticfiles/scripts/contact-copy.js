@@ -16,7 +16,7 @@ function copyDiscordUsername() {
 }
 
 function copyGmail() {
-    let gmail = 'rrirrirri08@gmail.com';
+    let gmail = 'sti_857@abv.bg';
     
     let currentInput = document.createElement('input');
     currentInput.value = gmail;

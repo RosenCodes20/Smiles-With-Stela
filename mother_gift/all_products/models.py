@@ -9,7 +9,7 @@ UserModel = get_user_model()
 class AllProducts(models.Model):
 
     product_image = models.ImageField(
-        upload_to="media/"
+        upload_to=""
     )
 
     product_description = models.CharField(

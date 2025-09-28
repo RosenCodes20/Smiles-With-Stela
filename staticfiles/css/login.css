@@ -23,7 +23,7 @@ article > form:hover {
     transition: ease-in-out 0.4s;
 }
 
-article > form:not(h2) {
+article > form:not(h2), article > form > div {
     display: flex;
     flex-direction: column;
 }
@@ -32,11 +32,11 @@ article > form:not(h2) {
     margin-bottom: 2em;
     border: none;
     border-bottom: 1px solid black;
+    padding: 0.5em 0;
 }
 
-
 div > label {
-    margin-bottom: 0.3em;
+    margin-bottom: 0.6em;
     font-size: 0.7em;
 }
 
@@ -44,15 +44,14 @@ div > label {
     font-size: 0.8em;
     text-align: right;
     margin-top: 1em;
-    background: red;
 }
 
-form > a:nth-child(6):hover, .registraion-link:hover {
+.forgot-pass:hover, .registraion-link:hover {
     color: #3E5A97;
     transition: 0.3s ease-in;
 }
 
-form > a:nth-child(6) {
+.forgot-pass {
     text-decoration: none;
     color: black;
 }
@@ -65,11 +64,13 @@ form > a:nth-child(6) {
     background: darkorange;
     color: white;
     border-radius: 1em;
+    border: none;
 }
 
-form > a:nth-child(7):hover {
+.login-btn:hover {
     opacity: 0.6;
     transition: 0.4s ease-out;
+    cursor: pointer;
 }
 
 article > form > h5 {
@@ -83,6 +84,7 @@ article > form > h5 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     gap: 0.5em;
 }
 
@@ -139,4 +141,11 @@ article > form > input {
     height: 2.5em;
     line-height: 2.5em; 
 }
-  
+
+.errorlist > li {
+    display: block;
+    font-size: 0.8em;
+    margin-bottom: 1.5em;
+    max-width: 600px;
+    text-align: center;
+}

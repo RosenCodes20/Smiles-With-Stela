@@ -280,22 +280,24 @@ header + section + section ol {
     gap: 15px;
 }
 
-.contact-form label {
+.contact-form div > label {
     font-weight: bold;
     color: #555;
+    font-size: 0.9em;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form div > input,
+.contact-form div > textarea {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
     transition: border 0.3s;
+    width: 100%;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form div > input:focus,
+.contact-form div > textarea:focus {
     border-color: #f48fb1;
     outline: none;
     box-shadow: 0 0 5px rgba(244, 143, 177, 0.5);
@@ -360,7 +362,7 @@ footer > div:nth-child(2) {
     flex-direction: column;
 }
 
-footer > div:nth-child(2) > form > input {
+footer > div:nth-child(2) > form > div > input {
     text-align: center;
     min-width: 400px;
     padding: 0.5em;
@@ -368,17 +370,30 @@ footer > div:nth-child(2) > form > input {
     margin-bottom: 2em;
 }
 
+footer > div:nth-child(2) > form {
+    display: flex;
+    flex-direction: column;
+}
+
 footer > div:nth-child(2) > h4 {
     margin-bottom: 2em;
 }
 
-footer > div:nth-child(2) > a {
+footer > div:nth-child(2) > form > button {
     text-decoration: none;
     border: 1px solid black;
     color: black;
-    padding: 0.5em 1em;
-    margin-top: 1em;
+    padding: 1em 0.1em;
     border-radius: 1em;
+    background: none;
+    width: 70%;
+    margin: 0 auto;
+}
+
+footer > div:nth-child(2) > form > button:hover {
+    opacity: 0.6;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 footer > div:nth-child(3) {
@@ -513,6 +528,8 @@ footer > div:nth-child(3) > div {
     display: flex;
     margin-top: 2.5em;
     gap: 2em;
+    align-items: center;
+    justify-content: center;
 }
 
 p > a {
