@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
-
+{% load calculate_euro %}
 {% block content %}
+    
+    {% for product in gift_sets_queryset %}
     
     <section class="filters">
         <select name="filters" id="filters">
@@ -13,101 +15,30 @@
     </section>
     
     <section class="sell-items">
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
         
         <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
+            <img src="{{ product.product_image.url }}" alt="{{ product.product_description }}">
             <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
+                <h2>{{ product.product_description }}</h2>
+            
+                {% if product.product_type == 'Подаръчни комплекти' %}    
+                    <p><a href="{% url 'gift-sets' %}">{{ product.product_type }}</a></p>
+                    
+                {% endif %}
+                <p>{{ product.product_price }}лв/{{ product.product_price|to_eur }}€</p>
                 <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
-        
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
-        
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
-        
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
-        
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
-        
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
-            </div>
-        </section>
-        
-        <section class="item-for-sale">
-            <img src="../static/images/IMG_4230.jpg" alt="">
-            <div class="text-items">
-                <h2>Украса във формата на книга</h2>
-                <p><a href="">Украси</a></p>
-                <p>25.99лв/13.29€</p>
-                <p>Курс: 1 EUR = 1.95583 BGN</p>
-                <p>В наличност ✅</p>
-                <a href="">Виж повече</a>
+                
+                {% if product.is_available %}
+                
+                    <p>В наличност ✅</p>
+                
+                {% else %}
+                    <p>Не е в наличност ❎</p>
+                
+                {% endif %}
+                <a href="{% url 'product-details' product.pk %}">Виж повече</a>
             </div>
         </section>
     </section>
-
+    {% endfor %}
 {% endblock %}
