@@ -2,8 +2,6 @@
 {% load calculate_euro %}
 {% block content %}
     
-    {% for product in all_products_queryset %}
-    
     <section class="filters">
         <select name="filters" id="filters">
             <option value="По подразбиране">Подреждане по подразбиране</option>
@@ -13,9 +11,9 @@
             <option value="Първо най-евтините">Първо най-евтините</option>
         </select>
     </section>
-    
     <section class="sell-items">
-        
+            {% for product in all_products_queryset %}
+
         <section class="item-for-sale">
             <img src="{{ product.product_image.url }}" alt="{{ product.product_description }}">
             <div class="text-items">
@@ -44,6 +42,7 @@
                 <a href="{% url 'product-details' product.pk %}">Виж повече</a>
             </div>
         </section>
-    </section>
     {% endfor %}
+    
+    </section>
 {% endblock %}
