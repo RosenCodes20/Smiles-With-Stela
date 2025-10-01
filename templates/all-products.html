@@ -26,6 +26,9 @@
                 {% elif product.product_type == 'Украси' %}    
                     <p><a href="{% url 'decorations' %}">{{ product.product_type }}</a></p>
                     
+                {% elif product.product_type == 'Подаръчни комплекти' %}    
+                    <p><a href="{% url 'gift-sets' %}">{{ product.product_type }}</a></p>
+                    
                 {% endif %}
                 <p>{{ product.product_price }}лв/{{ product.product_price|to_eur }}€</p>
                 <p>Курс: 1 EUR = 1.95583 BGN</p>
