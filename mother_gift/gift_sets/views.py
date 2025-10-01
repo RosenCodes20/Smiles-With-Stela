@@ -13,4 +13,4 @@ def gift_sets(request):
         'gift_sets_queryset': gift_sets_queryset
     }
 
-    return render(request, 'gift_sets.html', gift_sets_queryset)
+    return render(request, 'gift_sets.html', context)
