@@ -17,7 +17,7 @@
     <section class="sell-items">
         
         <section class="item-for-sale">
-            <img src="/media/messi.png" alt="{{ product.product_description }}">
+            <img src="{{ product.product_image.url }}" alt="{{ product.product_description }}">
             <div class="text-items">
                 <h2>{{ product.product_description }}</h2>
                 <p><a href="">{{ product.product_type }}</a></p>
@@ -29,7 +29,7 @@
                     <p>В наличност ✅</p>
                 
                 {% else %}
-                    <p>Не е в наличност</p>
+                    <p>Не е в наличност ❎</p>
                 
                 {% endif %}
                 <a href="{% url 'product-details' product.pk %}">Виж повече</a>
