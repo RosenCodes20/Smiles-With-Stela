@@ -39,10 +39,13 @@ def index(request):
                 fail_silently=False
             )
 
+    decorated_book = AllProducts.objects.filter(product_description='Декорирана книга').first()
+
     context = {
         'player_search_form': player_search_form,
         'queryset': queryset,
         'message_form': message_form,
+        'decorated_book': decorated_book
     }
 
     return render(request, "index.html", context)
