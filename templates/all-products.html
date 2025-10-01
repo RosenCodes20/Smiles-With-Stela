@@ -20,7 +20,10 @@
             <img src="{{ product.product_image.url }}" alt="{{ product.product_description }}">
             <div class="text-items">
                 <h2>{{ product.product_description }}</h2>
-                <p><a href="">{{ product.product_type }}</a></p>
+                {% if product.product_type == 'Сапуни' %}
+                    <p><a href="{% url 'soaps' %}">{{ product.product_type }}</a></p>
+            
+                {% endif %}
                 <p>{{ product.product_price }}лв/{{ product.product_price|to_eur }}€</p>
                 <p>Курс: 1 EUR = 1.95583 BGN</p>
                 
