@@ -19,7 +19,13 @@ def all_products(request):
 
 def product_details(request, pk):
 
-    return render(request, 'product-details.html')
+    product = AllProducts.objects.get(id=pk)
+
+    context = {
+        'product': product
+    }
+
+    return render(request, 'product-details.html', context)
 
 
 @login_required
