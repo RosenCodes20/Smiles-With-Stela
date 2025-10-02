@@ -12,7 +12,7 @@ class AllProducts(models.Model):
         upload_to=""
     )
 
-    second_product_image = models.ImageField = models.ImageField(
+    second_product_image = models.ImageField(
         upload_to='',
         null=True,
         blank=True
