@@ -8,7 +8,7 @@
     {% if not profile.profile.profile_picture %}
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvpUGO1rrA9pDJw9s-2dEpcr2qCv_yGZR5EA&s" alt="Profile picture" class="profile-pic">
     {% else %}
-    <img src="{{ profile.profile.profile_picture}}" alt="Profile picture" class="profile-pic">
+    <img src="{{ profile.profile.profile_picture.url}}" alt="Profile picture" class="profile-pic">
     {% endif %}
     <div class="things-div">
         <h2>Здравейте, {{ profile.profile.get_profile_full_name }}!</h2>
