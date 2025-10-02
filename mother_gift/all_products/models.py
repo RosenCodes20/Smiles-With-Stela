@@ -12,6 +12,12 @@ class AllProducts(models.Model):
         upload_to=""
     )
 
+    second_product_image = models.ImageField = models.ImageField(
+        upload_to='',
+        null=True,
+        blank=True
+    )
+
     product_description = models.CharField(
         max_length=200,
     )
