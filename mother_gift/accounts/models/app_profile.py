@@ -23,7 +23,8 @@ class Profile(models.Model):
         blank=True
     )
 
-    profile_picture = models.URLField(
+    profile_picture = models.ImageField(
+        upload_to='',
         null=True,
         blank=True
     )
