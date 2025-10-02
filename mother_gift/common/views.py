@@ -39,7 +39,7 @@ def index(request):
                 fail_silently=False
             )
 
-    decorated_book = AllProducts.objects.filter(product_description='Декорирана книга').first()
+    decorated_book = AllProducts.objects.filter(product_description='Стилна декорирана книга').first()
 
     context = {
         'player_search_form': player_search_form,
