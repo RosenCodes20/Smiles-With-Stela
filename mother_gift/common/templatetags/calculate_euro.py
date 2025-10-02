@@ -5,6 +5,6 @@ register = template.Library()
 @register.filter
 def to_eur(value):
     try:
-        return round(float(value) / 1.95583, 2)
+        return f'{float(value) / 1.95583:.2f}'
     except (ValueError, TypeError):
         return ""
