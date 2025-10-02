@@ -21,8 +21,11 @@ def product_details(request, pk):
 
     product = AllProducts.objects.get(id=pk)
 
+    split_text = product.applicable_for.split(": ")
+
     context = {
-        'product': product
+        'product': product,
+        'split_text': split_text
     }
 
     return render(request, 'product-details.html', context)
