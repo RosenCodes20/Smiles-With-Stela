@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
+{% load calculate_euro %}
 {% load static %}
 
 {% block content %}
 
     <section class="item-details">
         <div class="img-wrapper">
-            <img id="main-image" src="{% static 'images/IMG_4230.jpg' %}" alt="Комплект книга със сапуни във формата на плодове">
+            <img id="main-image" src="{{ product.product_image.url }}" alt="Комплект книга със сапуни във формата на плодове">
 
             <div class="gallery">
-                <img src="{% static 'images/IMG_4230.jpg' %}" alt="Снимка 1">
-                <img src="{% static 'images/IMG_4248.jpg' %}" alt="Снимка 2">
+                <img src="{{ product.product_image.url }}" alt="Снимка 1">
             </div>
         </div>
 
         <div class="text-wrapper">
-            <h1>Комплект „Книга с плодови сапуни“</h1>
+            <h1>{{ product.product_description }}</h1>
 
-            <p class="price">Цена: 25.99лв/13.29€</p>
+            <p class="price">Цена: {{ product.product_price }}лв/{{ product.product_price|to_eur }}€</p>
 
             <p>
                 Този изискан комплект представлява уникална книга-кутия, в която са подредени ръчно изработени сапуни с формата на свежи плодове. Всеки сапун е моделиран с внимание към детайла – от розовите „ягоди“ с релефна текстура, през нежните лилави „къпини“ и „боровинки“, до зелените декоративни листа, които придават усещане за естественост и свежест.

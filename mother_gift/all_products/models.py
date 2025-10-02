@@ -35,6 +35,12 @@ class AllProducts(models.Model):
         default=True
     )
 
+    first_long_description = models.TextField()
+
+    second_long_description = models.TextField()
+
+    applicable_for = models.TextField()
+
     user = models.ForeignKey(
         to=UserModel,
         on_delete=models.CASCADE
