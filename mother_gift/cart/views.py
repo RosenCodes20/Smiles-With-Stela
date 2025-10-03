@@ -5,3 +5,8 @@ from django.shortcuts import render
 def cart(request):
 
     return render(request, 'cart.html')
+
+
+def add_to_cart(request):
+
+    pass
