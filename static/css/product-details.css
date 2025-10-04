@@ -26,7 +26,7 @@
     margin: 1em 0;
 }
 
-.text-wrapper > a {
+.text-wrapper > form > button {
     background: darkorange;
     color: white;
     text-decoration: none;
@@ -35,6 +35,8 @@
     justify-content: center;
     padding: 0.6em 1.2em;
     border-radius: 0.6em;
+    width: 100%;
+    border: none;
 }
 
 .text-wrapper > h3 {
@@ -78,7 +80,7 @@
     font-weight: bold;
 }
 
-.text-wrapper > a:hover {
+.text-wrapper > form > button:hover {
     opacity: 0.7;
     transition: ease-in-out 0.5s;
 }
