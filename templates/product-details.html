@@ -37,7 +37,8 @@
                 {% endfor %}
             </ul>
 
-              <form class="add-to-cart-form" action="" method="post">
+              <form class="add-to-cart-form" action="{% url 'add-to-cart' product.id %}" method="post">
+                  {% csrf_token %}
                 <button class="buy-btn"><i class="fa-solid fa-cart-shopping"></i>Добави в количката</button>
             </form>    
         </div>
