@@ -1,9 +1,9 @@
 from django import template
 
-from mother_gift.all_products.models import AllProducts
+from mother_gift.cart.models import Cart
 
 register = template.Library()
 
-@register.filter
+@register.simple_tag()
 def get_cart_length():
-    return AllProducts.objects.all().count()
+    return Cart.objects.all().count()

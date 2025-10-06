@@ -1,5 +1,6 @@
 {% load search_tags %}
 {% load get_subscribe_form %}
+{% load get_cart_length %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -101,6 +102,9 @@
                             <button type="submit">Search</button>
                             </form>
                     </section>
+                    
+                {% get_cart_length as cart_length  %}
+                
                     <a href="javascript:void(0);" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
                     
