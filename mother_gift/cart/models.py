@@ -6,7 +6,7 @@ from mother_gift.all_products.models import AllProducts
 
 UserModel = get_user_model()
 
-class Cart(AllProducts):
+class Cart(models.Model):
     product_image_cart = models.ImageField(
         upload_to=""
     )
