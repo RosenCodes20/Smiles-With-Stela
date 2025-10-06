@@ -541,3 +541,14 @@ p > a {
 .logo-href {
     cursor: pointer;
 }
+
+.cart-length {
+    position: absolute;
+    right: 23.9em;
+    top: 2.1%;
+    background: black;
+    border-radius: 50%;
+    color: white;
+    padding: 0.5em 0.8em;
+    font-size: 0.7em;
+}
