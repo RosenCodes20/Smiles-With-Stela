@@ -8,9 +8,14 @@ from mother_gift.cart.models import Cart
 # Create your views here.
 
 @login_required
-def cart(request):
+def cart(request, pk):
+    cart_queryset_for_user = Cart.objects.filter(user_cart_id=pk)
 
-    return render(request, 'cart.html')
+    context = {
+        'cart_queryset_for_user': cart_queryset_for_user
+    }
+
+    return render(request, 'cart.html', context)
 
 def add_to_cart(request, pk):
     product = AllProducts.objects.get(id=pk)
