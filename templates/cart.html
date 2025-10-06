@@ -38,7 +38,7 @@
                 <div class="subtotal-wrap">
                     <p>Междинна сума</p>
                     
-                    <p>25.99лв/13.29€</p>
+                    <p>{{ sum_of_products }}лв/{{ sum_of_products|to_eur }}€</p>
                 </div>
                 
                 <div class="shipping-wrap">
@@ -52,7 +52,7 @@
             <div class="total-wrap">
                 <p class="sum-text-wrap">Общо</p>
                 
-                <p class="p-total">28.99лв/14.82€</p>
+                <p class="p-total">{{ sum_of_products }}лв/14.82€</p>
             </div>
             <a href="" class="buy-btn"><p>Поръчай</p></a>
 

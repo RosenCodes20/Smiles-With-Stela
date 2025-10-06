@@ -17,9 +17,12 @@ def cart(request, pk):
 
     sum_of_products = sum(product_prices)
 
+    sum_with_delivery = sum_of_products + 3
+
     context = {
         'cart_queryset_for_user': cart_queryset_for_user,
-        'sum_of_products': sum_of_products
+        'sum_of_products': sum_of_products,
+        'sum_with_delivery': sum_with_delivery,
     }
 
     return render(request, 'cart.html', context)
