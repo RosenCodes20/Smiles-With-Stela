@@ -102,11 +102,12 @@
                             <button type="submit">Search</button>
                             </form>
                     </section>
-                    
+
                 {% get_cart_length as cart_length  %}
-                
+
                     <a href="javascript:void(0);" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                    
+                    <span>{{ cart_length }}</span><a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
                     
                     {% if not request.user.is_authenticated %}
                     <li>
