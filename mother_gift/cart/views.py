@@ -16,7 +16,10 @@ def add_to_cart(request, pk):
     product = AllProducts.objects.get(id=pk)
 
     Cart.objects.create(
-
+        product_image_cart=product.product_image,
+        product_description_cart=product.product_description,
+        product_price_cart=product.product_price,
+        user_cart=request.user,
     )
 
     return redirect(request.META['HTTP_REFERER'])
