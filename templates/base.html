@@ -108,7 +108,12 @@
                     <a href="javascript:void(0);" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
                     
                     <span class="cart-length">{{ cart_length }}</span>
-                    <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'cart' request.user.id %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                    {% else %}
+                        <a href="{% url 'login'%}"><i class="fa-solid fa-cart-shopping"></i></a>
+                        
+                    {% endif %}
                     
                     {% if not request.user.is_authenticated %}
                     <li>

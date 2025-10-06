@@ -10,6 +10,12 @@ from mother_gift.cart.models import Cart
 @login_required
 def cart(request, pk):
     cart_queryset_for_user = Cart.objects.filter(user_cart_id=pk)
+    product_prices = []
+
+    for product in cart_queryset_for_user:
+        product_prices.append(float(product.product_price_cart))
+
+    sum_of_products = sum(product_prices)
 
     context = {
         'cart_queryset_for_user': cart_queryset_for_user

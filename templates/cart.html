@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load calculate_euro %}
 {% block content %}
     
     <div class="articles-wrap">
@@ -15,39 +15,16 @@
                     <th class="sum">Общо</th>
                     <th></th>
                 </tr>
-                
+                {% for product in cart_queryset_for_user %}
                 <tr>
-                    <td><img src="../static/images/IMG_4230.jpg" alt=""> Украса във формата на книга</td>
-                    <td>25.99лв/13.29€</td>
+                    <td><img src="{{ product.product_image_cart.url }}" alt=""> {{ product.product_description_cart }}</td>
+                    <td>{{ product.product_price_cart }}лв/{{ product.product_price_cart|to_eur }}€</td>
                     <td class="quantity"><p>1</p></td>
                     <td class="sum-price">25.99лв/13.29€</td>
                     <td><a href=""><i class="fa-solid fa-xmark"></i></a></td>
                 </tr>
 
-                <tr>
-                    <td><img src="../static/images/IMG_4230.jpg" alt=""> Украса във формата на книга</td>
-                    <td>25.99лв/13.29€</td>
-                    <td class="quantity"><p>1</p></td>
-                    <td class="sum-price">25.99лв/13.29€</td>
-                    <td><a href=""><i class="fa-solid fa-xmark"></i></a></td>
-                </tr>
-
-                <tr>
-                    <td><img src="../static/images/IMG_4230.jpg" alt=""> Украса във формата на книга</td>
-                    <td>25.99лв/13.29€</td>
-                    <td class="quantity"><p>1</p></td>
-                    <td class="sum-price">25.99лв/13.29€</td>
-                    <td><a href=""><i class="fa-solid fa-xmark"></i></a></td>
-                </tr>
-
-                <tr>
-                    <td><img src="../static/images/IMG_4230.jpg" alt=""> Украса във формата на книга</td>
-                    <td>25.99лв/13.29€</td>
-                    <td class="quantity"><p>1</p></td>
-                    <td class="sum-price">25.99лв/13.29€</td>
-                    <td><a href=""><i class="fa-solid fa-xmark"></i></a></td>
-                </tr>
-
+                {% endfor %}
                 
             </table>
         </article>
