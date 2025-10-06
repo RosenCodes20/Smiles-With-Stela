@@ -1,5 +1,4 @@
 from django.shortcuts import render
-
 # Create your views here.
 
 def cart(request):
@@ -7,6 +6,5 @@ def cart(request):
     return render(request, 'cart.html')
 
 
-def add_to_cart(request):
-
+def add_to_cart(request, pk):
     pass
