@@ -38,3 +38,6 @@ def add_to_cart(request, pk):
     )
 
     return redirect(request.META['HTTP_REFERER'])
+
+def remove_product_from_cart(request):
+    pass
