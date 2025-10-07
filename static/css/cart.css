@@ -174,7 +174,11 @@ td .fa-xmark:hover {
 }
 
 .sad-main > i {
-    color: #FDDF69;
-    font-size: 3em;
+    color: #FEDF1E;
+    font-size: 4em;
     margin-bottom: 0.5em;
+}
+
+.sad-main > h3 {
+    font-size: 1.7em;
 }
