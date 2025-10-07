@@ -9,7 +9,7 @@ class BaseCartForm(forms.ModelForm):
         fields = ('town_name', 'speedy_address')
 
         widgets = {
-            "town_name": forms.TextInput(attrs={'placeholder': 'Моля въведете името на вашия град', 'id': 'username'}),
+            "town_name": forms.TextInput(attrs={'placeholder': 'Моля въведете на вашия град', 'id': 'username'}),
             'speedy_address': forms.TextInput(attrs={'placeholder': 'Моля въведете адресът на speedy във вашия град', 'id': 'username'})
         }
 
