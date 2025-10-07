@@ -55,7 +55,7 @@ def remove_product_from_cart(request, pk):
 def create_deliver_cart(request):
     form = CreateCartForm(request.POST or None)
     user = User.objects.get(id=request.user.id)
-    products = Cart.objects.filter(user_id=user.id)
+    products = Cart.objects.filter(user_cart_id=user.id)
 
     filtered_products_descriptions = [p.product_description_cart for p in products]
     products_prices = [p.product_price_cart for p in products]
@@ -77,7 +77,7 @@ def create_deliver_cart(request):
             f'На дата: {strftime("%Y-%m-%d %H:%M:%S", gmtime())}',
             f'{user.email} си поръча: {filtered_products_descriptions}\n'
             f'На цени {products_prices}\n'
-            f'На цена: {sum(sum_prices)}лв/{sum(sum_prices) / 1.95583}евро\n'
+            f'На цена: {sum(sum_prices)}лв/{sum(sum_prices) / 1.95583:.2f}евро\n'
             f'До град: {finish_cart.town_name}\n'
             f'До адрес: {finish_cart.speedy_address}',
             'rrirrirri08@gmail.com',
