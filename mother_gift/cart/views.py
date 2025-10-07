@@ -52,7 +52,11 @@ def create_deliver_cart(request):
     form = CreateCartForm(request.POST or None)
 
     if form.is_valid():
-        form.save()
+        finish_cart = form.save(commit=False)
+
+        finish_cart.user_finish_cart = request.user
+
+        finish_cart.save()
 
         return redirect('index')
 
