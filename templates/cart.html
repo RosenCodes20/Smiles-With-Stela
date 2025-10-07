@@ -2,6 +2,7 @@
 {% load calculate_euro %}
 {% block content %}
     
+    {% if cart_queryset_for_user %}
     <div class="articles-wrap">
         <article class="cart-table">
             <h2>Вашата количка</h2>
@@ -58,7 +59,13 @@
 
         </section>
     </div>
-    
     <div class="div-for-style"></div>
-
+        
+    {% else %}
+        <main class="sad-main">
+            <i class="fa-solid fa-face-frown"></i>
+            <h3>Все още няма нищо във вашата количка : (</h3>
+        </main>
+    {% endif %}
+    
 {% endblock %}
