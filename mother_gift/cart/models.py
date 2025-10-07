@@ -33,3 +33,8 @@ class Addresses(models.Model):
     speedy_address = models.CharField(
         max_length=200
     )
+
+    user_finish_cart = models.ForeignKey(
+        to=UserModel,
+        on_delete=models.CASCADE
+    )

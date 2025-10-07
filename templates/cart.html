@@ -54,7 +54,7 @@
                 
                 <p class="p-total">{{ sum_with_delivery }}лв/{{ sum_with_delivery|to_eur }}€</p>
             </div>
-            <a href="" class="buy-btn"><p>Поръчай</p></a>
+            <a href="{% url 'finish-cart' %}" class="buy-btn"><p>Поръчай</p></a>
 
         </section>
     </div>
