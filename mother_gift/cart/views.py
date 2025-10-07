@@ -1,4 +1,4 @@
-from time import strftime, gmtime
+import datetime
 
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
@@ -74,7 +74,7 @@ def create_deliver_cart(request):
 
         send_mail(
             f'Поръчка от: {user.email} '
-            f'На дата: {strftime("%Y-%m-%d %H:%M:%S", gmtime())}',
+            f'На дата: {datetime.datetime.now()}',
             f'{user.email} си поръча: {filtered_products_descriptions}\n'
             f'На цени {products_prices}\n'
             f'На цена: {float(sum(sum_prices))}лв/{float(sum(sum_prices) / 1.95583):.2f}евро\n'
