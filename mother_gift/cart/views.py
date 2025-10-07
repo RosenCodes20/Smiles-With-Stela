@@ -73,7 +73,9 @@ def create_deliver_cart(request):
             f'Поръчка от: {user.email}\n'
             f'На дата: {strftime("%Y-%m-%d %H:%M:%S", gmtime())}',
             f'{user.email} си поръча: {products}\n'
-            f'На цена: {sum(sum_prices)}',
+            f'На цена: {sum(sum_prices)}\n'
+            f'До град: {finish_cart.cleaned_data["town_name"]}\n'
+            f'До адрес: {finish_cart.cleaned_data["speedy_address"]}',
             'rrirrirri08@gmail.com',
             ['rrirrirri08@gmail.com'],
             fail_silently=False
