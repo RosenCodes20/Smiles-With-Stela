@@ -45,3 +45,4 @@ def remove_product_from_cart(request, pk):
     product.delete()
 
     return redirect(request.META['HTTP_REFERER'])
+
