@@ -58,7 +58,7 @@ def create_deliver_cart(request):
 
         finish_cart.save()
 
-        return redirect('index')
+        return redirect('thanks-for-choosing')
 
     context = {
         'form': form
