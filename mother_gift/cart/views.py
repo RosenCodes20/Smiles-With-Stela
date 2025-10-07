@@ -1,7 +1,9 @@
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 
 from mother_gift.all_products.models import AllProducts
+from mother_gift.cart.forms import CreateCartForm
 from mother_gift.cart.models import Cart
 
 
@@ -46,3 +48,16 @@ def remove_product_from_cart(request, pk):
 
     return redirect(request.META['HTTP_REFERER'])
 
+def create_deliver_cart(request):
+    form = CreateCartForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+
+        return redirect('index')
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'create_cart.html', context)

@@ -12,3 +12,7 @@ class BaseCartForm(forms.ModelForm):
             "town_name": forms.TextInput(attrs={'placeholder': 'Моля въведете името на вашия град'}),
             'speedy_address': forms.TextInput(attrs={'placeholder': 'Моля въведете адресът на speedy във вашия град'})
         }
+
+class CreateCartForm(BaseCartForm):
+    class Meta(BaseCartForm.Meta):
+        pass

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <article class="login">
+        
+        <form action="{% url 'register' %}" method="post">
+            <h2>Завърши поръчка</h2>
+            {{ form }}
+            {% csrf_token %}
+            
+            <button class="registration-btn">Завърши поръчката</button>
+        </form>
+    </article>
+    
+{% endblock %}
