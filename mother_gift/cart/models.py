@@ -24,3 +24,12 @@ class Cart(models.Model):
         to=UserModel,
         on_delete=models.CASCADE
     )
+
+class Addresses(models.Model):
+    town_name = models.CharField(
+        max_length=100
+    )
+
+    speedy_address = models.CharField(
+        max_length=200
+    )
