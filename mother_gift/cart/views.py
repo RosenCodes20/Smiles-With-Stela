@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 
+from mother_gift.accounts.models import User
 from mother_gift.all_products.models import AllProducts
 from mother_gift.cart.forms import CreateCartForm
 from mother_gift.cart.models import Cart
@@ -48,15 +49,20 @@ def remove_product_from_cart(request, pk):
 
     return redirect(request.META['HTTP_REFERER'])
 
+@login_required
 def create_deliver_cart(request):
     form = CreateCartForm(request.POST or None)
-
+    user = User.objects.get(id=request.id)
     if form.is_valid():
         finish_cart = form.save(commit=False)
 
         finish_cart.user_finish_cart = request.user
 
         finish_cart.save()
+
+        send_mail(
+            f'Поръчка от: {request.user.email}'
+        )
 
         return redirect('thanks-for-choosing')
 
