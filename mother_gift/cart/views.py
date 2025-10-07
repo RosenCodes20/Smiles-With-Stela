@@ -54,7 +54,7 @@ def remove_product_from_cart(request, pk):
 @login_required
 def create_deliver_cart(request):
     form = CreateCartForm(request.POST or None)
-    user = User.objects.get(id=request.id)
+    user = User.objects.get(id=request.user.id)
     products = AllProducts.objects.filter(user_id=user.id)
 
     sum_prices = []
@@ -80,6 +80,11 @@ def create_deliver_cart(request):
             ['rrirrirri08@gmail.com'],
             fail_silently=False
         )
+
+        cart_objects = Cart.objects.filter(user_cart_id=request.user.id)
+
+        for cart in cart_objects:
+            cart.delete()
 
         return redirect('thanks-for-choosing')
 

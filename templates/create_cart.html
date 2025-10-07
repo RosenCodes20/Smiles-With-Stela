@@ -4,7 +4,7 @@
     
     <article class="login">
         
-        <form action="{% url 'register' %}" method="post">
+        <form action="{% url 'finish-cart' %}" method="post">
             <h2>Завърши поръчка</h2>
             {{ form }}
             {% csrf_token %}
