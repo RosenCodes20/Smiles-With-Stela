@@ -77,7 +77,7 @@ def create_deliver_cart(request):
             f'На дата: {strftime("%Y-%m-%d %H:%M:%S", gmtime())}',
             f'{user.email} си поръча: {filtered_products_descriptions}\n'
             f'На цени {products_prices}\n'
-            f'На цена: {sum(sum_prices)}лв/{sum(sum_prices) / 1.95583:.2f}евро\n'
+            f'На цена: {float(sum(sum_prices))}лв/{float(sum(sum_prices) / 1.95583):.2f}евро\n'
             f'До град: {finish_cart.town_name}\n'
             f'До адрес: {finish_cart.speedy_address}',
             'rrirrirri08@gmail.com',
