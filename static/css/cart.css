@@ -155,12 +155,12 @@ td .fa-xmark:hover {
     margin-bottom: 0.5em;
 }
 
-.thanks-main > h3 {
+.thanks-main > h3, .sad-main > h3 {
     font-size: 2em;
     margin-bottom: 1em;
 }
 
-.thanks-main > a {
+.thanks-main > a, .sad-main > a {
     text-decoration: none;
     background: darkorange;
     color: white;
@@ -169,7 +169,7 @@ td .fa-xmark:hover {
     font-size: 1.3em;
 }
 
-.thanks-main > a:hover {
+.thanks-main > a:hover, .sad-main > a:hover {
     transition: 0.3s ease-in-out;
 }
 
@@ -177,8 +177,4 @@ td .fa-xmark:hover {
     color: #FEDF1E;
     font-size: 4em;
     margin-bottom: 0.5em;
-}
-
-.sad-main > h3 {
-    font-size: 1.7em;
 }
