@@ -56,11 +56,11 @@ def create_deliver_cart(request):
     form = CreateCartForm(request.POST or None)
     user = User.objects.get(id=request.user.id)
     products = AllProducts.objects.filter(user_id=user.id)
-
+    print(products)
     sum_prices = []
 
     for product in products:
-        sum_prices.append(product)
+        sum_prices.append(float(product.product_price))
 
     if form.is_valid():
         finish_cart = form.save(commit=False)
