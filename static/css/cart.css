@@ -172,3 +172,9 @@ td .fa-xmark:hover {
 .thanks-main > a:hover {
     transition: 0.3s ease-in-out;
 }
+
+.sad-main > i {
+    color: #FDDF69;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
