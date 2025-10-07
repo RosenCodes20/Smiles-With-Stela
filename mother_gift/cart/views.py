@@ -1,3 +1,5 @@
+from time import strftime, gmtime
+
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
@@ -53,6 +55,8 @@ def remove_product_from_cart(request, pk):
 def create_deliver_cart(request):
     form = CreateCartForm(request.POST or None)
     user = User.objects.get(id=request.id)
+    products = AllProducts.objects.get(user_id=user.id)
+
     if form.is_valid():
         finish_cart = form.save(commit=False)
 
@@ -61,7 +65,9 @@ def create_deliver_cart(request):
         finish_cart.save()
 
         send_mail(
-            f'Поръчка от: {request.user.email}'
+            f'Поръчка от: {user.email}\n'
+            f'На дата: {strftime("%Y-%m-%d %H:%M:%S", gmtime())}',
+
         )
 
         return redirect('thanks-for-choosing')
