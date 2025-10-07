@@ -148,3 +148,13 @@ td .fa-xmark:hover {
 .div-for-style {
     min-height: 20dvh;
 }
+
+.thanks-main > i {
+    font-size: 3em;
+    color: green;
+    margin-bottom: 0.5em;
+}
+
+.thanks-main > h3 {
+    font-size: 2em;
+}
