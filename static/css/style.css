@@ -418,6 +418,8 @@ footer > div:nth-child(3) > div {
 
 .big-img {
     border-radius: 2em;
+    object-fit: cover;
+    object-position: 80% 40%;
 }
 
 .reviews {
