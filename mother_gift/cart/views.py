@@ -65,3 +65,7 @@ def create_deliver_cart(request):
     }
 
     return render(request, 'create_cart.html', context)
+
+def thanks_for_choosing(request):
+
+    return render(request, 'thanks_for_choosing_this_page.html')
