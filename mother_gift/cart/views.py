@@ -55,12 +55,15 @@ def remove_product_from_cart(request, pk):
 def create_deliver_cart(request):
     form = CreateCartForm(request.POST or None)
     user = User.objects.get(id=request.user.id)
-    products = AllProducts.objects.filter(user_id=user.id)
-    print(products)
+    products = Cart.objects.filter(user_id=user.id)
+
+    filtered_products_descriptions = [p.product_description_cart for p in products]
+    products_prices = [p.product_price_cart for p in products]
+
     sum_prices = []
 
     for product in products:
-        sum_prices.append(float(product.product_price))
+        sum_prices.append(float(product.product_price_cart))
 
     if form.is_valid():
         finish_cart = form.save(commit=False)
@@ -70,12 +73,12 @@ def create_deliver_cart(request):
         finish_cart.save()
 
         send_mail(
-            f'Поръчка от: {user.email}\n'
+            f'Поръчка от: {user.email} '
             f'На дата: {strftime("%Y-%m-%d %H:%M:%S", gmtime())}',
             f'{user.email} си поръча: {products}\n'
             f'На цена: {sum(sum_prices)}\n'
-            f'До град: {finish_cart.cleaned_data["town_name"]}\n'
-            f'До адрес: {finish_cart.cleaned_data["speedy_address"]}',
+            f'До град: {finish_cart.town_name}\n'
+            f'До адрес: {finish_cart.speedy_address}',
             'rrirrirri08@gmail.com',
             ['rrirrirri08@gmail.com'],
             fail_silently=False
