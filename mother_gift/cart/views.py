@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from mother_gift.accounts.models import User
 from mother_gift.all_products.models import AllProducts
 from mother_gift.cart.forms import CreateCartForm
-from mother_gift.cart.models import Cart
+from mother_gift.cart.models import Cart, OrderUserModel
 
 
 # Create your views here.
@@ -88,6 +88,11 @@ def create_deliver_cart(request):
         cart_objects = Cart.objects.filter(user_cart_id=request.user.id)
 
         for cart in cart_objects:
+            OrderUserModel.objects.create(
+                product_description_order_user=cart.product_description_cart,
+                date=datetime.date.today(),
+
+            )
             cart.delete()
 
         return redirect('thanks-for-choosing')
