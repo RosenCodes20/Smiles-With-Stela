@@ -33,18 +33,16 @@
         <th>Дата</th>
         <th>Статус</th>
       </tr>
+      
+      {% for order in orders %}  
       <tr>
         <td>#1001</td>
         <td>Сапун Лавандула</td>
         <td>12.09.2025</td>
         <td>Доставено</td>
       </tr>
-      <tr>
-        <td>#1002</td>
-        <td>Декоративна свещ</td>
-        <td>15.09.2025</td>
-        <td>В процес</td>
-      </tr>
+        
+      {% endfor %}  
     </table>
   </section>
 

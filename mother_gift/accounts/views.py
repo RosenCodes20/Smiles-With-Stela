@@ -56,6 +56,8 @@ class ProfileDetails(LoginRequiredMixin, UserPassesTestMixin, DetailView):
 
         context['orders'] = OrderUserModel.objects.filter(user_order=self.request.user)
 
+        return context
+
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Profile
