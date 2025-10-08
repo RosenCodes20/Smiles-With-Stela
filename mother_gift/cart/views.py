@@ -91,7 +91,8 @@ def create_deliver_cart(request):
             OrderUserModel.objects.create(
                 product_description_order_user=cart.product_description_cart,
                 date=datetime.date.today(),
-
+                status='В процес',
+                user_order=request.user,
             )
             cart.delete()
 
