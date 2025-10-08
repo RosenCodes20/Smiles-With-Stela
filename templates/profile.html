@@ -36,10 +36,10 @@
       
       {% for order in orders %}  
       <tr>
-        <td>#1001</td>
-        <td>Сапун Лавандула</td>
-        <td>12.09.2025</td>
-        <td>Доставено</td>
+        <td>#100{{ order.id }}</td>
+        <td>{{ order.product_description_order_user }}</td>
+        <td>{{ order.date }}</td>
+        <td>{{ order.status }}</td>
       </tr>
         
       {% endfor %}  
