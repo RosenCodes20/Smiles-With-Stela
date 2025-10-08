@@ -58,7 +58,7 @@ def create_deliver_cart(request):
     products = Cart.objects.filter(user_cart_id=user.id)
 
     filtered_products_descriptions = [p.product_description_cart for p in products]
-    products_prices = [p.product_price_cart for p in products]
+    products_prices = [float(p.product_price_cart) for p in products]
 
     sum_prices = []
 
