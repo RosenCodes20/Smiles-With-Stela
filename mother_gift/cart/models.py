@@ -38,3 +38,12 @@ class Addresses(models.Model):
         to=UserModel,
         on_delete=models.CASCADE
     )
+
+class OrderUserModel(models.Model):
+    product_description_order_user = models.CharField(
+        max_length=300
+    )
+
+    date = models.DateField()
+
+    status = models.CharField()
