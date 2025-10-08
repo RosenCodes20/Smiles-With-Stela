@@ -50,6 +50,9 @@ class ProfileDetails(LoginRequiredMixin, UserPassesTestMixin, DetailView):
         user = get_object_or_404(UserModel, pk=self.kwargs['pk'])
         return self.request.user.profile == user.profile
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Profile
