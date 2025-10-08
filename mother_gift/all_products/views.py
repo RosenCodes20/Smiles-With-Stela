@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 
 from mother_gift.all_products.forms import AddProductForm
 from mother_gift.all_products.models import AllProducts
+from mother_gift.common.forms import SearchForm
 
 
 # Create your views here.
@@ -10,6 +11,11 @@ from mother_gift.all_products.models import AllProducts
 def all_products(request):
 
     all_products_queryset = AllProducts.objects.all()
+
+    if request.user.is_authenticated:
+        if 'product' in request.GET:
+            product = request.GET.get('product')
+            all_products_queryset = all_products_queryset.filter(product_description__icontains=product)
 
     context = {
         'all_products_queryset': all_products_queryset,

@@ -13,15 +13,9 @@ def index(request):
     queryset = AllProducts.objects.all()
 
     if request.user.is_authenticated:
-        queryset = AllProducts.objects.filter(user=request.user)
-
-    else:
-        queryset = []
-
-    if request.user.is_authenticated:
-        if "all_products" in request.GET:
+        if "product" in request.GET:
             product = request.GET.get('product')
-            queryset = queryset.filter(product_type__icontains=product)
+            queryset = queryset.filter(product_description__icontains=product)
 
     if request.method == "GET":
         message_form = SendInfoForm()
@@ -64,11 +58,15 @@ def subscribe_for_news(request):
                 fail_silently=False
             )
 
+            send_mail(
+                f"Абониране за новини от: {sign_for_news_form.cleaned_data['email']}",
+                'Нов абониран човек за новините на нашия магазин',
+                'rrirrirri08@gmail.com',
+                [''],
+                fail_silently=False
+            )
+
         else:
             return redirect('register')
-
-    context = {
-        'sign_for_news_form': sign_for_news_form,
-    }
 
     return redirect(request.META['HTTP_REFERER'])
