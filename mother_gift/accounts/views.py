@@ -7,6 +7,7 @@ from django.views.generic import CreateView, DetailView, UpdateView
 
 from mother_gift.accounts.forms import UserRegisterForm, EditProfileForm
 from mother_gift.accounts.models import Profile
+from mother_gift.cart.models import OrderUserModel
 
 # Create your views here.
 
@@ -52,6 +53,8 @@ class ProfileDetails(LoginRequiredMixin, UserPassesTestMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
+        context['orders'] = OrderUserModel.objects.filter(user_order=self.request.user)
 
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
