@@ -62,7 +62,7 @@ def subscribe_for_news(request):
                 f"Абониране за новини от: {sign_for_news_form.cleaned_data['email']}",
                 'Нов абониран човек за новините на нашия магазин',
                 'rrirrirri08@gmail.com',
-                [''],
+                ['rrirrirri08@gmail.com'],
                 fail_silently=False
             )
 
