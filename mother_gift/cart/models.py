@@ -3,6 +3,7 @@ from django.db import models
 from decimal import Decimal
 
 from mother_gift.all_products.models import AllProducts
+from mother_gift.cart.choices import OrderUserModelChoices
 
 UserModel = get_user_model()
 
@@ -46,7 +47,10 @@ class OrderUserModel(models.Model):
 
     date = models.DateField()
 
-    status = models.CharField()
+    status = models.CharField(
+        max_length=100,
+        choices=OrderUserModelChoices.choices
+    )
 
     user_order = models.ForeignKey(
         to=UserModel,
