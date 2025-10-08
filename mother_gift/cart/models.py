@@ -47,3 +47,8 @@ class OrderUserModel(models.Model):
     date = models.DateField()
 
     status = models.CharField()
+
+    user_order = models.ForeignKey(
+        to=UserModel,
+        on_delete=models.CASCADE
+    )
