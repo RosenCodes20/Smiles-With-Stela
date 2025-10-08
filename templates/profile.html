@@ -33,16 +33,16 @@
         <th>Дата</th>
         <th>Статус</th>
       </tr>
-      
-      {% for order in orders %}  
+
+      {% for order in orders %}
       <tr>
         <td>#100{{ order.id }}</td>
         <td>{{ order.product_description_order_user }}</td>
-        <td>{{ order.date }}</td>
+        <td>{{ order.date|date:"d-m-Y" }}</td>
         <td>{{ order.status }}</td>
       </tr>
-        
-      {% endfor %}  
+
+      {% endfor %}
     </table>
   </section>
 
