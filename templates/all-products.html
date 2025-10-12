@@ -44,5 +44,27 @@
         </section>
     {% endfor %}
     
+    <!-- Start Pagination --> 
+        <div class="pagination"> 
+            <span class="current"> 
+                Page {{ all_products_queryset.number }} of {{ all_products_queryset.paginator.num_pages }} 
+            </span> 
+            <span class="step-links-buttons"> 
+                {% if all_products_queryset.has_previous and all_products_queryset.has_next %} 
+                    <a href="?page={{ all_products_queryset.previous_page_number }}"> 
+                        <i class="fa-solid fa-arrow-left"></i> </a> 
+                    <a href="?page={{ all_products_queryset.next_page_number }}"> 
+                        <i class="fa-solid fa-arrow-right"></i> </a> 
+                {% elif all_products_queryset.has_previous %} 
+                    <a href="?page={{ all_products_queryset.previous_page_number }}"> 
+                        <i class="fa-solid fa-arrow-left"></i> </a> 
+                {% elif all_products_queryset.has_next %} 
+                    <a href="?page={{ all_products_queryset.next_page_number }}"> 
+                        <i class="fa-solid fa-arrow-right"></i> </a> 
+                {% endif %} 
+            </span> 
+        </div> 
+        <!-- End Pagination -->
+    
     </section>
 {% endblock %}
