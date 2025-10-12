@@ -12,7 +12,7 @@
         </select>
     </section>
     <section class="sell-items">
-            {% for product in all_products_queryset %}
+        {% for product in all_products_queryset %}
 
         <section class="item-for-sale">
             <img src="{{ product.product_image.url }}" alt="{{ product.product_description }}">
@@ -44,9 +44,11 @@
         </section>
     {% endfor %}
     
-        <div class="pagination"> 
+    </section>
+    
+      <div class="pagination"> 
             <span class="current"> 
-                Page {{ all_products_queryset.number }} of {{ all_products_queryset.paginator.num_pages }} 
+                Страница {{ all_products_queryset.number }} от {{ all_products_queryset.paginator.num_pages }} 
             </span> 
             <span class="step-links-buttons"> 
                 {% if all_products_queryset.has_previous and all_products_queryset.has_next %} 
@@ -63,6 +65,4 @@
                 {% endif %} 
             </span> 
         </div> 
-    
-    </section>
 {% endblock %}
