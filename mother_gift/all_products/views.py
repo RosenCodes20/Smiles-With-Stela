@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, redirect
 
 from mother_gift.all_products.forms import AddProductForm
@@ -16,6 +17,21 @@ def all_products(request):
         if 'product' in request.GET:
             product = request.GET.get('product')
             all_products_queryset = all_products_queryset.filter(product_description__icontains=product)
+
+    products_per_page = 8
+
+    paginator = Paginator(all_products_queryset, products_per_page)
+
+    page = request.GET.get('page')
+
+    try:
+        all_products_queryset = paginator.page(page)
+
+    except PageNotAnInteger:
+        all_products_queryset = paginator.page(1)
+
+    except EmptyPage:
+        all_products_queryset = paginator.page(paginator.num_pages)
 
     context = {
         'all_products_queryset': all_products_queryset,
