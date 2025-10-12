@@ -43,4 +43,24 @@
     {% endfor %}
     
     </section>
+    
+    <div class="pagination"> 
+            <span class="current"> 
+                Страница {{ decorations_queryset.number }} от {{ decorations_queryset.paginator.num_pages }} 
+            </span> 
+            <span class="step-links-buttons"> 
+                {% if decorations_queryset.has_previous and decorations_queryset.has_next %} 
+                    <a href="?page={{ decorations_queryset.previous_page_number }}"> 
+                        <i class="fa-solid fa-arrow-left"></i> </a> 
+                    <a href="?page={{ decorations_queryset.next_page_number }}"> 
+                        <i class="fa-solid fa-arrow-right"></i> </a> 
+                {% elif decorations_queryset.has_previous %} 
+                    <a href="?page={{ decorations_queryset.previous_page_number }}"> 
+                        <i class="fa-solid fa-arrow-left"></i> </a> 
+                {% elif decorations_queryset.has_next %} 
+                    <a href="?page={{ decorations_queryset.next_page_number }}"> 
+                        <i class="fa-solid fa-arrow-right"></i> </a> 
+                {% endif %} 
+            </span> 
+    </div> 
 {% endblock %}
