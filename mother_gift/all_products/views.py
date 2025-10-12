@@ -3,6 +3,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, redirect
 
 from mother_gift.all_products.forms import AddProductForm
+from mother_gift.all_products.function_helper import paginator_function_helper
 from mother_gift.all_products.models import AllProducts
 from mother_gift.common.forms import SearchForm
 
@@ -18,20 +19,7 @@ def all_products(request):
             product = request.GET.get('product')
             all_products_queryset = all_products_queryset.filter(product_description__icontains=product)
 
-    products_per_page = 8
-
-    paginator = Paginator(all_products_queryset, products_per_page)
-
-    page = request.GET.get('page')
-
-    try:
-        all_products_queryset = paginator.page(page)
-
-    except PageNotAnInteger:
-        all_products_queryset = paginator.page(1)
-
-    except EmptyPage:
-        all_products_queryset = paginator.page(paginator.num_pages)
+    all_products_queryset = paginator_function_helper(request, all_products_queryset)
 
     context = {
         'all_products_queryset': all_products_queryset,
