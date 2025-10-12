@@ -44,7 +44,6 @@
         </section>
     {% endfor %}
     
-    <!-- Start Pagination --> 
         <div class="pagination"> 
             <span class="current"> 
                 Page {{ all_products_queryset.number }} of {{ all_products_queryset.paginator.num_pages }} 
@@ -64,7 +63,6 @@
                 {% endif %} 
             </span> 
         </div> 
-        <!-- End Pagination -->
     
     </section>
 {% endblock %}
