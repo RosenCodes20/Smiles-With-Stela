@@ -42,3 +42,4 @@ elif not settings.DEBUG:
     urlpatterns += [
         re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
+# 365/365 - 12.10.2025
