@@ -24,6 +24,7 @@ from django.views.static import serve
 from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('', include("mother_gift.common.urls")),
     path('accounts/', include("mother_gift.accounts.urls")),
     path("about-us/", include("mother_gift.about_us.urls")),
