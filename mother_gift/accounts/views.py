@@ -22,7 +22,7 @@ class Login(UserPassesTestMixin, LoginView):
         elif not self.request.user.is_authenticated:
             return True
 
-    template_name = "login.html"
+    template_name = "account/login.html"
 
 class Register(UserPassesTestMixin, CreateView):
     def test_func(self):

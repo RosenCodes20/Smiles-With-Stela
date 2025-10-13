@@ -24,9 +24,11 @@ from django.views.static import serve
 from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
     path('', include("mother_gift.common.urls")),
     path('accounts/', include("mother_gift.accounts.urls")),
+
+    path('accounts/', include('allauth.urls')),
+
     path("about-us/", include("mother_gift.about_us.urls")),
     path("all-products/", include("mother_gift.all_products.urls")),
     path("cart/", include("mother_gift.cart.urls")),
