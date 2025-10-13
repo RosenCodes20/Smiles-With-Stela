@@ -47,6 +47,11 @@ INSTALLED_APPS = [
     'mother_gift.decorations',
     'mother_gift.gift_sets',
     'mother_gift.soaps',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
