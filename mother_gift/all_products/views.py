@@ -18,6 +18,7 @@ def all_products(request):
         if 'product' in request.GET:
             product = request.GET.get('product')
             all_products_queryset = all_products_queryset.filter(product_description__icontains=product)
+            print(all_products_queryset)
 
     all_products_queryset = paginator_function_helper(request, all_products_queryset)
 
