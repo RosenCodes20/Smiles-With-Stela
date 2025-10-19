@@ -182,7 +182,17 @@ SOCIALACCOUNT_PROVIDERS = {
             'access_type': 'online',
         },
         'OAUTH_PKCE_ENABLED': True,
-    }
+    },
+
+    'facebook': {
+            'METHOD': 'oauth2',
+            'SCOPE': ['email', 'public_profile'],
+            'FIELDS': [
+                'id', 'email', 'name', 'first_name', 'last_name',
+            ],
+            'VERIFIED_EMAIL': False,
+            'VERSION': 'v17.0',
+        },
 }
 
 SITE_ID = 3
