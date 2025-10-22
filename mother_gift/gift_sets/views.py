@@ -10,6 +10,12 @@ def gift_sets(request):
 
     gift_sets_queryset = AllProducts.objects.filter(product_type='Подаръчни комплекти')
 
+    if request.user.is_authenticated:
+        if 'product' in request.GET:
+            product = request.GET.get('product')
+            gift_sets_queryset = gift_sets_queryset.filter(product_description__icontains=product)
+            print(gift_sets_queryset)
+
     gift_sets_queryset = paginator_function_helper(request, gift_sets_queryset)
 
     context = {
