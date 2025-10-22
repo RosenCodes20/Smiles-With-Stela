@@ -11,7 +11,14 @@ def soaps(request):
 
     soaps_queryset = AllProducts.objects.filter(product_type='Сапуни')
 
+    if request.user.is_authenticated:
+        if 'product' in request.GET:
+            product = request.GET.get('product')
+            soaps_queryset = soaps_queryset.filter(product_description__icontains=product)
+            print(soaps_queryset)
+
     soaps_queryset = paginator_function_helper(request, soaps_queryset)
+
 
     context = {
         'soaps_queryset': soaps_queryset
