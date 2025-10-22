@@ -40,7 +40,8 @@ def index(request):
         'player_search_form': player_search_form,
         'queryset': queryset,
         'message_form': message_form,
-        'decorated_book': decorated_book
+        'decorated_book': decorated_book,
+        'elephant_soap': elephant_soap
     }
 
     return render(request, "index.html", context)
