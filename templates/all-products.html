@@ -42,6 +42,9 @@
                 <a href="{% url 'product-details' product.pk %}">Виж повече</a>
             </div>
         </section>
+            
+       {% empty %}
+            <p class="nothing-here">Все още няма въведени продукти или търсенето беше неправилно!</p>
     {% endfor %}
     
     </section>
