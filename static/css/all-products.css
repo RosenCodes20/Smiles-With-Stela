@@ -138,6 +138,7 @@ p > a {
 .go-back-all {
     background: darkorange;
     color: white;
-    padding: 0.5em 1em;
+    padding: 0.9em 1.5em;
     text-decoration: none;
+    border-radius: 0.5em;
 }
