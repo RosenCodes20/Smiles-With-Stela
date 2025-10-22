@@ -89,12 +89,13 @@ p > a {
     padding: 10px 15px;
     margin: 0 5px;
     text-decoration: none;
-    background-color: white;
+    background-color: darkorange;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .step-links-buttons a:hover {
-    background-color: #3498db;
+    background-color: black;
+    color: darkorange;
 }
 
 .step-links-buttons span.current {
@@ -109,12 +110,18 @@ p > a {
 .step-links-buttons {
     display: flex;
     text-shadow: none;
+    gap: 2em;
+    margin-bottom: 0.5em;
 }
 
 .step-links-buttons a.disabled {
     pointer-events: none;
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+.current {
+    margin-bottom: 0.5em;
 }
 
 .all-div {
