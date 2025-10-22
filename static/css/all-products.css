@@ -123,7 +123,7 @@ p > a {
     justify-content: center;
     flex-direction: column;
     min-height: 50dvh;
-    gap: 1.5em;
+    gap: 2.5em;
 }
 
 .nothing-here {
@@ -140,6 +140,6 @@ p > a {
     color: white;
     padding: 0.6em 1em;
     text-decoration: none;
-    border-radius: 0.5em;
+    border-radius: 1em;
     font-size: 1.3em;
 }
