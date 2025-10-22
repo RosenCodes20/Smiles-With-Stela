@@ -10,6 +10,12 @@ def decorations(request):
 
     decorations_queryset = AllProducts.objects.filter(product_type='Украси')
 
+    if request.user.is_authenticated:
+        if 'product' in request.GET:
+            product = request.GET.get('product')
+            decorations_queryset = decorations_queryset.filter(product_description__icontains=product)
+            print(decorations_queryset)
+
     decorations_queryset = paginator_function_helper(request, decorations_queryset)
 
     context = {
