@@ -34,6 +34,7 @@ def index(request):
             )
 
     decorated_book = AllProducts.objects.filter(product_description='Стилна декорирана книга').first()
+    elephant_soap = AllProducts.objects.get(product_description='Сапун във формата на слон')
 
     context = {
         'player_search_form': player_search_form,
