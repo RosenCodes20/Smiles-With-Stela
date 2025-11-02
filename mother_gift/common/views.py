@@ -42,7 +42,8 @@ def index(request):
         'queryset': queryset,
         'message_form': message_form,
         'decorated_book': decorated_book,
-        'elephant_soap': elephant_soap
+        'elephant_soap': elephant_soap,
+        'elegant_cups_with_soaps': elegant_cups_with_soaps
     }
 
     return render(request, "index.html", context)
