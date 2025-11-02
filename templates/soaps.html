@@ -37,6 +37,12 @@
                 <a href="{% url 'product-details' product.pk %}">Виж повече</a>
             </div>
         </section>
+        
+         {% empty %}
+            <div class="all-div">
+            <p class="nothing-here">Все още няма въведени продукти или търсенето беше неправилно! 😔</p>
+             <a class="go-back-all" href="javascript:history.back()">Върни се обратно</a>
+            </div>
     {% endfor %}
     
     </section>
