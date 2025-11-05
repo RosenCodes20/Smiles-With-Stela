@@ -117,3 +117,8 @@
     border: 0.1px solid lightgray;
     border-radius: 0.8em;
 }
+
+.opinion-form > label {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
