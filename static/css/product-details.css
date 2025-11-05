@@ -101,8 +101,8 @@
 }
 
 .opinion-form {
+    width: 40%;
     background: #eee;
-    width: 50%;
     margin: 1em auto;
     display: flex;
     flex-direction: column;
@@ -121,4 +121,13 @@
 .opinion-form > label {
     font-size: 0.9em;
     margin-top: 0.5em;
+}
+
+.star-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+    gap: 1em;
+    font-size: 1.2em;
 }
