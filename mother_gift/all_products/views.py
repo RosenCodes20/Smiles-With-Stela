@@ -29,10 +29,12 @@ def all_products(request):
     return render(request, 'all-products.html', context)
 
 def product_details(request, pk):
-
     product = AllProducts.objects.get(id=pk)
 
     split_text = product.applicable_for.split(": ")
+
+    if request.user.is_authenticated:
+        pass
 
     context = {
         'product': product,
