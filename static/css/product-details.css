@@ -104,4 +104,12 @@
     background: #eee;
     width: 50%;
     margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.opinion-form > input {
+    width: 50%;
+    margin: 1em auto;
+    padding: 0.3em 1.1em;
 }
