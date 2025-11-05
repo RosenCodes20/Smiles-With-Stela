@@ -101,5 +101,7 @@
 }
 
 .opinion-form {
-    margin-top: 1em;
+    background: #eee;
+    width: 50%;
+    margin: 1em auto;
 }
