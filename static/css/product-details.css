@@ -111,10 +111,10 @@
 }
 
 .opinion-form > input {
-    width: 50%;
+    width: 60%;
     margin: 1em auto;
     padding: 0.7em 1.1em;
-    border: 0.1px solid lightgray;
+    border: 1px solid lightgray;
     border-radius: 0.8em;
 }
 
