@@ -11,5 +11,8 @@ class AddProductForm(forms.ModelForm):
 class StarReviewForm(forms.Form):
     opinion_for_product = forms.CharField(
         max_length=150,
-        widget=forms.TextInput(attrs={"placeholder": "Въведи мнение за продука......."})
+        widget=forms.TextInput(attrs={
+            "placeholder": "Въведи мнение за продука......."
+        })
+
     )
