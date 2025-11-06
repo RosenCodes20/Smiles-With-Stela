@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, redirect
 
-from mother_gift.all_products.forms import AddProductForm
+from mother_gift.all_products.forms import AddProductForm, StarReviewForm
 from mother_gift.all_products.function_helper import paginator_function_helper
 from mother_gift.all_products.models import AllProducts
 from mother_gift.common.forms import SearchForm
@@ -30,7 +30,7 @@ def all_products(request):
 
 def product_details(request, pk):
     product = AllProducts.objects.get(id=pk)
-
+    form = StarReviewForm(request.POST or None)
     split_text = product.applicable_for.split(": ")
 
     if request.user.is_authenticated:
