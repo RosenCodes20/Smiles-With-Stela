@@ -13,6 +13,6 @@ class StarReviewForm(forms.Form):
         max_length=150,
         widget=forms.TextInput(attrs={
             "placeholder": "Въведи мнение за продука......."
-        })
+    })
 
     )
