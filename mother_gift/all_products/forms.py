@@ -14,5 +14,4 @@ class StarReviewForm(forms.Form):
         widget=forms.TextInput(attrs={
             "placeholder": "Въведи мнение за продука......."
     })
-
-    )
+)
