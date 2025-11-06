@@ -102,12 +102,12 @@
 
 .opinion-form {
     width: 40%;
-    background: #eee;
     margin: 1em auto;
     display: flex;
     flex-direction: column;
     padding: 1em;
     border-radius: 0.7em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
 }
 
 .opinion-form > input {
@@ -191,5 +191,5 @@
 }
 
 .only-people-logged {
-
+    margin-bottom: 1.5em;
 }
