@@ -13,5 +13,10 @@ class StarReviewForm(forms.Form):
         max_length=150,
         widget=forms.TextInput(attrs={
             "placeholder": "Въведи мнение за продука......."
-    })
-)
+        })
+    )
+
+    rating = forms.ChoiceField(
+        choices=[(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')],
+        widget=forms.RadioSelect(attrs={"class": "star-rating"})
+    )
