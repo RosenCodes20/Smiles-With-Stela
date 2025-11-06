@@ -45,3 +45,10 @@ class AllProducts(models.Model):
         to=UserModel,
         on_delete=models.CASCADE
     )
+
+class StarRating(models.Model):
+    person_opinion = models.CharField(
+        max_length=150,
+        null=False,
+        blank=False,
+    )
