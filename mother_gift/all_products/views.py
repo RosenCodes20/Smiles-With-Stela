@@ -34,7 +34,9 @@ def product_details(request, pk):
     split_text = product.applicable_for.split(": ")
 
     if request.user.is_authenticated:
-        pass
+        if request.method == "POST":
+            if form.is_valid():
+                form.s
 
     context = {
         'product': product,
