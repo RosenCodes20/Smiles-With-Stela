@@ -18,5 +18,6 @@ class StarReviewForm(forms.ModelForm):
         }
 
         widgets = {
-            "rating": forms.RadioSelect(attrs={"class": "star-rating"})
+            "rating": forms.RadioSelect(attrs={"class": "star-rating"}),
+            "person_opinion": forms.TextInput(attrs={"placeholder": "Какво мислиш за продукта......."})
         }
