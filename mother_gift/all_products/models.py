@@ -57,3 +57,8 @@ class StarRating(models.Model):
         choices=[(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')],
         # widget=forms.RadioSelect(attrs={"class": "star-rating"})
     )
+
+    user = models.ForeignKey(
+        to=UserModel,
+        on_delete=models.CASCADE
+    )
