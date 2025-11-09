@@ -63,3 +63,8 @@ class StarRating(models.Model):
         to=UserModel,
         on_delete=models.CASCADE
     )
+
+    product = models.OneToOneField(
+        to=AllProducts,
+        on_delete=models.CASCADE
+    )
