@@ -52,3 +52,8 @@ class StarRating(models.Model):
         null=False,
         blank=False,
     )
+
+    rating = models.CharField(
+        choices=[(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')],
+        # widget=forms.RadioSelect(attrs={"class": "star-rating"})
+    )
