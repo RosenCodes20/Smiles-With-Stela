@@ -11,4 +11,4 @@ class AddProductForm(forms.ModelForm):
 class StarReviewForm(forms.ModelForm):
     class Meta:
         model = StarRating
-
+        fields = ("person_opinion", "rating")
