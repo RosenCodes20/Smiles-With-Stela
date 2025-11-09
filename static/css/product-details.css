@@ -174,7 +174,30 @@
 
 .star-rating {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 1em;
+    align-items: center;
+    gap: 0.9em;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating div label {
+    font-size: 2.5rem;
+    color: #d3d3d3;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.star-rating div label:hover,
+.star-rating div label:hover ~ div label {
+    color: #ffcc00;
+    transform: scale(1.2);
+}
+
+.star-rating > div:not(:first-child) > label:has(input:checked){
+    color: #ffcc00;
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
 }
