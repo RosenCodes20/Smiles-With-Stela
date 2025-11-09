@@ -42,6 +42,8 @@ def product_details(request, pk):
 
                 rating.save()
 
+                return redirect("thanks_for_review")
+
     context = {
         'product': product,
         'split_text': split_text,
@@ -74,3 +76,7 @@ def create_products(request): # THIS PAGE WILL BE ONLY VISIBLE BY ME!!!
     else:
         raise PermissionError("Sorry you can't go there! Go back as fast as you can!")
 
+
+def thanks_for_review(request):
+
+    return render(request, "thanks_for_review.html")
