@@ -44,7 +44,8 @@ def product_details(request, pk):
 
     context = {
         'product': product,
-        'split_text': split_text
+        'split_text': split_text,
+        'form': form,
     }
 
     return render(request, 'product-details.html', context)
