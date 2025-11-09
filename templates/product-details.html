@@ -48,7 +48,7 @@
     <div class="reviews-div">
             <p class="only-people-logged">Само хората купили конкретен продукт могат да дадат своя отзив за него!</p>
     
-            <form action="" method="post" class="opinion-form">
+            <form action="{% url 'product-details' product.id %}" method="post" class="opinion-form">
                 {{ form }}
                 {% csrf_token %}
                 <button class="opinion-btn-submit" type="submit">Изпрати</button>
