@@ -38,7 +38,7 @@ def product_details(request, pk):
             if form.is_valid():
                 rating = form.save(commit=False)
 
-                form.user = request.user
+                rating.user = request.user
 
                 rating.save()
 
