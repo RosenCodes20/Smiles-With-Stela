@@ -110,7 +110,14 @@
     box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
 }
 
-.opinion-form > input {
+.opinion-form > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.opinion-form > div > input {
     width: 60%;
     margin: 1em auto;
     padding: 0.7em 1.1em;
@@ -118,7 +125,7 @@
     border-radius: 0.8em;
 }
 
-.opinion-form > label {
+.opinion-form > div > label {
     font-size: 0.9em;
     margin-top: 0.5em;
 }
@@ -149,47 +156,14 @@
     cursor: pointer;
 }
 
-#full-stars-example-two {
-  .rating-group {
-    display: inline-flex;
-  }
-
-  .rating__icon {
-    pointer-events: none;
-  }
-
-  .rating__input {
-   position: absolute !important;
-   left: -9999px !important;
-  }
-
-  .rating__input--none {
-    display: none
-  }
-
-  .rating__label {
-    cursor: pointer;
-    padding: 0 0.1em;
-    font-size: 2rem;
-  }
-
-  .rating__icon--star {
-    color: orange;
-  }
-
-  .rating__input:checked ~ .rating__label .rating__icon--star {
-    color: #ddd;
-  }
-
-  .rating-group:hover .rating__label .rating__icon--star {
-    color: orange;
-  }
-
-  .rating__input:hover ~ .rating__label .rating__icon--star {
-    color: #ddd;
-  }
+.opinion-form > div > fieldset {
+    border: none;
 }
 
-.only-people-logged {
-    margin-bottom: 1.5em;
+.opinion-form > div > fieldset > legend {
+    display: none;
+}
+
+.star-rating > div:first-child  {
+    display: none;
 }
