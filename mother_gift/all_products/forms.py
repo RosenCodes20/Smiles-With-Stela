@@ -12,6 +12,11 @@ class StarReviewForm(forms.ModelForm):
     class Meta:
         model = StarRating
         fields = ("person_opinion", "rating")
+
+        labels = {
+            "person_opinion": "Какво мислиш за продукта:",
+        }
+
         widgets = {
             "rating": forms.RadioSelect(attrs={"class": "star-rating"})
         }
