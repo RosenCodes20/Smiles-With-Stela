@@ -121,7 +121,7 @@
     width: 60%;
     margin: 1em auto;
     padding: 0.7em 1.1em;
-    border: 1px solid lightgray;
+    border: 2px solid lightgray;
     border-radius: 0.8em;
 }
 
@@ -169,7 +169,7 @@
 }
 
 .opinion-form > div:nth-child(2) {
-    margin-bottom: 1em;
+    margin: 1em 0;
 }
 
 .star-rating {
