@@ -40,6 +40,8 @@ def product_details(request, pk):
 
                 rating.user = request.user
 
+                rating.product = product
+
                 rating.save()
 
                 return redirect("thanks_for_review")
