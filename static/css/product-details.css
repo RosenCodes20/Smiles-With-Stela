@@ -169,7 +169,8 @@
 }
 
 .opinion-form > div:nth-child(2) {
-    margin: 1em 0;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
 }
 
 .star-rating {

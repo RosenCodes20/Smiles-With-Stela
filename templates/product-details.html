@@ -50,7 +50,7 @@
     
             <form action="" method="post" class="opinion-form">
                 {{ form }}
-
+                {% csrf_token %}
                 <button class="opinion-btn-submit" type="submit">Изпрати</button>
             </form>
     </div>
