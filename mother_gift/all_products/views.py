@@ -36,7 +36,11 @@ def product_details(request, pk):
     if request.user.is_authenticated:
         if request.method == "POST":
             if form.is_valid():
-                pass
+                rating = form.save(commit=False)
+
+                form.user = request.user
+
+                rating.save()
 
     context = {
         'product': product,
