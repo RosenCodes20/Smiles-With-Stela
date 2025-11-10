@@ -97,7 +97,11 @@ def create_deliver_cart(request):
             )
             cart.delete()
 
-        BoughtProducts.objects.create()
+        for product in products:
+            BoughtProducts.objects.create(
+                user=request.user,
+                product=product
+            )
 
         return redirect('thanks-for-choosing')
 
