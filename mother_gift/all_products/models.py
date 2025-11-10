@@ -74,3 +74,8 @@ class BoughtProducts(models.Model):
         to=UserModel,
         on_delete=models.CASCADE
     )
+
+    product = models.ForeignKey(
+        to=AllProducts,
+        on_delete=models.CASCADE
+    )
