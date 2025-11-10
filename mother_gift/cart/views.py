@@ -74,7 +74,7 @@ def create_deliver_cart(request):
         finish_cart.save()
 
         send_mail(
-            f'Поръчка от: {user.email} '
+            f'Поръчка от: {user.email}, {user.profile.get_profile_full_name()} '
             f'На дата: {datetime.datetime.now()}',
             f'{user.email} си поръча: {filtered_products_descriptions}\n'
             f'На цени {products_prices}\n'
