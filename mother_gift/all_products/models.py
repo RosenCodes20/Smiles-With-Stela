@@ -68,3 +68,6 @@ class StarRating(models.Model):
         to=AllProducts,
         on_delete=models.CASCADE
     )
+
+class BoughtProducts(models.Model):
+    pass
