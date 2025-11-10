@@ -156,9 +156,9 @@ LOGOUT_REDIRECT_URL = 'index'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+EMAIL_PORT = 465
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 EMAIL_HOST_USER = "rrirrirri08@gmail.com"
 EMAIL_HOST_PASSWORD = os.getenv('GOOGLE_PASSWORD', config('GOOGLE_PASSWORD'))
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
@@ -206,4 +206,3 @@ SOCIALACCOUNT_ADAPTER = 'mother_gift.accounts.adapter.MySocialAccountAdapter'
 SOCIALACCOUNT_LOGIN_ON_GET = True
 SOCIALACCOUNT_AUTO_SIGNUP = True
 ACCOUNT_SIGNUP_REDIRECT_URL = 'index'
-
