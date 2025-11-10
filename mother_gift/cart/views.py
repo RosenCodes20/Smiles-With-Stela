@@ -66,44 +66,45 @@ def create_deliver_cart(request):
     for product in products:
         sum_prices.append(float(product.product_price_cart))
 
-    if form.is_valid():
-        finish_cart = form.save(commit=False)
+    if request.method == "POST":
+        if form.is_valid():
+            finish_cart = form.save(commit=False)
 
-        finish_cart.user_finish_cart = request.user
+            finish_cart.user_finish_cart = request.user
 
-        finish_cart.save()
+            finish_cart.save()
 
-        send_mail(
-            f'Поръчка от: {user.email}, {user.profile.get_profile_full_name()} '
-            f'На дата: {datetime.datetime.now()}',
-            f'{user.email} си поръча: {filtered_products_descriptions}\n'
-            f'На цени {products_prices}\n'
-            f'На цена: {float(sum(sum_prices))}лв/{float(sum(sum_prices) / 1.95583):.2f}евро\n'
-            f'До град: {finish_cart.town_name}\n'
-            f'До адрес: {finish_cart.speedy_address}',
-            'rrirrirri08@gmail.com',
-            ['rrirrirri08@gmail.com'],
-            fail_silently=False
-        )
-
-        cart_objects = Cart.objects.filter(user_cart_id=request.user.id)
-
-        for cart in cart_objects:
-            OrderUserModel.objects.create(
-                product_description_order_user=cart.product_description_cart,
-                date=datetime.date.today(),
-                status='В процес',
-                user_order=request.user,
-            )
-            cart.delete()
-
-        for product in products:
-            BoughtProducts.objects.create(
-                user=request.user,
-                product=product
+            send_mail(
+                f'Поръчка от: {user.email}, {user.profile.get_profile_full_name()} '
+                f'На дата: {datetime.datetime.now()}',
+                f'{user.email} си поръча: {filtered_products_descriptions}\n'
+                f'На цени {products_prices}\n'
+                f'На цена: {float(sum(sum_prices))}лв/{float(sum(sum_prices) / 1.95583):.2f}евро\n'
+                f'До град: {finish_cart.town_name}\n'
+                f'До адрес: {finish_cart.speedy_address}',
+                'rrirrirri08@gmail.com',
+                ['rrirrirri08@gmail.com'],
+                fail_silently=False
             )
 
-        return redirect('thanks-for-choosing')
+            cart_objects = Cart.objects.filter(user_cart_id=request.user.id)
+
+            for product in products:
+                BoughtProducts.objects.create(
+                    user=request.user,
+                    product=product
+                )
+
+            for cart in cart_objects:
+                OrderUserModel.objects.create(
+                    product_description_order_user=cart.product_description_cart,
+                    date=datetime.date.today(),
+                    status='В процес',
+                    user_order=request.user,
+                )
+                cart.delete()
+
+            return redirect('thanks-for-choosing')
 
     context = {
         'form': form
