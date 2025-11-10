@@ -206,3 +206,4 @@ SOCIALACCOUNT_ADAPTER = 'mother_gift.accounts.adapter.MySocialAccountAdapter'
 SOCIALACCOUNT_LOGIN_ON_GET = True
 SOCIALACCOUNT_AUTO_SIGNUP = True
 ACCOUNT_SIGNUP_REDIRECT_URL = 'index'
+
