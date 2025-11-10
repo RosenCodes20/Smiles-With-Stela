@@ -95,6 +95,7 @@ def create_deliver_cart(request):
                     product=product
                 )
 
+
             for cart in cart_objects:
                 OrderUserModel.objects.create(
                     product_description_order_user=cart.product_description_cart,
