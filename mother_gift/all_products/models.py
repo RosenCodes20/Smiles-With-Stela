@@ -70,4 +70,7 @@ class StarRating(models.Model):
     )
 
 class BoughtProducts(models.Model):
-    pass
+    user = models.ForeignKey(
+        to=UserModel,
+        on_delete=models.CASCADE
+    )
