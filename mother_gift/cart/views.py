@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 
 from mother_gift.accounts.models import User
-from mother_gift.all_products.models import AllProducts
+from mother_gift.all_products.models import AllProducts, BoughtProducts
 from mother_gift.cart.forms import CreateCartForm
 from mother_gift.cart.models import Cart, OrderUserModel
 
@@ -96,6 +96,8 @@ def create_deliver_cart(request):
                 user_order=request.user,
             )
             cart.delete()
+
+        BoughtProducts.objects.create()
 
         return redirect('thanks-for-choosing')
 
