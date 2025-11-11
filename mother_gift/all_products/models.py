@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.db import models
 
 from mother_gift.all_products.choices import ProductTypeChoices
-
+from mother_gift.cart.models import Cart, OrderUserModel
 
 # Create your models here.
 UserModel = get_user_model()
@@ -69,6 +69,7 @@ class StarRating(models.Model):
         on_delete=models.CASCADE
     )
 
+
 class BoughtProducts(models.Model):
     user = models.ForeignKey(
         to=UserModel,
@@ -76,6 +77,6 @@ class BoughtProducts(models.Model):
     )
 
     product = models.ForeignKey(
-        to=AllProducts,
+        to=OrderUserModel,
         on_delete=models.CASCADE
     )

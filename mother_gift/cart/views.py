@@ -84,25 +84,24 @@ def create_deliver_cart(request):
                 f'До адрес: {finish_cart.speedy_address}',
                 'rrirrirri08@gmail.com',
                 ['rrirrirri08@gmail.com'],
-                fail_silently=False
+                fail_silently=True
             )
 
             cart_objects = Cart.objects.filter(user_cart_id=request.user.id)
 
-            for product in products:
-                BoughtProducts.objects.create(
-                    user=request.user,
-                    product=product
-                )
-
-
             for cart in cart_objects:
-                OrderUserModel.objects.create(
+                got_order = OrderUserModel.objects.create(
                     product_description_order_user=cart.product_description_cart,
                     date=datetime.date.today(),
                     status='В процес',
                     user_order=request.user,
                 )
+
+                BoughtProducts.objects.create(
+                    product=got_order,
+                    user=request.user
+                )
+
                 cart.delete()
 
             return redirect('thanks-for-choosing')
