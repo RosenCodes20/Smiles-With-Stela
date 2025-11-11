@@ -19,9 +19,9 @@ class UserRegisterForm(UserCreationForm):
         }
 
         widgets = {
-            'email': forms.TextInput(attrs={'placeholder': 'Въведи твоят имейл'}),
-            'id_password1': forms.TextInput(attrs={'placeholder': 'Въведи твоята парола'}),
-            'password2': forms.TextInput(attrs={'placeholder': 'Въведи твоята парола отново'})
+            'email': forms.TextInput(attrs={'placeholder': 'Въведи твоят имейл', "id": "username"}),
+            'password1': forms.PasswordInput(attrs={'placeholder': 'Въведи твоята парола', "id": "username"}),
+            'password2': forms.TextInput(attrs={'placeholder': 'Въведи твоята парола отново', "id": "username"})
         }
 
 
