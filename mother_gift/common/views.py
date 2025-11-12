@@ -1,11 +1,33 @@
+import smtplib
+import ssl
+from email.header import Header
+from email.mime.text import MIMEText
+
+from decouple import config
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 
 from mother_gift.all_products.models import AllProducts
 from mother_gift.common.forms import SearchForm, SendInfoForm, SubscribeForNewsForm
 
+EMAIL = "rrirrirri08@gmail.com"
+PASSWORD = config("GOOGLE_PASSWORD")
 
 # Create your views here.
+
+def send_mail_ssl(subject, message, from_email, recipient_list):
+    """
+    Sends email using Gmail SMTP_SSL with Unicode support.
+    """
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+        server.login(EMAIL, PASSWORD)
+        for recipient in recipient_list:
+            msg = MIMEText(message, "plain", "utf-8")
+            msg['Subject'] = Header(subject, "utf-8")
+            msg['From'] = from_email
+            msg['To'] = recipient
+            server.sendmail(from_email, recipient, msg.as_string())
 
 def index(request):
 
@@ -24,14 +46,11 @@ def index(request):
         message_form = SendInfoForm(request.POST)
 
         if message_form.is_valid():
+            subject = f'Съобщение до мен от: {message_form.cleaned_data["name"]}'
+            message = message_form.cleaned_data['message']
+            from_email = message_form.cleaned_data['email']
 
-            send_mail(
-                f'Съобщение до мен от: {message_form.cleaned_data["name"]}',
-                message_form.cleaned_data['message'],
-                message_form.cleaned_data['email'],
-                ["rrirrirri08@gmail.com"],
-                fail_silently=False
-            )
+            send_mail_ssl(subject, message, from_email, ["rrirrirri08@gmail.com"])
 
     decorated_book = AllProducts.objects.filter(product_description='Стилна декорирана книга').first()
     elephant_soap = AllProducts.objects.get(product_description='Сапун във формата на слон')
@@ -54,6 +73,10 @@ def subscribe_for_news(request):
 
     if sign_for_news_form.is_valid():
         if request.user.is_authenticated:
+            subject = f'Абониране за новини от: {sign_for_news_form.cleaned_data['email']}'
+            message = 'Ти успешно се абонира за нашите новини! Очаквай имейл при появата на нов продукт!'
+            from_email = sign_for_news_form.cleaned_data['email']
+
             send_mail(
                 f"Абониране за новини от: {sign_for_news_form.cleaned_data['email']}",
                 'Ти успешно се абонира за нашите новини! Очаквай имейл при появата на нов продукт!',
