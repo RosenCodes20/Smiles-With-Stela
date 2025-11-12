@@ -75,7 +75,9 @@ def subscribe_for_news(request):
         if request.user.is_authenticated:
             subject = f'Абониране за новини от: {sign_for_news_form.cleaned_data['email']}'
             message = 'Ти успешно се абонира за нашите новини! Очаквай имейл при появата на нов продукт!'
-            from_email = sign_for_news_form.cleaned_data['email']
+            from_email = "rrirrirri08@gmail.com"
+            send_mail_ssl(subject, message, from_email, [sign_for_news_form.cleaned_data['email']])
+
 
             send_mail(
                 f"Абониране за новини от: {sign_for_news_form.cleaned_data['email']}",
