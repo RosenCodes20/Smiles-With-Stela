@@ -2,7 +2,6 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from decimal import Decimal
 
-from mother_gift.all_products.models import AllProducts
 from mother_gift.cart.choices import OrderUserModelChoices
 
 UserModel = get_user_model()
