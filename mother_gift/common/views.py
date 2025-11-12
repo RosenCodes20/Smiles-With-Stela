@@ -81,7 +81,7 @@ def subscribe_for_news(request):
             subject = f'Абониране за новини от: {sign_for_news_form.cleaned_data['email']}'
             message = 'Нов абониран човек за новините на нашия магазин'
             from_email = "rrirrirri08@gmail.com"
-            send_mail_ssl(subject, message, from_email, 'rrirrirri08@gmail.com')
+            send_mail_ssl(subject, message, from_email, ['rrirrirri08@gmail.com'])
 
         else:
             return redirect('register')
