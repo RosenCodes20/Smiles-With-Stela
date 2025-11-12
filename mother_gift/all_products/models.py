@@ -64,9 +64,9 @@ class StarRating(models.Model):
         on_delete=models.CASCADE
     )
 
-    product = models.OneToOneField(
+    product = models.ForeignKey(
         to=AllProducts,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
     )
 
 
