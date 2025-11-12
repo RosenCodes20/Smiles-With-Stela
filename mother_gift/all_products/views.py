@@ -35,7 +35,8 @@ def product_details(request, pk):
     split_text = product.applicable_for.split(": ")
     is_bought = False
 
-    if request.user in [p.user for p in BoughtProducts.objects.all()]:
+    if (request.user in [p.user for p in BoughtProducts.objects.all()]
+            and BoughtProducts.objects.get(user=request.user).product):
         is_bought = True
 
     if request.user.is_authenticated:

@@ -51,6 +51,8 @@ class OrderUserModel(models.Model):
         choices=OrderUserModelChoices.choices
     )
 
+    product_all_products = models.ForeignKey()
+
     user_order = models.ForeignKey(
         to=UserModel,
         on_delete=models.CASCADE
