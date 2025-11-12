@@ -84,7 +84,7 @@ def create_deliver_cart(request):
                 f'До адрес: {finish_cart.speedy_address}',
                 'rrirrirri08@gmail.com',
                 ['rrirrirri08@gmail.com'],
-                fail_silently=True
+                fail_silently=False
             )
 
             cart_objects = Cart.objects.filter(user_cart_id=request.user.id)
