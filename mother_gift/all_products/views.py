@@ -32,6 +32,7 @@ def product_details(request, pk):
     product = AllProducts.objects.get(id=pk)
     form = StarReviewForm(request.POST or None)
     split_text = product.applicable_for.split(": ")
+    is_bought = False
 
     if request.user.is_authenticated:
         if request.method == "POST":
