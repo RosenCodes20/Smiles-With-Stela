@@ -4,7 +4,8 @@ from django.shortcuts import render, redirect
 
 from mother_gift.all_products.forms import AddProductForm, StarReviewForm
 from mother_gift.all_products.function_helper import paginator_function_helper
-from mother_gift.all_products.models import AllProducts
+from mother_gift.all_products.models import AllProducts, BoughtProducts
+from mother_gift.cart.models import OrderUserModel
 from mother_gift.common.forms import SearchForm
 
 
@@ -33,6 +34,9 @@ def product_details(request, pk):
     form = StarReviewForm(request.POST or None)
     split_text = product.applicable_for.split(": ")
     is_bought = False
+
+    if request.user in [p.user for p in BoughtProducts.objects.all()]:
+        is_bought = True
 
     if request.user.is_authenticated:
         if request.method == "POST":
