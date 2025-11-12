@@ -2,6 +2,7 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from decimal import Decimal
 
+from mother_gift.all_products.models import AllProducts
 from mother_gift.cart.choices import OrderUserModelChoices
 
 UserModel = get_user_model()
@@ -50,8 +51,6 @@ class OrderUserModel(models.Model):
         max_length=100,
         choices=OrderUserModelChoices.choices
     )
-
-    product_all_products = models.ForeignKey()
 
     user_order = models.ForeignKey(
         to=UserModel,
