@@ -1,5 +1,10 @@
 import datetime
+import smtplib
+import ssl
+from email.header import Header
+from email.mime.text import MIMEText
 
+from decouple import config
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
@@ -74,18 +79,34 @@ def create_deliver_cart(request):
 
             finish_cart.save()
 
-            send_mail(
+            EMAIL = "rrirrirri08@gmail.com"
+            PASSWORD = config("GOOGLE_PASSWORD")
+
+            def send_mail_ssl(subject, message, recipient_list):
+                context = ssl.create_default_context()
+                with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+                    server.login(EMAIL, PASSWORD)
+                    for recipient in recipient_list:
+                        msg = MIMEText(message, "plain", "utf-8")
+                        msg['Subject'] = Header(subject, "utf-8")
+                        msg['From'] = EMAIL
+                        msg['To'] = recipient
+
+                        server.sendmail(EMAIL, recipient, msg.as_string())
+            subject = (
                 f'Поръчка от: {user.email}, {user.profile.get_profile_full_name()} '
-                f'На дата: {datetime.datetime.now()}',
+                f'На дата: {datetime.datetime.now()}'
+            )
+
+            message = (
                 f'{user.email} си поръча: {filtered_products_descriptions}\n'
                 f'На цени {products_prices}\n'
                 f'На цена: {float(sum(sum_prices))}лв/{float(sum(sum_prices) / 1.95583):.2f}евро\n'
                 f'До град: {finish_cart.town_name}\n'
-                f'До адрес: {finish_cart.speedy_address}',
-                'rrirrirri08@gmail.com',
-                ['rrirrirri08@gmail.com'],
-                fail_silently=False
+                f'До адрес: {finish_cart.speedy_address}'
             )
+
+            send_mail_ssl(subject, message, ['rrirrirri08@gmail.com'])
 
             cart_objects = Cart.objects.filter(user_cart_id=request.user.id)
 
