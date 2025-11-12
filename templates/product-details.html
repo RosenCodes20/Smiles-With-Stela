@@ -44,18 +44,18 @@
             </form>    
         </div>
     </section>
-
-    {% if is_bought %}
     
     <div class="reviews-div">
             <p class="only-people-logged">Само хората купили конкретен продукт могат да дадат своя отзив за него!</p>
+            {% if is_bought %}
 
             <form action="{% url 'product-details' product.id %}" method="post" class="opinion-form">
                 {{ form }}
                 {% csrf_token %}
                 <button class="opinion-btn-submit" type="submit">Изпрати</button>
             </form>
+    {% endif %}
+    
     </div>
 
-    {% endif %}
 {% endblock %}
