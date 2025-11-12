@@ -36,7 +36,7 @@ def product_details(request, pk):
     is_bought = False
 
     if (request.user in [p.user for p in BoughtProducts.objects.all()]
-            and BoughtProducts.objects.get(user=request.user).product):
+            and BoughtProducts.objects.get(user=request.user).product.product_description_order_user == product.product_description):
         is_bought = True
 
     if request.user.is_authenticated:
