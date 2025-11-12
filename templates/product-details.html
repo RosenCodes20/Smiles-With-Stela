@@ -45,6 +45,8 @@
         </div>
     </section>
     
+    {% if is_bought %}
+    
     <div class="reviews-div">
             <p class="only-people-logged">Само хората купили конкретен продукт могат да дадат своя отзив за него!</p>
     
@@ -54,4 +56,6 @@
                 <button class="opinion-btn-submit" type="submit">Изпрати</button>
             </form>
     </div>
+    
+    {% endif %}
 {% endblock %}
