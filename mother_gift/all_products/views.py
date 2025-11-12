@@ -56,6 +56,7 @@ def product_details(request, pk):
         'product': product,
         'split_text': split_text,
         'form': form,
+        'is_bought': is_bought,
     }
 
     return render(request, 'product-details.html', context)
