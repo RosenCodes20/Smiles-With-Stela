@@ -135,7 +135,6 @@ header + section {
 
 header + section > a {
     position: absolute;
-    top: 60%;
     background: #FB8C00;
     padding: 0.6em 1.5em;
     border-radius: 0.6em;

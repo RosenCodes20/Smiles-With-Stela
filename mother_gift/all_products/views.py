@@ -29,6 +29,7 @@ def all_products(request):
 
     return render(request, 'all-products.html', context)
 
+@login_required
 def product_details(request, pk):
     product = AllProducts.objects.get(id=pk)
     form = StarReviewForm(request.POST or None)
