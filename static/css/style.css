@@ -594,7 +594,19 @@ p > a {
         flex-direction: column;
     }
 
+    footer > div:first-child {
+        margin-top: 1em;
+    }
+
     .footer-ul  {
-        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 1em;
+    }
+
+    .needed-links {
+        text-align: center;
     }
 }
