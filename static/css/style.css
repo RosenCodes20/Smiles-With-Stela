@@ -593,4 +593,8 @@ p > a {
     footer {
         flex-direction: column;
     }
+
+    .footer-ul  {
+        flex-direction: row;
+    }
 }
