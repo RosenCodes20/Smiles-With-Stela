@@ -565,4 +565,8 @@ p > a {
         font-size: 1.3em;
         text-align: center;
     }
+
+    header + section > a {
+        font-size: 1.1em;
+    }
 }
