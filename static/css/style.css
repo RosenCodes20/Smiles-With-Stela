@@ -581,4 +581,8 @@ p > a {
         flex-direction: column;
         gap: 1em;
     }
+
+    .p-relative {
+        top: 25%;
+    }
 }
