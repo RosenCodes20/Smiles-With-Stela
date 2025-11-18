@@ -555,6 +555,14 @@ p > a {
     font-size: 0.7em;
 }
 
-@media (max-width: 1357px) {
+@media (max-width: 1200px) {
+    .big-img {
+        width: 70%;
+    }
 
+    .p-relative {
+        width: 50%;
+        font-size: 1.2em;
+        text-align: center;
+    }
 }
