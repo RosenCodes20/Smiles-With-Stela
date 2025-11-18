@@ -564,6 +564,7 @@ p > a {
         width: 50%;
         font-size: 1.3em;
         text-align: center;
+        top: 30%;
     }
 
     header + section > a {
@@ -580,9 +581,14 @@ p > a {
     nav {
         flex-direction: column;
         gap: 1em;
+        margin-bottom: 1em;
     }
 
     .p-relative {
         top: 25%;
     }
+}
+
+@media (max-width: 1217px) {
+    
 }
