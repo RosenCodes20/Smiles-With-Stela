@@ -590,5 +590,7 @@ p > a {
 }
 
 @media (max-width: 1217px) {
-    
+    footer {
+        flex-direction: column;
+    }
 }
