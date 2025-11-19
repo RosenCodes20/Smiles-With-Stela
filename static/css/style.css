@@ -626,4 +626,8 @@ p > a {
     footer > div:nth-child(3) > p {
         margin-bottom: 1em;
     }
+
+    .law-wrapper {
+        margin: 1.5em 0;
+    }
 }
