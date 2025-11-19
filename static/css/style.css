@@ -562,6 +562,10 @@ p > a {
     right: 23.9em;
 }
 
+.hamburger {
+    display: none;
+}
+
 @media (max-width: 1200px) {
     .big-img {
         width: 70%;
