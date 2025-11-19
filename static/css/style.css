@@ -631,3 +631,16 @@ p > a {
         margin: 1.5em 0;
     }
 }
+
+@media (max-width: 890px) {
+     header + section + section {
+        font-size: 0.7em;
+         border: 1px solid black;
+         width: 100%;
+    }
+
+    .big-img {
+        width: 100%;
+        border-radius: 0;
+    }
+}
