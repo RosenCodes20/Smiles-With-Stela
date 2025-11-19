@@ -93,18 +93,6 @@
                 </ul>
             </section>
         
-            <div class="hamburger">
-                <label>
-                    <input type="checkbox">
-                    <span class="menu"> <span class="hamburger"></span> </span>
-                    <ul>
-                      <li> <a href="#">Home</a> </li>
-                      <li> <a href="#">About</a> </li>
-                      <li> <a href="#">Contact</a> </li>
-                    </ul>
-                </label>
-            </div>
-        
             {% get_search_form as search_form %}
             
             <section class="registration">
@@ -157,6 +145,18 @@
             </section>
         </nav>
     </header>
+    
+     <div class="hamburger-line">
+                <label>
+                    <input type="checkbox">
+                    <span class="menu"> <span class="hamburger"></span> </span>
+                    <ul>
+                      <li> <a href="#">Home</a> </li>
+                      <li> <a href="#">About</a> </li>
+                      <li> <a href="#">Contact</a> </li>
+                    </ul>
+                </label>
+     </div>
     
 {% block content %}
     
