@@ -544,15 +544,22 @@ p > a {
     cursor: pointer;
 }
 
-.cart-length {
+.cart-length, .cart-length-auth {
     position: absolute;
-    right: 26.6em;
     top: 2.1%;
     background: black;
     border-radius: 50%;
     color: white;
     padding: 0.5em 0.8em;
     font-size: 0.7em;
+}
+
+.cart-length {
+    right: 26.6em;
+}
+
+.cart-length-auth {
+    right: 23.9em;
 }
 
 @media (max-width: 1200px) {
