@@ -655,7 +655,7 @@ p > a {
       width: 100%;
     }
 
-    .items {
+    .item-items {
       margin: 1rem;
       font-size: 36px;
         color: white;
@@ -699,53 +699,53 @@ p > a {
       right: 0;
     }
 
-    .icons {
+    .icon-icons {
       position: absolute;
-      top: 35%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
 
-    .icons,
-    .icons::before,
-    .icons::after {
+    .icon-icons,
+    .icon-icons::before,
+    .icon-icons::after {
       width: 3rem;
       height: 2px;
       background-color: gray;
       display: inline-block;
     }
 
-    .icons::before,
-    .icons::after {
+    .icon-icons::before,
+    .icon-icons::after {
       content: "";
       position: absolute;
       left: 0;
       transition: all 0.2s;
     }
 
-    .icons::before {
+    .icon-icons::before {
       top: -0.8rem;
     }
-    .icons::after {
+    .icon-icons::after {
       top: 0.8rem;
     }
 
-    .button:hover .icons:before {
+    .button:hover .icon-icons:before {
       top: -1rem;
     }
-    .button:hover .icons::after {
+    .button:hover .icon-icons::after {
       top: 1rem;
     }
 
-    .checkbox:checked + .button .icons {
+    .checkbox:checked + .button .icon-icons {
       background-color: transparent;
     }
 
-    .checkbox:checked + .button .icons::before {
+    .checkbox:checked + .button .icon-icons::before {
       top: 0;
       transform: rotate(135deg);
     }
-    .checkbox:checked + .button .icons::after {
+    .checkbox:checked + .button .icon-icons::after {
       top: 0;
       transform: rotate(-135deg);
     }

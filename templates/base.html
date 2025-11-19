@@ -107,12 +107,12 @@
                 {% get_cart_length as cart_length  %}
 
                     <a href="javascript:void(0);" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    
+
                     {% if not request.user.is_authenticated %}
                         <span class="cart-length">{{ cart_length }}</span>
                     {% else %}
                         <span class="cart-length-auth">{{ cart_length }}</span>
-                    
+
                     {% endif %}
                     {% if request.user.is_authenticated %}
                         <a href="{% url 'cart' request.user.id %}"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -144,24 +144,24 @@
                 </ul>
             </section>
         </nav>
-    
+
     <div class="hamburger-line">
             <input type="checkbox" id="navi-toggle" class="checkbox" />
           <label for="navi-toggle" class="button">
-            <span class="icons">&nbsp;</span>
+            <span class="icon-icons">&nbsp;</span>
           </label>
           <div class="background">&nbsp;</div>
-        
+
           <nav class="nav">
             <ul class="list">
-              <li class="items"> <a class="link" href="{% url 'all-products' %}"> Всички продукти</a> </li>
-              <li class="items"> <a class="link" href="{% url 'soaps' %}"> Сапуни </a> </li>
-              <li class="items"> <a class="link" href="{% url 'gift-sets' %}"> Подаръчни комплекти </a> </li>
-              <li class="items"> <a class="link" href="{% url 'about-us' %}"> За нас </a> </li>
-              <li class="items"> <a class="link" href="{% url 'contact' %}"> Контакти </a> </li>
+              <li class="item-items"> <a class="link" href="{% url 'all-products' %}"> Всички продукти</a> </li>
+              <li class="item-items"> <a class="link" href="{% url 'soaps' %}"> Сапуни </a> </li>
+              <li class="item-items"> <a class="link" href="{% url 'gift-sets' %}"> Подаръчни комплекти </a> </li>
+              <li class="item-items"> <a class="link" href="{% url 'about-us' %}"> За нас </a> </li>
+              <li class="item-items"> <a class="link" href="{% url 'contact' %}"> Контакти </a> </li>
             </ul>
           </nav>
-    </div> 
+    </div>
     </header>
     
 {% block content %}
