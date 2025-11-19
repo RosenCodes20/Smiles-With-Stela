@@ -611,6 +611,8 @@ p > a {
         justify-content: center;
         flex-direction: column;
         margin-top: 1em;
+        gap: 0.3em;
+        margin-bottom: 1em;
     }
 
     .needed-links {
