@@ -685,7 +685,6 @@ p > a {
       cursor: pointer;
     }
 
-    /* functionality */
     .checkbox:checked ~ .background {
       transform: scale(80);
     }
@@ -695,55 +694,53 @@ p > a {
       right: 0;
     }
 
-    /*  */
-    /* styling hamb ICON */
-    .icon {
+    .icons {
       position: absolute;
-      top: 50%;
+      top: 35%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
 
-    .icon,
-    .icon::before,
-    .icon::after {
+    .icons,
+    .icons::before,
+    .icons::after {
       width: 3rem;
       height: 2px;
       background-color: gray;
       display: inline-block;
     }
 
-    .icon::before,
-    .icon::after {
+    .icons::before,
+    .icons::after {
       content: "";
       position: absolute;
       left: 0;
       transition: all 0.2s;
     }
 
-    .icon::before {
+    .icons::before {
       top: -0.8rem;
     }
-    .icon::after {
+    .icons::after {
       top: 0.8rem;
     }
 
-    .button:hover icon:before {
+    .button:hover .icons:before {
       top: -1rem;
     }
-    .button:hover icon::after {
+    .button:hover .icons::after {
       top: 1rem;
     }
 
-    .checkbox:checked + .button .icon {
+    .checkbox:checked + .button .icons {
       background-color: transparent;
     }
 
-    .checkbox:checked + .button .icon::before {
+    .checkbox:checked + .button .icons::before {
       top: 0;
       transform: rotate(135deg);
     }
-    .checkbox:checked + .button .icon::after {
+    .checkbox:checked + .button .icons::after {
       top: 0;
       transform: rotate(-135deg);
     }
