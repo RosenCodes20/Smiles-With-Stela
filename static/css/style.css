@@ -104,7 +104,7 @@ nav {
 .signup > a {
     color: white;
     text-decoration: none;
-    
+
 }
 
 header + section > img {
@@ -477,7 +477,7 @@ footer > div:nth-child(3) > div {
 
 .prev, .next {
     position: absolute;
-    top: 65%; 
+    top: 65%;
     transform: translateY(-50%);
     background: lightgray;
     padding: 0.6em 0.9em;
@@ -600,6 +600,10 @@ p > a {
     }
 
     .hamburger-line {
+        display: block;
+    }
+
+    nav {
         display: none;
     }
 }
