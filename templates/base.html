@@ -146,22 +146,22 @@
         </nav>
     
      <div class="hamburger-line">
-        <label>
-            <input type="checkbox">
-
-            <span class="menu">
-                <span class="hamburger"></span>
-            </span>
-
-            <ul class="mobile-nav">
-                <li><a href="{% url 'all-products' %}">Всички продукти</a></li>
-                <li><a href="{% url 'soaps' %}">Сапуни</a></li>
-                <li><a href="{% url 'decorations' %}">Украси</a></li>
-                <li><a href="{% url 'gift-sets' %}">Подаръчни комплекти</a></li>
-                <li><a href="{% url 'about-us' %}">За нас</a></li>
-                <li><a href="{% url 'contact' %}">Контакти</a></li>
+            <input type="checkbox" id="navi-toggle" class="checkbox" />
+          <label for="navi-toggle" class="button">
+            <span class="icon">&nbsp;</span>
+          </label>
+          <div class="background">&nbsp;</div>
+        
+          <!-- nav -->
+          <nav class="nav">
+            <ul class="list">
+              <li class="item"> <a class="link"> Link 1 </a> </li>
+              <li class="item"> <a class="link"> Link 2 </a> </li>
+              <li class="item"> <a class="link"> Link 4 </a> </li>
+              <li class="item"> <a class="link"> Link 5 </a> </li>
+              <li class="item"> <a class="link"> Link 6 </a> </li>
             </ul>
-        </label>
+          </nav>
     </div>
     </header>
     
