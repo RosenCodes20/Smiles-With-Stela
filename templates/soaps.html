@@ -2,16 +2,16 @@
 {% load calculate_euro %}
 {% block content %}
      
-    <section class="filters">
-        <select name="filters" id="filters">
-            <option value="По подразбиране">Подреждане по подразбиране</option>
-            <option value="Първо най-популярните">Първо най-популярните</option>
-            <option value="Първо най-новите">Първо най новите</option>
-            <option value="Първо най-скъпите">Първо най-скъпите</option>
-            <option value="Първо най-евтините">Първо най-евтините</option>
-        </select>
-    </section>
-    
+{#    <section class="filters">#}
+{#        <select name="filters" id="filters">#}
+{#            <option value="По подразбиране">Подреждане по подразбиране</option>#}
+{#            <option value="Първо най-популярните">Първо най-популярните</option>#}
+{#            <option value="Първо най-новите">Първо най новите</option>#}
+{#            <option value="Първо най-скъпите">Първо най-скъпите</option>#}
+{#            <option value="Първо най-евтините">Първо най-евтините</option>#}
+{#        </select>#}
+{#    </section>#}
+{#    #}
     <section class="sell-items">
     {% for product in soaps_queryset %}
         
