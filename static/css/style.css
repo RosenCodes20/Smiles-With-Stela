@@ -624,9 +624,4 @@ p > a {
     footer > div:nth-child(3) > p {
         margin-bottom: 1em;
     }
-
-    footer > div:nth-child(3) > div {
-        display: flex;
-        gap: 0.6em;
-    }
 }
