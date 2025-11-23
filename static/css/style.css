@@ -802,3 +802,7 @@ p > a {
         overflow-x: hidden;
     }
 }
+
+@media (max-width: 895px) {
+    
+}
