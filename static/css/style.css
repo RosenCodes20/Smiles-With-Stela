@@ -869,3 +869,7 @@ p > a {
         object-fit: cover;
     }
 }
+
+@media (max-width: 483px) {
+    
+}
