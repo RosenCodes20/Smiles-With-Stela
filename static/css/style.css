@@ -853,3 +853,7 @@ p > a {
         top: 25%;
     }
 }
+
+@media (max-width: 582px) {
+    
+}
