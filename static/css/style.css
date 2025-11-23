@@ -955,6 +955,6 @@ footer > div:nth-child(2) > form > div > input {
 
 @media (max-width: 453px) {
     .prev, .next {
-        top: 110%;
+        top: 80%;
     }
 }
