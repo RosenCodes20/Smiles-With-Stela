@@ -772,6 +772,11 @@ p > a {
         text-align: center;
     }
 
+    footer > div:nth-child(3) {
+        min-height: 0;
+        margin-bottom: 1em;
+    }
+
     footer > div:nth-child(3) > h4 {
         margin-bottom: 1em;
     }
@@ -781,7 +786,8 @@ p > a {
     }
 
     .law-wrapper {
-        margin: 1.5em 0;
+        margin-top: 1.5em;
+        margin-bottom: 2em;
     }
 }
 
@@ -803,6 +809,8 @@ p > a {
     }
 }
 
-@media (max-width: 895px) {
-    
+@media (max-width: 897px) {
+    .law-wrapper {
+        font-size: 0.9em;
+    }
 }
