@@ -938,7 +938,6 @@ footer > div:nth-child(2) > form > div > input {
     }
 
     ol {
-        text-align: center;
     }
 
     ol > li {
@@ -957,4 +956,8 @@ footer > div:nth-child(2) > form > div > input {
     .prev, .next {
         top: 80%;
     }
+}
+
+@media (max-width: 413px) {
+    
 }
