@@ -903,5 +903,8 @@ footer > div:nth-child(2) > form > div > input {
 }
 
 @media (max-width: 599px) {
-    
+    .big-h2 {
+        font-size: 1.8em;
+        text-align: center;
+    }
 }
