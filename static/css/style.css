@@ -901,3 +901,7 @@ footer > div:nth-child(2) > form > div > input {
         display: block;
     }
 }
+
+@media (max-width: 599px) {
+    
+}
