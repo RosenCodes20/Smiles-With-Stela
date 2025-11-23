@@ -161,6 +161,57 @@
               <li class="item-items"> <a class="link" href="{% url 'gift-sets' %}"> Подаръчни комплекти </a> </li>
               <li class="item-items"> <a class="link" href="{% url 'about-us' %}"> За нас </a> </li>
               <li class="item-items"> <a class="link" href="{% url 'contact' %}"> Контакти </a> </li>
+              <li class="item-items">
+                  <section class="registration">
+                <ul>
+                    <section class="search-bar" id="search-bar">
+                        <form method="get">
+                            {{ search_form }}
+                            <button type="submit">Search</button>
+                            </form>
+                    </section>
+
+                {% get_cart_length as cart_length  %}
+
+                    <a href="javascript:void(0);" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+                    {% if not request.user.is_authenticated %}
+                        <span class="cart-length">{{ cart_length }}</span>
+                    {% else %}
+                        <span class="cart-length-auth">{{ cart_length }}</span>
+
+                    {% endif %}
+                    {% if request.user.is_authenticated %}
+                        <a class="cart-icon" href="{% url 'cart' request.user.id %}"><i class="fa-solid fa-cart-shopping"></i></a>
+                    {% else %}
+                        <a class="cart-icon" href="{% url 'login'%}"><i class="fa-solid fa-cart-shopping"></i></a>
+                        
+                    {% endif %}
+                </ul>
+            </section>
+              </li>
+            <li class="item-items">
+                {% if not request.user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'login' %}" class="hover-arrows">
+                            <span class="arrow left">←</span>
+                            ВХОД
+                            <span class="arrow right">→</span>
+                        </a>
+                    </li>
+                    <li class="signup"><a href="{% url 'register' %}">РЕГИСТРАЦИЯ</a></li>
+                    
+                    {% else %}
+                        <li>
+                            <a href="{% url 'logout' %}" class="hover-arrows">
+                                <span class="arrow left">←</span>
+                                ИЗХОД
+                                <span class="arrow right">→</span>
+                            </a>
+                        </li>
+                        <li class="signup"><a href="{% url 'profile-details' request.user.pk %}">ПРОФИЛ</a></li>
+                    {% endif %}
+            </li>
             </ul>
           </nav>
     </div>

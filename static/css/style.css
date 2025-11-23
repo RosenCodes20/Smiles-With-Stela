@@ -674,8 +674,8 @@ footer > div:nth-child(2) > form > div > input {
     .link:link,
     .link:visited {
       display: inline-block;
-      font-size: 3rem;
-      font-weight: 300;
+      font-size: 1.9rem;
+      font-weight: bold;
       padding: 1rem 2rem;
       color: darkorange;
       text-decoration: none;
@@ -758,6 +758,38 @@ footer > div:nth-child(2) > form > div > input {
 
     .img-logo {
         width: 200px;
+    }
+
+    .cart-length {
+        display: none;
+    }
+
+    .registration ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 500px;
+        margin: 0.5em auto;
+    }
+
+    .registration {
+        margin-bottom: 1em;
+    }
+
+    .hover-arrows, .signup, .fa-cart-shopping {
+        font-size: 1rem;
+    }
+
+    #search-icon, .cart-icon {
+        font-size: 1.5rem;
+    }
+
+    .signup {
+        width: 50%;
+        margin: 1em auto;
+        padding: 0.6em 1em;
+        border-radius: 0.9em;
     }
 }
 
