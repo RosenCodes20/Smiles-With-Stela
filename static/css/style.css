@@ -843,3 +843,13 @@ p > a {
         top: 30%;
     }
 }
+
+@media (max-width: 725px) {
+    .p-relative {
+        top: 15%;
+    }
+
+    .big-btn-index {
+        top: 25%;
+    }
+}
