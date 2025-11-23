@@ -477,7 +477,7 @@ footer > div:nth-child(3) > div {
 
 .prev, .next {
     position: absolute;
-    top: 65%;
+    top: 70%;
     transform: translateY(-50%);
     background: lightgray;
     padding: 0.6em 0.9em;
@@ -906,5 +906,11 @@ footer > div:nth-child(2) > form > div > input {
     .big-h2 {
         font-size: 1.8em;
         text-align: center;
+    }
+}
+
+@media (max-width: 453px) {
+    .prev, .next {
+        top: 110%;
     }
 }
