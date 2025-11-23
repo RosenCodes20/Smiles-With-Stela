@@ -803,8 +803,11 @@ p > a {
     }
 
     .big-img {
-        width: 100%;
-        border-radius: 0;
+        width: 80%;
+    }
+
+    .p-relative, .big-btn-index {
+        font-size: 1.1em;
     }
 }
 
@@ -827,5 +830,16 @@ p > a {
 
     .law-wrapper {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 1027px) {
+    .p-relative {
+        width: 60%;
+        top: 20%;
+    }
+
+    .big-btn-index {
+        top: 30%;
     }
 }
