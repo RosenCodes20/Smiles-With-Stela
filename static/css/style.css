@@ -17,8 +17,6 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 nav > a > img {
