@@ -18,7 +18,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 nav > a > img {
@@ -796,5 +796,11 @@ p > a {
     .big-img {
         width: 100%;
         border-radius: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    body, html {
+        overflow-x: hidden;
     }
 }
