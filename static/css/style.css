@@ -834,6 +834,14 @@ footer > div:nth-child(2) > form > div > input {
         margin-bottom: 2em;
         flex-wrap: wrap;
     }
+
+    footer > div:not(:last-child) {
+        margin-bottom: 1em;
+    }
+
+    .law-wrapper p {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 890px) {
