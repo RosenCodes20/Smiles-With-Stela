@@ -815,3 +815,13 @@ p > a {
         font-size: 0.9em;
     }
 }
+
+@media (max-width: 808px) {
+    #none {
+        display: none;
+    }
+
+    .law-wrapper {
+        flex-direction: column;
+    }
+}
