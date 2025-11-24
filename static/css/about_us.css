@@ -64,3 +64,7 @@ div > p {
 a:hover {
     opacity: 0.6;
 }
+
+@media (max-width: 1218px) {
+    
+}
