@@ -212,3 +212,7 @@ td .fa-xmark:hover {
         width: 650px;
     }
 }
+
+@media (max-width: 601px) {
+    
+}
