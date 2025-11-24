@@ -184,5 +184,8 @@ td .fa-xmark:hover {
 }
 
 @media (max-width: 745px) {
-    
+    .sad-main {
+        text-align: center;
+        font-size: 1em;
+    }
 }
