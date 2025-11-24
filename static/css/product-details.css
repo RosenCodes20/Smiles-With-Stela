@@ -210,5 +210,35 @@
 }
 
 @media (max-width: 1424px) {
-    
+    .item-details {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .img-wrapper img {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+    }
+
+    .text-wrapper {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .gallery {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .gallery img {
+        width: 80px;
+        height: 60px;
+    }
+
+    .text-wrapper > ul > li {
+        display: block;
+        margin-left: 0;
+    }
 }
