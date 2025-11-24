@@ -189,3 +189,16 @@ td .fa-xmark:hover {
         font-size: 1em;
     }
 }
+
+@media (max-width: 1385px) {
+    .articles-wrap {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .div-for-style {
+        min-height: 0;
+    }
+}
