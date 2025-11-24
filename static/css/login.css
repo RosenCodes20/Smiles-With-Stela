@@ -163,5 +163,7 @@ article > form > input {
 }
 
 @media (max-width: 400px) {
-    
+    .login > form {
+        min-width: 350px;
+    }
 }
