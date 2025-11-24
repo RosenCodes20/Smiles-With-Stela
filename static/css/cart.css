@@ -214,6 +214,9 @@ td .fa-xmark:hover {
 }
 
 @media (max-width: 601px) {
+    .cart-table {
+        width: 500px;
+    }
     table {
     border: 0;
   }
