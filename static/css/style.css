@@ -1023,3 +1023,48 @@ footer > div:nth-child(2) > form > div > input {
         right: 38%;
     }
 }
+
+@media (max-width: 650px) {
+    .cart-length, .cart-length-auth {
+        right: 37%;
+    }
+}
+
+@media (max-width: 578px) {
+    .cart-length, .cart-length-auth {
+        right: 36%;
+    }
+}
+
+@media (max-width: 500px) {
+    .cart-length, .cart-length-auth {
+        right: 35%;
+    }
+}
+
+
+@media (max-width: 534px) {
+    .cart-length-auth, .cart-length {
+        top: 80%;
+        right: 31.2%;
+    }
+}
+
+@media (max-width: 428px) {
+    .cart-length, .cart-length-auth {
+        top: 81%;
+        right: 29%;
+    }
+}
+
+@media (max-width: 383px) {
+    .cart-length, .cart-length-auth {
+        right: 26%;
+    }
+}
+
+@media (max-width: 339px) {
+    .cart-length-auth, .cart-length {
+        right: 25%;
+    }
+}
