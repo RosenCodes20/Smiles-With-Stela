@@ -9,13 +9,15 @@
             
             
             <table>
-                <tr>
-                    <th>Продукт</th>
-                    <th>Цена</th>
-                    <th>Количество</th>
-                    <th class="sum">Общо</th>
-                    <th></th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Продукт</th>
+                        <th>Цена</th>
+                        <th>Количество</th>
+                        <th class="sum">Общо</th>
+                        <th></th>
+                    </tr>
+                </thead>
                 {% for product in cart_queryset_for_user %}
                 <tr>
                     <td><img src="{{ product.product_image_cart.url }}" alt=""> {{ product.product_description_cart }}</td>
