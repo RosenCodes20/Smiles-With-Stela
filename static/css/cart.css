@@ -262,5 +262,15 @@ td .fa-xmark:hover {
 }
 
 @media (max-width: 536px) {
-    
+    .summary {
+        min-width: 300px;
+    }
+
+    .cart-table {
+        width: 350px;
+    }
+
+    table {
+        width: 300px;
+    }
 }
