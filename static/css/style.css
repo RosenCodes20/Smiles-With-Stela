@@ -760,7 +760,7 @@ footer > div:nth-child(2) > form > div > input {
         width: 200px;
     }
 
-    .cart-length {
+    .cart-length, .cart-length-auth {
         display: none;
     }
 
