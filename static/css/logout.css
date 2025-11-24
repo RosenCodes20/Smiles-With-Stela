@@ -44,5 +44,7 @@
 }
 
 @media (max-width: 937px) {
-    
+    .logout-art {
+        text-align: center;
+    }
 }
