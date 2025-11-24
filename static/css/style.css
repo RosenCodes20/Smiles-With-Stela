@@ -969,3 +969,23 @@ footer > div:nth-child(2) > form > div > input {
         min-width: 300px !important;
     }
 }
+
+@media (max-width: 446px) {
+    .p-relative {
+        top: 10%;
+        border: 5px solid black;
+    }
+
+    .big-btn-index {
+        top: 20%;
+        font-size: 0.8em;
+    }
+}
+
+/*@media (max-width: 320px) {*/
+/*    .p-relative {*/
+/*        top: 8%;*/
+/*    }*/
+/*    */
+/*    .big-btn-index*/
+/*}*/
