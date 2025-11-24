@@ -149,3 +149,7 @@ article > form > input {
     max-width: 600px;
     text-align: center;
 }
+
+@media (max-width: 1358px) {
+
+}
