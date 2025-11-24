@@ -182,3 +182,7 @@ td .fa-xmark:hover {
 .thanks-main {
     min-height: 60dvh;
 }
+
+@media (max-width: 745px) {
+    
+}
