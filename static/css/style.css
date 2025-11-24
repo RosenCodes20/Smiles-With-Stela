@@ -761,7 +761,9 @@ footer > div:nth-child(2) > form > div > input {
     }
 
     .cart-length, .cart-length-auth {
-        display: none;
+        top: 79%;
+        right: 43%;
+        font-size: 0.4em;
     }
 
     .registration ul {
