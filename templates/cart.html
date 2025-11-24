@@ -18,15 +18,16 @@
                         <th></th>
                     </tr>
                 </thead>
-                {% for product in cart_queryset_for_user %}
-                <tr>
-                    <td><img src="{{ product.product_image_cart.url }}" alt=""> {{ product.product_description_cart }}</td>
-                    <td>{{ product.product_price_cart }}лв/{{ product.product_price_cart|to_eur }}€</td>
-                    <td class="quantity"><p>1</p></td>
-                    <td class="sum-price">{{ product.product_price_cart }}лв/{{ product.product_price_cart|to_eur }}€</td>
-                    <td><a href="{% url 'remove-cart-product' product.id %}"><i class="fa-solid fa-xmark"></i></a></td>
-                </tr>
-
+                <tbody>
+                    {% for product in cart_queryset_for_user %}
+                    <tr>
+                        <td><img src="{{ product.product_image_cart.url }}" alt=""> {{ product.product_description_cart }}</td>
+                        <td>{{ product.product_price_cart }}лв/{{ product.product_price_cart|to_eur }}€</td>
+                        <td class="quantity"><p>1</p></td>
+                        <td class="sum-price">{{ product.product_price_cart }}лв/{{ product.product_price_cart|to_eur }}€</td>
+                        <td><a href="{% url 'remove-cart-product' product.id %}"><i class="fa-solid fa-xmark"></i></a></td>
+                    </tr>
+                </tbody>
                 {% endfor %}
                 
             </table>
