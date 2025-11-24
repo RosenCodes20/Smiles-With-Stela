@@ -259,5 +259,8 @@ td .fa-xmark:hover {
   table td:last-child {
     border-bottom: 0;
   }
+}
 
+@media (max-width: 536px) {
+    
 }
