@@ -1017,3 +1017,9 @@ footer > div:nth-child(2) > form > div > input {
         right: 39%;
     }
 }
+
+@media (max-width: 717px) {
+    .cart-length, .cart-length-auth {
+        right: 38%;
+    }
+}
