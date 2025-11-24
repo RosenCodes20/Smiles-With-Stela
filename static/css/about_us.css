@@ -68,7 +68,7 @@ a:hover {
 @media (max-width: 1218px) {
     .images-wrap {
         flex-direction: column;
-        gap: 1em;
+        gap: 1.5em;
     }
 
     .my-img-wrap {
