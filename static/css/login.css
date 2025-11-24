@@ -167,3 +167,7 @@ article > form > input {
         min-width: 350px;
     }
 }
+
+@media (max-width: 350px) {
+    
+}
