@@ -74,4 +74,8 @@ a:hover {
     .my-img-wrap {
         margin-bottom: 1em;
     }
+
+    .about-us-sect {
+        text-align: center;
+    }
 }
