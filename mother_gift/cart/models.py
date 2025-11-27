@@ -26,6 +26,15 @@ class Cart(models.Model):
     )
 
 class Addresses(models.Model):
+    first_name = models.CharField(
+        max_length=150
+    )
+
+    last_name = models.CharField(
+        max_length=150
+    )
+
+    address_email = models.EmailField()
     town_name = models.CharField(
         max_length=100
     )
