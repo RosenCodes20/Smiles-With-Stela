@@ -104,7 +104,8 @@ def create_deliver_cart(request):
                 f'На цена: {float(sum(sum_prices))}лв/{float(sum(sum_prices) / 1.95583):.2f}евро\n'
                 f'До град: {finish_cart.town_name}\n'
                 f'До адрес: {finish_cart.speedy_address}\n'
-                f"Име и фамилия: {form.cleaned_data['first_name']} {form.cleaned_data['last_name']}"
+                f"Име и фамилия: {form.cleaned_data['first_name']} {form.cleaned_data['last_name']}\n"
+                f"Въведен имейл: {form.cleaned_data['address_email']}"
             )
 
             send_mail_ssl(subject, message, ['rrirrirri08@gmail.com'])
