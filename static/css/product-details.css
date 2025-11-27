@@ -241,4 +241,14 @@
         display: block;
         margin-left: 0;
     }
+
+    .opinion-form {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .opinion-form {
+        width: 90%;
+    }
 }
