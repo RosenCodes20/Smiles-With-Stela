@@ -1,11 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let called = document.querySelectorAll("#called");
-
-    for (span of called) {
-        if (screen.width < 808) {
-            span.id = "none";
+    let spans = document.querySelectorAll('.called');
+    spans.forEach(span => {
+        if (window.innerWidth < 808) {
+            span.style.display = 'none';
         }
-
-        console.log(span);
-    }
+    });
 })
