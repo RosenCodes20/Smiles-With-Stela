@@ -6,7 +6,7 @@ from mother_gift.cart.models import Addresses
 class BaseCartForm(forms.ModelForm):
     class Meta:
         model = Addresses
-        fields = ('town_name', 'speedy_address')
+        fields = ('first_name', 'last_name', 'address_email', 'town_name', 'speedy_address')
 
         widgets = {
             "town_name": forms.TextInput(attrs={'placeholder': 'Моля въведете вашия град', 'id': 'username'}),
