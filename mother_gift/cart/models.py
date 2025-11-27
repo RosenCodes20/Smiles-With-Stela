@@ -35,6 +35,7 @@ class Addresses(models.Model):
     )
 
     address_email = models.EmailField()
+
     town_name = models.CharField(
         max_length=100
     )
