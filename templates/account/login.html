@@ -11,7 +11,7 @@
             <h2>Вход</h2>
             {{ form }}
             {% csrf_token %}
-            <a href="" class="forgot-pass"><p>Забравена парола?</p></a>
+            <a href="{% url 'password_reset' %}" class="forgot-pass"><p>Забравена парола?</p></a>
             
             <button class="login-btn">ВХОД</button>
             
