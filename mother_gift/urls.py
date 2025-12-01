@@ -28,6 +28,7 @@ urlpatterns = [
     path('accounts/', include("mother_gift.accounts.urls")),
 
     path('accounts/', include('allauth.urls')),
+    path('account/', include('django.contrib.auth.urls')),
     path("about-us/", include("mother_gift.about_us.urls")),
     path("all-products/", include("mother_gift.all_products.urls")),
     path("cart/", include("mother_gift.cart.urls")),
