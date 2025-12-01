@@ -794,9 +794,8 @@ footer > div:nth-child(2) > form > div > input {
         border-radius: 0.9em;
     }
 
-    .search-bar form {
-        display: block;
-        top: 10%;
+    .item-items > .registration > ul > section {
+        top: 90%;
     }
 }
 
