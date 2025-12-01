@@ -28,7 +28,7 @@ article > form:not(h2), article > form > div {
     flex-direction: column;
 }
 
-#username, #pass {
+#username, #pass, #id_email {
     margin-bottom: 2em;
     border: none;
     border-bottom: 1px solid black;
@@ -148,6 +148,14 @@ article > form > input {
     margin-bottom: 1.5em;
     max-width: 600px;
     text-align: center;
+}
+
+.forgot-pass-h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 2em;
 }
 
 @media (max-width: 1358px) {
