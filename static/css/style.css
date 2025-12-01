@@ -793,6 +793,11 @@ footer > div:nth-child(2) > form > div > input {
         padding: 0.6em 1em;
         border-radius: 0.9em;
     }
+
+    .search-bar form {
+        display: block;
+        top: 10%;
+    }
 }
 
 @media (max-width: 1217px) {
