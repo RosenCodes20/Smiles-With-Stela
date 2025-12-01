@@ -795,7 +795,19 @@ footer > div:nth-child(2) > form > div > input {
     }
 
     .item-items > .registration > ul > section {
-        top: 90%;
+        top: 86%;
+        right: 40%;
+        z-index: 1;
+    }
+
+    .item-items > .registration > ul > section > form {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .item-items > .registration > ul > section > form > div > input  {
+        margin: 0 auto;
+        border: 1px solid black;
     }
 }
 
@@ -1070,5 +1082,29 @@ footer > div:nth-child(2) > form > div > input {
 @media (max-width: 339px) {
     .cart-length-auth, .cart-length {
         right: 25%;
+    }
+}
+
+@media (max-width: 660px) {
+    .item-items > .registration > ul > section {
+        right: 30%;
+    }
+}
+
+@media (max-width: 500px) {
+    .item-items > .registration > ul > section {
+        right: 15%;
+    }
+}
+
+@media (max-width: 428px) {
+    .item-items > .registration > ul > section {
+        top: 88%;
+    }
+}
+
+@media (max-width: 391px) {
+    .item-items > .registration > ul > section {
+        right: 8%;
     }
 }
