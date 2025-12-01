@@ -805,9 +805,14 @@ footer > div:nth-child(2) > form > div > input {
         justify-content: center;
     }
 
+    .item-items > .registration > ul > section > form > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .item-items > .registration > ul > section > form > div > input  {
         margin: 0 auto;
-        border: 1px solid black;
     }
 }
 
