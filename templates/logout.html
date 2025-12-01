@@ -5,7 +5,7 @@
         <h2>Сигурен ли си че искаш да излезеш от акаунта си?</h2>
         
         <div class="form-wrapper">
-            <form action="{% url 'logout' %}" method="post" class="logout-form">
+            <form action="{% url 'logout-by-me' %}" method="post" class="logout-form">
                 {% csrf_token %}
                 <button class="logout-btn"><i class="fa-solid fa-check"></i>Да</button>
             </form>

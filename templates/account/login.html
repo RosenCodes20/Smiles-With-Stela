@@ -7,7 +7,7 @@
     
     <article class="login">
         
-        <form action="{% url 'login' %}" method="post">
+        <form action="{% url 'login-by-me' %}" method="post">
             <h2>Вход</h2>
             {{ form }}
             {% csrf_token %}
@@ -23,7 +23,7 @@
             
             <div class="registration-wrap">
                 <h5>Или се регистрирайте с:</h5>
-                <a href="{% url 'register' %}" class="registraion-link"><p>РЕГИСТРАЦИЯ</p></a>
+                <a href="{% url 'register-by-me' %}" class="registraion-link"><p>РЕГИСТРАЦИЯ</p></a>
             </div>
         </form>
     </article>
