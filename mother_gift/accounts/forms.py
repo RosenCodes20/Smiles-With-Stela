@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordResetForm
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from mother_gift.accounts.models import User, Profile
@@ -47,3 +47,8 @@ class EditProfileForm(forms.ModelForm):
             'first_name': forms.TextInput(attrs={'placeholder': 'Моля въведете първо име', 'id': 'username'}),
             'last_name': forms.TextInput(attrs={'placeholder': 'Моля въведете фамилия', 'id': 'username'}),
         }
+
+class UserForgotPasswordForm(PasswordResetForm):
+    class Meta:
+        model = User
+        fields = ("email",)
