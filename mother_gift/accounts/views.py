@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.contrib.auth.views import LoginView, LogoutView
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, DetailView, UpdateView
 
@@ -84,3 +84,10 @@ def password_reset_view(request):
     if request.method == "POST":
         if form.is_valid():
             form.save(from_email="rrirrirri08@gmail.com",)
+            return redirect("password_reset_done")
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, "registration/password_reset_form.html", context)
