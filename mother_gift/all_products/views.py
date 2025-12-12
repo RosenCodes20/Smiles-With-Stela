@@ -15,8 +15,7 @@ def all_products(request):
 
     all_products_queryset = AllProducts.objects.all()
 
-    if request.user.is_authenticated:
-        if 'product' in request.GET:
+    if 'product' in request.GET:
             product = request.GET.get('product')
             all_products_queryset = all_products_queryset.filter(product_description__icontains=product)
             print(all_products_queryset)
