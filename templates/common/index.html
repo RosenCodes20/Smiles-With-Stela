@@ -1,8 +1,8 @@
-{% extends 'base.html' %}
+{% extends 'common/base.html' %}
 {% load static %}
 {% block content %}
     <section>
-        <img src="../static/images/IMG_4230.jpg" class="big-img" alt="">
+        <img src="../../static/images/IMG_4230.jpg" class="big-img" alt="">
         
         <p class="p-relative">ИЗЦЯЛО ДОМАШНО НАПРАВЕНИ САПУНИ И УКРАСИ</p>
         <a class="big-btn-index" href="{% url 'all-products' %}">Виж Тук</a>
@@ -23,19 +23,19 @@
         <h2 class="category-text">Категории продукти</h2>
         <div class="category-list">
             <div class="category-item">
-                <img src="../static/images/IMG_4225.jpg" alt="Сапуни">
+                <img src="../../static/images/IMG_4225.jpg" alt="Сапуни">
                 <h3>Сапуни</h3>
                 <p>Ръчно изработени сапуни с натурални съставки.</p>
                 <a href="{% url 'soaps' %}">Виж повече</a>
             </div>
             <div class="category-item">
-                <img src="../static/images/IMG_4228.jpg" alt="Украси">
+                <img src="../../static/images/IMG_4228.jpg" alt="Украси">
                 <h3>Украси</h3>
                 <p>Красиви декорации за дома и подаръци.</p>
                 <a href="{% url 'decorations' %}">Виж повече</a>
             </div>
             <div class="category-item">
-                <img src="../static/images/IMG_4229.jpg" alt="Подаръчни комплекти">
+                <img src="../../static/images/IMG_4229.jpg" alt="Подаръчни комплекти">
                 <h3>Подаръчни комплекти</h3>
                 <p>Специални комплекти за подарък, готови за радост.</p>
                 <a href="{% url 'gift-sets' %}">Виж повече</a>
@@ -48,21 +48,21 @@
         
         <div class="items-list">
             <div class="item">
-                <img src="../static/images/нов-сапун.jpg" alt="">
+                <img src="../../static/images/нов-сапун.jpg" alt="">
                 <h3>Сапун с формата на слонче с аромат на ванилия</h3>
                 <p>Нежен сапун с натурални съставки за ежедневна грижа.</p>
                 <a href="{% url 'product-details' elephant_soap.id %}">Виж повече</a>
             </div>
             
             <div class="item">
-                <img src="../static/images/нови-украси.jpg" alt="">
+                <img src="../../static/images/нови-украси.jpg" alt="">
                 <h3>Красиви и елегантни чаши, със съпунчета във формата на цветя вътре</h3>
                 <p>Уникална украса, която би внесла не само хубав аромат, но и би украсило вашия дом</p>
                 <a href="{% url 'product-details' elegant_cups_with_soaps.pk %}">Виж повече</a>
             </div>
             
             <div class="item">
-                <img src="../static/images/IMG_4230.jpg" alt="">
+                <img src="../../static/images/IMG_4230.jpg" alt="">
                 <h3>Декорирана книга</h3>
                 <p>Красива украса съдържаща книга и малки плодове, които са сапунчета</p>
                 <a href="{% url 'product-details' decorated_book.id %}">Виж повече</a>

@@ -1,8 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'common/base.html' %}
 {% load calculate_euro %}
 {% block content %}
     
-    {% for product in gift_sets_queryset %}
     
 {#    <section class="filters">#}
 {#        <select name="filters" id="filters">#}
@@ -13,18 +12,20 @@
 {#            <option value="Първо най-евтините">Първо най-евтините</option>#}
 {#        </select>#}
 {#    </section>#}
-    
+{#    #}
     <section class="sell-items">
+    {% for product in decorations_queryset %}
         
         <section class="item-for-sale">
             <img src="{{ product.product_image.url }}" alt="{{ product.product_description }}">
             <div class="text-items">
                 <h2>{{ product.product_description }}</h2>
             
-                {% if product.product_type == 'Подаръчни комплекти' %}    
-                    <p><a href="{% url 'gift-sets' %}">{{ product.product_type }}</a></p>
+                {% if product.product_type == 'Украси' %}    
+                    <p><a href="{% url 'decorations' %}">{{ product.product_type }}</a></p>
                     
                 {% endif %}
+            
                 <p>{{ product.product_price }}лв/{{ product.product_price|to_eur }}€</p>
                 <p>Курс: 1 EUR = 1.95583 BGN</p>
                 
@@ -39,7 +40,6 @@
                 <a href="{% url 'product-details' product.pk %}">Виж повече</a>
             </div>
         </section>
-    </section>
         
     {% empty %}
         <div class="all-div">
@@ -48,21 +48,23 @@
         </div>
     {% endfor %}
     
+    </section>
+    
     <div class="pagination"> 
             <span class="current"> 
-                Страница {{ gift_sets_queryset.number }} от {{ gift_sets_queryset.paginator.num_pages }} 
+                Страница {{ decorations_queryset.number }} от {{ decorations_queryset.paginator.num_pages }} 
             </span> 
             <span class="step-links-buttons"> 
-                {% if gift_sets_queryset.has_previous and gift_sets_queryset.has_next %} 
-                    <a href="?page={{ gift_sets_queryset.previous_page_number }}"> 
+                {% if decorations_queryset.has_previous and decorations_queryset.has_next %} 
+                    <a href="?page={{ decorations_queryset.previous_page_number }}"> 
                         <i class="fa-solid fa-arrow-left"></i> </a> 
-                    <a href="?page={{ gift_sets_queryset.next_page_number }}"> 
+                    <a href="?page={{ decorations_queryset.next_page_number }}"> 
                         <i class="fa-solid fa-arrow-right"></i> </a> 
-                {% elif gift_sets_queryset.has_previous %} 
-                    <a href="?page={{ gift_sets_queryset.previous_page_number }}"> 
+                {% elif decorations_queryset.has_previous %} 
+                    <a href="?page={{ decorations_queryset.previous_page_number }}"> 
                         <i class="fa-solid fa-arrow-left"></i> </a> 
-                {% elif gift_sets_queryset.has_next %} 
-                    <a href="?page={{ gift_sets_queryset.next_page_number }}"> 
+                {% elif decorations_queryset.has_next %} 
+                    <a href="?page={{ decorations_queryset.next_page_number }}"> 
                         <i class="fa-solid fa-arrow-right"></i> </a> 
                 {% endif %} 
             </span> 

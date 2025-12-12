@@ -24,4 +24,4 @@ def soaps(request):
         'soaps_queryset': soaps_queryset
     }
 
-    return render(request, 'soaps.html', context)
+    return render(request, 'product/soaps.html', context)

@@ -27,7 +27,7 @@ def all_products(request):
         'all_products_queryset': all_products_queryset,
     }
 
-    return render(request, 'all-products.html', context)
+    return render(request, 'product/all-products.html', context)
 
 @login_required
 def product_details(request, pk):
@@ -63,7 +63,7 @@ def product_details(request, pk):
         'is_bought': is_bought,
     }
 
-    return render(request, 'product-details.html', context)
+    return render(request, 'product/product-details.html', context)
 
 
 @login_required
@@ -84,7 +84,7 @@ def create_products(request): # THIS PAGE WILL BE ONLY VISIBLE BY ME!!!
             'form': form
         }
 
-        return render(request, 'add_product.html', context)
+        return render(request, 'product/add_product.html', context)
 
     else:
         raise PermissionError("Sorry you can't go there! Go back as fast as you can!")
@@ -92,4 +92,4 @@ def create_products(request): # THIS PAGE WILL BE ONLY VISIBLE BY ME!!!
 
 def thanks_for_review(request):
 
-    return render(request, "thanks_for_review.html")
+    return render(request, "thanks/thanks_for_review.html")

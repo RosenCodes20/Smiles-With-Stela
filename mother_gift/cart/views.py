@@ -35,7 +35,7 @@ def cart(request, pk):
         'sum_with_delivery': sum_with_delivery,
     }
 
-    return render(request, 'cart.html', context)
+    return render(request, 'product/../../templates/cart/cart.html', context)
 
 @login_required
 def add_to_cart(request, pk):
@@ -133,8 +133,8 @@ def create_deliver_cart(request):
         'form': form
     }
 
-    return render(request, 'create_cart.html', context)
+    return render(request, 'product/../../templates/cart/create_cart.html', context)
 
 def thanks_for_choosing(request):
 
-    return render(request, 'thanks_for_choosing_this_page.html')
+    return render(request, 'thanks/thanks_for_choosing_this_page.html')

@@ -33,19 +33,19 @@ class Register(UserPassesTestMixin, CreateView):
         elif not self.request.user.is_authenticated:
             return True
 
-    template_name = "registration.html"
+    template_name = "account/registration.html"
     model = UserModel
     form_class = UserRegisterForm
     success_url = reverse_lazy('login')
 
 class Logout(LogoutView, LoginRequiredMixin):
-    template_name = 'logout.html'
+    template_name = 'account/logout.html'
     http_method_names = ['post', 'get']
 
 
 class ProfileDetails(LoginRequiredMixin, UserPassesTestMixin, DetailView):
     model = UserModel
-    template_name = "profile.html"
+    template_name = "account/profile.html"
     context_object_name = "profile"
 
     def test_func(self):
@@ -62,7 +62,7 @@ class ProfileDetails(LoginRequiredMixin, UserPassesTestMixin, DetailView):
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Profile
-    template_name = "edit-profile.html"
+    template_name = "account/edit-profile.html"
     form_class = EditProfileForm
     context_object_name = "profile"
 

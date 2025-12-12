@@ -22,4 +22,4 @@ def decorations(request):
         'decorations_queryset': decorations_queryset
     }
 
-    return render(request, 'decorations.html', context)
+    return render(request, 'product/decorations.html', context)

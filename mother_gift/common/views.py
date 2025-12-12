@@ -65,7 +65,7 @@ def index(request):
         'elegant_cups_with_soaps': elegant_cups_with_soaps,
     }
 
-    return render(request, "index.html", context)
+    return render(request, "common/index.html", context)
 
 
 def subscribe_for_news(request):
