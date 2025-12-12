@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, DetailView, UpdateView
 
+from mother_gift import settings
 from mother_gift.accounts.forms import UserRegisterForm, EditProfileForm, UserForgotPasswordForm
 from mother_gift.accounts.models import Profile
 from mother_gift.cart.models import OrderUserModel
@@ -83,7 +84,11 @@ def password_reset_view(request):
 
     if request.method == "POST":
         if form.is_valid():
-            form.save(from_email="rrirrirri08@gmail.com",)
+            form.save(
+                request=request,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                domain_override="127.0.0.1:8000",
+            )
             return redirect("password_reset_done")
 
     context = {
