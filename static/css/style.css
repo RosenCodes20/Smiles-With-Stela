@@ -1138,3 +1138,13 @@ footer > div:nth-child(2) > form > div > input {
         top: 77%;
     }
 }
+
+@media (height <= 752px) {
+    .link {
+        font-size: 0.55em !important;
+    }
+
+    .cart-length, .cart-length-auth {
+        top: 76%;
+    }
+}
