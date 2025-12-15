@@ -1119,4 +1119,8 @@ footer > div:nth-child(2) > form > div > input {
     .link {
         font-size: 0.7em !important;
     }
+
+    .cart-length, .cart-length-auth {
+        top: 79%;
+    }
 }
