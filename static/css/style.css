@@ -1115,8 +1115,8 @@ footer > div:nth-child(2) > form > div > input {
     }
 }
 
-@media (max-height: 905px) and (orientation: landscape) {
-    body {
-        background: red;
+@media (height <= 905px) {
+    .link {
+        font-size: 0.7em !important;
     }
 }
