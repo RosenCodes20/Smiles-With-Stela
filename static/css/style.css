@@ -793,7 +793,6 @@ footer > div:nth-child(2) > form > div > input {
         padding: 0.6em 1em;
         border-radius: 0.9em;
         background: darkorange;
-        font-size: 1.5em;
     }
 
     .item-items > .registration > ul > section {
@@ -1113,5 +1112,11 @@ footer > div:nth-child(2) > form > div > input {
 @media (max-width: 391px) {
     .item-items > .registration > ul > section {
         right: 8%;
+    }
+}
+
+@media (max-height: 905px) and (orientation: landscape) {
+    body {
+        background: red;
     }
 }
