@@ -1137,6 +1137,10 @@ footer > div:nth-child(2) > form > div > input {
     .cart-length, .cart-length-auth {
         top: 77%;
     }
+
+    .big-btn-index {
+        top: 25%;
+    }
 }
 
 @media (height <= 752px) {
