@@ -66,6 +66,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+    "mother_gift.middleware.VisitorNotificationMiddleware"
 ]
 
 ROOT_URLCONF = 'mother_gift.urls'
