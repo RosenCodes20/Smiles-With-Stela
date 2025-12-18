@@ -1,5 +1,3 @@
-from django.core.mail import send_mail
-
 from mother_gift.common.views import send_mail_ssl
 
 
