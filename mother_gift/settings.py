@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure--k3rau4iufhjjm^g%j0w=cjzh#!g3oa#tu0g*8kv0c)#f!ul+_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-CSRF_TRUSTED_ORIGINS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '1dc618b8c969.ngrok-free.app']
+CSRF_TRUSTED_ORIGINS = ['https://1dc618b8c969.ngrok-free.app']
 
 
 # Application definition
@@ -197,7 +197,7 @@ SOCIALACCOUNT_PROVIDERS = {
         },
 }
 
-SITE_ID = 3
+SITE_ID = 7
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'

@@ -46,7 +46,7 @@ def index(request):
         message_form = SendInfoForm(request.POST)
 
         if message_form.is_valid():
-            subject = f'Съобщение до мен от: {message_form.cleaned_data["name"]}'
+            subject = f'Съобщение до мен от: {message_form.cleaned_data["name"]}, Имейл: {message_form.cleaned_data['email']}'
             message = message_form.cleaned_data['message']
             from_email = message_form.cleaned_data['email']
 
