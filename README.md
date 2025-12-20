@@ -59,7 +59,7 @@ Smiles With Stela е уеб приложение, създадено с мног
 - Python 3
 - Django
 - Django ORM
-- SQLite
+- PostgreSQL
 
 ### Frontend
 - HTML5
