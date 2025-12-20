@@ -65,7 +65,7 @@ Smiles With Stela е уеб приложение, създадено с мног
 - HTML5
 - CSS3
 - JavaScript
-- Django Templates
+- Django Template Language
 
 ---
 
