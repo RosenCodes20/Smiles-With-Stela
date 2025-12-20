@@ -10,10 +10,8 @@ Smiles With Stela е уеб приложение, създадено с мног
 ## 🖼️ Screenshots
 
 ![Home Page](screenshots/home.png)  
-![Products Page](screenshots/products.png)  
-![Gallery Page](screenshots/gallery.png)  
-![About Page](screenshots/about.png)  
-![Contact Page](screenshots/contact.png)  
+![Products Page](screenshots/products.png)   
+![About Page](screenshots/about_us.png)   
 
 ---
 
